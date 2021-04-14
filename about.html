@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html data-theme = 'dark'>
+    <head>
+
+        <link rel="stylesheet" href="/styles/main.css">
+        <script src="js/onload.js" ></script>
+        <title>About</title>
+    </head>
+
+    <body onload="CheckPage()">
+        
+        <div class="nav-bar">
+            <div class="logo">
+                <a href="about.html">Sufian</a>
+            </div>
+
+            <div class="nav-bar-options">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="blogs.html">Blogs</a>
+            </div>
+
+            <div class="nav-bar-icons">
+                <form action="">
+                    <input class="log-out"type="submit" value="Log-out">
+                </form>
+                <div class="switch-div">
+                    <input type="checkbox" name="theme" id="theme" onchange="ChangeTheme(this)">
+                    <label for="theme" class="switch">
+                        
+                        <img src="icons/drawing.svg" alt="">
+                        <img src="icons/moon.svg" alt="">
+                        
+                    </label>
+                </div>
+                <input type="checkbox" name="" id="nav-menu">
+                <label for="nav-menu" class="burger" >
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </label>
+                <div class="nav-bar-menu">
+                    <a href="index.html" style="--order : 1">Home</a>
+                    <a href="projects.html" style="--order : 2">Projects</a>
+                    <a href="blogs.html" style="--order : 3">Blogs</a>
+                </div>
+            </div>
+                
+        </div>
+       
+        <div class="page"> 
+            <div class="profile-imgs">
+                <img src="img/zpaxev0mwjc41.jpg" >
+                <img src="icons/defult-user.svg" >
+            </div>
+
+            <div class="row bio">
+                <h1>Sufian</h1>
+                <h3>welcome to my website</h2>
+                <p>my name is Sufian.
+                    im a computer science student learning software development. 
+                    i made this website to be my on place on the internet , its going to contain everything about me , my projects , plans , thoughts and im gonna have a diary on this website , basically its my virtual room in here .
+
+                    at the time i started making with website im already 2 years into the major , i used to know absolutely nothing about software and i started making website as a practice  learning on my own, a year later . i learned a lot about software and web development.
+
+                    and now im making a website that looks exactly like this one but as social media website , its going to be much more relaxed that the other widely known websites, and much more simple, users are going to have much more control over what they see.
+                </p>
+            </div>
+            <hr>
+            <div class="row">
+                <h1>Skills</h1>
+                <div class="skill">
+                    <h3>Skill</h3>
+                    <h3>description/project</h3>
+                    <h3>level</h3>
+                </div>
+                <hr>
+                <div class="skill">
+                    <div>
+                        <img src="icons/Htmlicon.svg" alt="">
+                        <p>HTML</p>
+                    </div>
+                    <p>I Understand the website structure can build a website for any purpose</p>
+                    <p>Expert</p>
+                </div>
+                <hr>
+                <div class="skill">
+                    <div>
+                        <img src="icons/CSSicon.svg" alt="">
+                        <p>CSS</p>
+                    </div>
+                    <p>Capable of styling the website to make it easy for the user to use and navigate through the website </p>
+                    <p>Good</p>
+                </div>
+                <hr>
+                <div class="skill">
+                    <div>
+                        <img src="icons/jsicon.svg" alt="">
+                        <p> java script</p>
+                    </div>
+                    <p>Capable making the website behave the way I want and object oriented programing </p>
+                    <p>Good</p>
+                </div>
+                <hr>
+                <div class="skill">
+                    <div>
+                        <img src="icons/Csicon.svg" alt="">
+                        <p>C sharp</p>
+                    </div>
+                    <p>Only made one game following a tutorial.
+                        can do object oriented programing
+                    </p>
+                    <p>Expert</p>
+                </div>
+                <hr>
+                
+                <div class="skill">
+                    <div>
+                        <img src="icons/javaicom.svg" alt="">
+                        <p>Java</p>
+                    </div>
+                    <p>Programed 3 games (Flappy bird , Pong and Chrome dinosaur game) , totally functional but not perfec </p>
+                    <p>beginner</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <h1>Contacts</h1>
+                <div class="skill">
+                    <p>Email</p>
+                    <p>syn-97@hotmail.com</p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="/js/main.js" onload="CheckTheme()"></script>
+</html>
