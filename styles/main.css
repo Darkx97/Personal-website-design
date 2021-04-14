@@ -21,17 +21,17 @@
 
 @font-face{
     font-family : 'optixal';
-    src : url("/Fonts/Optixal.ttf");
+    src : url("Fonts/Optixal.ttf");
     font-weight: 400;
 }
 @font-face{
     font-family : "poppins";
-    src : url("/Fonts/Poppins-Regular.ttf");
+    src : url("Fonts/Poppins-Regular.ttf");
     font-weight: 400;
 }
 @font-face{
     font-family : "roboto";
-    src : url("/Fonts/Roboto-Regular.ttf");
+    src : url("Fonts/Roboto-Regular.ttf");
     font-weight: 400;
 }
 
