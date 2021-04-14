@@ -176,6 +176,7 @@ p,a
     font-size: var(--p-size);
     font-family: "Roboto";
     color: var(--normal-text-color);
+    transition: border 0.5s ease;
 }
 
 a{
@@ -284,7 +285,8 @@ img
     padding: 2px 8px;
     border: 2px #00000000 solid;
     border-radius: var(--border-radius);
-    transition:border 0.7s  cubic-bezier(0.78, 0.48, 0.01, 1) , color 0.5s  cubic-bezier(0.78, 0.48, 0.01, 1) ;
+    transition:all 0.5s cubic-bezier(0.68, 0.48, 0.11,1);
+
 }
 
 .nav-bar-menu a , .nav-bar-menu p
@@ -298,6 +300,7 @@ img
 {
     color: var(--normal-text-color);
     border-color: var(--normal-text-color);
+
 }
 
 .logo a 
@@ -366,14 +369,13 @@ img
 {
     position: relative;
     top:-500px;
-    
 }
 
 
 .nav-bar-menu.active , input[type="checkbox"]:checked + label.burger + div.nav-bar-menu  > *
 {
     transform: translate(0 , 500px);
-    transition: transform 0.4s calc(var(--order) * 0.2s) cubic-bezier(0.78, 0.48, 0.01, 1) ;
+    transition: transform 0.4s calc(var(--order) * 0.2s) cubic-bezier(0.78, 0.48, 0.01, 1),border 0.5s ease ;
 }
 
 input[type="checkbox"]:checked + label.burger  > .line1 ,.line1.active
@@ -1064,11 +1066,15 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     .upload-meta-data > div:first-child
     {
         flex-direction: column;
+        place-content: start;
+        place-items: start;
+        
     }
 
     .upload-meta-data > div:last-child
     {
         flex-direction: column-reverse;
+        place-items: end;
     }
     .nav-bar-menu a , .nav-bar-menu p
     {
@@ -1088,7 +1094,7 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
         --h5-size : 28px;
         --h6-size : 20px;
         --p-size  : 18px;
-        --note-size : 14px;
+        --note-size : 20px;
 
         --nav-bar-height : 80px;
 
@@ -1191,7 +1197,7 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
         --h5-size : 20px;
         --h6-size : 18px;
         --p-size  : 16px;
-        --note-size : 12px;
+        --note-size : 18px;
 
 
         --nav-bar-height : 80px;
@@ -1243,7 +1249,8 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     .option-menu
     {
         width: var(--option-men-width);
-        max-height:  calc(var(--h4-size) * 6.5);
+        max-height:  calc(var(--h4
+        3-size) * 6.5);
     }   
     .option , .option > p
     {
@@ -1266,7 +1273,7 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     }
     .nav-bar-menu a , .nav-bar-menu p
     {
-        font-size: calc(var(--h1-size) * 2);
+        font-size: calc(var(--h1-size) );
     }
     .nav-bar-menu
     {
