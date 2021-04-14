@@ -18,6 +18,7 @@
 }
 
 
+
 @font-face{
     font-family : 'optixal';
     src : url("../Fonts/Optixal.ttf");
@@ -567,9 +568,9 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
 .upload-meta-data > div
 {
     display: flex;
-    place-items: center;
     width: 100%;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+
 }
 
 .upload-meta-data > div  > p
@@ -1065,16 +1066,13 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     }
     .upload-meta-data > div:first-child
     {
-        flex-direction: column;
-        place-content: start;
-        place-items: start;
-        
+        flex-direction: column;        
     }
 
     .upload-meta-data > div:last-child
     {
         flex-direction: column-reverse;
-        place-items: end;
+        
     }
     .nav-bar-menu a , .nav-bar-menu p
     {
