@@ -697,10 +697,7 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     background-color: var(--title-color);
 }
 
-.content
-{
-    padding-left: 50px;
-}
+
 
 .comment-ui
 {
@@ -866,10 +863,15 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
 }
 
 
-.project h3
+.project h3,.project  h2 ,.project  h3 ,.project  h4 ,.project  h5 ,.project   h6
 {
     margin-left: 30px;
     place-self: start;
+}
+
+.project >p 
+{
+    margin-left: 50px;
 }
 
 
@@ -887,7 +889,7 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
 {
     margin-left: 50px;
 }
-.blog  h3 , .blog  h1 ,.blog  h2 , .blog  h4 ,.blog  h5 ,.blog  h6
+.blog  h1 ,.blog  h2 ,.blog  h3 , .blog  h4 ,.blog  h5 ,.blog  h6
 {
     margin-left: 34px;
 }
