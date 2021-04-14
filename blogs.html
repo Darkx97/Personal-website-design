@@ -24,15 +24,13 @@
                 <form action="">
                     <input class="log-out"type="submit" value="Log-out">
                 </form>
-                <div class="switch-div">
-                    <input type="checkbox" name="theme" id="theme" onchange="ChangeTheme(this)">
-                    <label for="theme" class="switch">
-                        
-                        <img src="icons/drawing.svg" alt="">
-                        <img src="icons/moon.svg" alt="">
-                        
-                    </label>
-                </div>
+                <input type="checkbox" name="theme" id="theme" onchange="ChangeTheme(this)">
+                <label for="theme" class="mode-switch">
+                    
+                    <img src="icons/drawing.svg" alt="">
+                    <img src="icons/moon.svg" alt="">
+                    
+                </label>
                 <input type="checkbox" name="" id="nav-menu">
                 <label for="nav-menu" class="burger" >
                     <div class="line1"></div>
@@ -53,9 +51,9 @@
                 <form>
                     <div class="input post-ui">
                         
-                        <p>project title</p>
+                        <p>Blog title</p>
                         <textarea class="comment-textarea" ></textarea>
-                        <p>project description</p>
+                        <p>Blog description</p>
                         <textarea ondragover="ActiveDropZone(this)" ondragleave="DeActiveDropZone(this)" ondrop="DropFile(this,event)"></textarea>
                         <input type="file">
                         <div class="dropzone" ondragover="ActiveDropZone(this)" ondragleave="DeActiveDropZone(this)" ondrop="DropFile(this,event)"></div>
@@ -69,28 +67,31 @@
 
             <div class="row">
                 <div class="upload-meta-data">
-                    <div class="user-image-name">
-                        <img src="img/hellothere9.2.jpg" alt="">
-                        <p>user name</p>
-                    </div>
-                    <div class="upload-type-date">
-                        <p>blog</p>
-                        <div class="date">
-                            <p>14/6/2020</p>
+                    <div>
+                        <div class="user-image-name">
+                            <img src="img/hellothere9.2.jpg" alt="">
+                            <p>username</p>
                         </div>
+                        <p>project</p>
                     </div>
-                    <div class="upload-edit">
-                        <input id="Edit-upload-1" type="checkbox">
-                        <label for="Edit-upload-1" class="edit-button">
-                            <div class="dot"></div>
-                            <div class="dot"></div>
-                            <div class="dot"></div>
-                        </label>    
-                        <div class="option-menu" style="--amount : 4">
-                            <input class="option" type="submit" value="Edit" style="--order : 1">
-                            <input class="option" type="submit" value="Hide" style="--order : 2">
-                            <input class="option" type="submit" value="Delete" style="--order : 3">
-                            <input class="option" type="submit" value="Follow" style="--order : 4">
+                    <div>
+                        <div class="date">
+                            <p>14/2/2021</p>
+                        </div>
+                        <div class="upload-edit">
+                        
+                            <input id="Edit-upload-1" type="checkbox">
+                            <label for="Edit-upload-1" class="edit-button">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </label>    
+                            <div class="option-menu" style="--amount : 4">
+                                <input class="option" type="submit" value="Edit" style="--order : 1">
+                                <input class="option" type="submit" value="Hide" style="--order : 2">
+                                <input class="option" type="submit" value="Delete" style="--order : 3">
+                                <input class="option" type="submit" value="Follow" style="--order : 4">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -111,30 +112,31 @@
                     <div for="comment-section-1" class="comment-section">
                         <div class="comment">
                             <div class="upload-meta-data">
-                                <div class="user-image-name">
-                                    <img c src="img/hellothere9.2.jpg" alt="">
-                                    <p>user name</p>
-                                </div>
-                                <div class="upload-type-date">
-                                    <div class="date">
-                                        <p>7/4/2021</p>
-                                        <p>10:54 pm</p>
+                                <div>
+                                    <div class="user-image-name">
+                                        <img src="img/hellothere9.2.jpg" alt="">
+                                        <p>username</p>
                                     </div>
+                                    <p>project</p>
                                 </div>
-                                <div class="upload-edit">
-                                    <input id="Edit-upload-1-comment-1" type="checkbox">
-                                    <label for="Edit-upload-1-comment-1" class="edit-button">
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                    </label>    
-                                    <div class="option-menu" style="--amount : 4">
-                                        <input class="option" type="submit" value="Edit" style="--order : 1" >
-                                        <input class="option" type="submit" value="Hide"
-                                        style="--order : 2" >
-                                        <input class="option" type="submit" value="Delete"
-                                        style="--order : 3" >
-                                        <input class="option" type="submit" value="Follow" style="--order : 4">
+                                <div>
+                                    <div class="date">
+                                        <p>14/2/2021</p>
+                                    </div>
+                                    <div class="upload-edit">
+                                    
+                                        <input id="Edit-upload-1" type="checkbox">
+                                        <label for="Edit-upload-1" class="edit-button">
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                        </label>    
+                                        <div class="option-menu" style="--amount : 4">
+                                            <input class="option" type="submit" value="Edit" style="--order : 1">
+                                            <input class="option" type="submit" value="Hide" style="--order : 2">
+                                            <input class="option" type="submit" value="Delete" style="--order : 3">
+                                            <input class="option" type="submit" value="Follow" style="--order : 4">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -144,30 +146,31 @@
                         </div>
                         <div class="comment">
                             <div class="upload-meta-data">
-                                <div class="user-image-name">
-                                    <img src="icons/defult-user.svg" alt="">
-                                    <p>user name</p>
-                                </div>
-                                <div class="upload-type-date">
-                                    <div class="date">
-                                        <p>7/4/2021</p>
-                                        <p>10:54 pm</p>
+                                <div>
+                                    <div class="user-image-name">
+                                        <img src="img/hellothere9.2.jpg" alt="">
+                                        <p>username</p>
                                     </div>
+                                    <p>project</p>
                                 </div>
-                                <div class="upload-edit">
-                                    <input id="Edit-upload-1-comment-2" type="checkbox">
-                                    <label for="Edit-upload-1-comment-2" class="edit-button">
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                    </label>    
-                                    <div class="option-menu" style="--amount : 4">
-                                        <input class="option" type="submit" value="Edit" style="--order : 1" >
-                                        <input class="option" type="submit" value="Hide"
-                                        style="--order : 2" >
-                                        <input class="option" type="submit" value="Delete"
-                                        style="--order : 3" >
-                                        <input class="option" type="submit" value="Follow" style="--order : 4">
+                                <div>
+                                    <div class="date">
+                                        <p>14/2/2021</p>
+                                    </div>
+                                    <div class="upload-edit">
+                                    
+                                        <input id="Edit-upload-1" type="checkbox">
+                                        <label for="Edit-upload-1" class="edit-button">
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                        </label>    
+                                        <div class="option-menu" style="--amount : 4">
+                                            <input class="option" type="submit" value="Edit" style="--order : 1">
+                                            <input class="option" type="submit" value="Hide" style="--order : 2">
+                                            <input class="option" type="submit" value="Delete" style="--order : 3">
+                                            <input class="option" type="submit" value="Follow" style="--order : 4">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -177,30 +180,31 @@
                         </div>
                         <div class="comment">
                             <div class="upload-meta-data">
-                                <div class="user-image-name">
-                                    <img src="icons/defult-user.svg" alt="">
-                                    <p>user name</p>
-                                </div>
-                                <div class="upload-type-date">
-                                    <div class="date">
-                                        <p>7/4/2021</p>
-                                        <p>10:54 pm</p>
+                                <div>
+                                    <div class="user-image-name">
+                                        <img src="img/hellothere9.2.jpg" alt="">
+                                        <p>username</p>
                                     </div>
+                                    <p>project</p>
                                 </div>
-                                <div class="upload-edit">
-                                    <input id="Edit-upload-1-comment-3" type="checkbox">
-                                    <label for="Edit-upload-1-comment-3" class="edit-button">
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                    </label>    
-                                    <div class="option-menu" style="--amount : 4">
-                                        <input class="option" type="submit" value="Edit" style="--order : 1" >
-                                        <input class="option" type="submit" value="Hide"
-                                        style="--order : 2" >
-                                        <input class="option" type="submit" value="Delete"
-                                        style="--order : 3" >
-                                        <input class="option" type="submit" value="Follow" style="--order : 4">
+                                <div>
+                                    <div class="date">
+                                        <p>14/2/2021</p>
+                                    </div>
+                                    <div class="upload-edit">
+                                    
+                                        <input id="Edit-upload-1" type="checkbox">
+                                        <label for="Edit-upload-1" class="edit-button">
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                        </label>    
+                                        <div class="option-menu" style="--amount : 4">
+                                            <input class="option" type="submit" value="Edit" style="--order : 1">
+                                            <input class="option" type="submit" value="Hide" style="--order : 2">
+                                            <input class="option" type="submit" value="Delete" style="--order : 3">
+                                            <input class="option" type="submit" value="Follow" style="--order : 4">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -213,28 +217,31 @@
                 <hr>
             <div class="row">
                 <div class="upload-meta-data">
-                    <div class="user-image-name">
-                        <img src="img/hellothere9.2.jpg" alt="">
-                        <p>user name</p>
-                    </div>
-                    <div class="upload-type-date">
-                        <p>blog</p>
-                        <div class="date">
-                            <p>26/5/2020</p>
+                    <div>
+                        <div class="user-image-name">
+                            <img src="img/hellothere9.2.jpg" alt="">
+                            <p>username</p>
                         </div>
+                        <p>project</p>
                     </div>
-                    <div class="upload-edit">
-                        <input id="Edit-upload-2" type="checkbox">
-                        <label for="Edit-upload-2" class="edit-button">
-                            <div class="dot"></div>
-                            <div class="dot"></div>
-                            <div class="dot"></div>
-                        </label>    
-                        <div class="option-menu" style="--amount : 4">
-                            <input class="option" type="submit" value="Edit" style="--order : 1">
-                            <input class="option" type="submit" value="Hide" style="--order : 2">
-                            <input class="option" type="submit" value="Delete" style="--order : 3">
-                            <input class="option" type="submit" value="Follow" style="--order : 4">
+                    <div>
+                        <div class="date">
+                            <p>14/2/2021</p>
+                        </div>
+                        <div class="upload-edit">
+                        
+                            <input id="Edit-upload-1" type="checkbox">
+                            <label for="Edit-upload-1" class="edit-button">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </label>    
+                            <div class="option-menu" style="--amount : 4">
+                                <input class="option" type="submit" value="Edit" style="--order : 1">
+                                <input class="option" type="submit" value="Hide" style="--order : 2">
+                                <input class="option" type="submit" value="Delete" style="--order : 3">
+                                <input class="option" type="submit" value="Follow" style="--order : 4">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -256,30 +263,31 @@
                     <div for="comment-section-1" class="comment-section">
                         <div class="comment">
                             <div class="upload-meta-data">
-                                <div class="user-image-name">
-                                    <img c src="icons/defult-user.svg" alt="">
-                                    <p>user name</p>
-                                </div>
-                                <div class="upload-type-date">
-                                    <div class="date">
-                                        <p>7/4/2021</p>
-                                        <p>10:54 pm</p>
+                                <div>
+                                    <div class="user-image-name">
+                                        <img src="img/hellothere9.2.jpg" alt="">
+                                        <p>username</p>
                                     </div>
+                                    <p>project</p>
                                 </div>
-                                <div class="upload-edit">
-                                    <input id="Edit-upload-2-comment-1" type="checkbox">
-                                    <label for="Edit-upload-2-comment-1" class="edit-button">
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                    </label>    
-                                    <div class="option-menu" style="--amount : 4">
-                                        <input class="option" type="submit" value="Edit" style="--order : 1" >
-                                        <input class="option" type="submit" value="Hide"
-                                        style="--order : 2" >
-                                        <input class="option" type="submit" value="Delete"
-                                        style="--order : 3" >
-                                        <input class="option" type="submit" value="Follow" style="--order : 4">
+                                <div>
+                                    <div class="date">
+                                        <p>14/2/2021</p>
+                                    </div>
+                                    <div class="upload-edit">
+                                    
+                                        <input id="Edit-upload-1" type="checkbox">
+                                        <label for="Edit-upload-1" class="edit-button">
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                        </label>    
+                                        <div class="option-menu" style="--amount : 4">
+                                            <input class="option" type="submit" value="Edit" style="--order : 1">
+                                            <input class="option" type="submit" value="Hide" style="--order : 2">
+                                            <input class="option" type="submit" value="Delete" style="--order : 3">
+                                            <input class="option" type="submit" value="Follow" style="--order : 4">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -289,30 +297,31 @@
                         </div>
                         <div class="comment">
                             <div class="upload-meta-data">
-                                <div class="user-image-name">
-                                    <img src="icons/defult-user.svg" alt="">
-                                    <p>user name</p>
-                                </div>
-                                <div class="upload-type-date">
-                                    <div class="date">
-                                        <p>7/4/2021</p>
-                                        <p>10:54 pm</p>
+                                <div>
+                                    <div class="user-image-name">
+                                        <img src="img/hellothere9.2.jpg" alt="">
+                                        <p>username</p>
                                     </div>
+                                    <p>project</p>
                                 </div>
-                                <div class="upload-edit">
-                                    <input id="Edit-upload-2-comment-2" type="checkbox">
-                                    <label for="Edit-upload-2-comment-2" class="edit-button">
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                    </label>    
-                                    <div class="option-menu" style="--amount : 4">
-                                        <input class="option" type="submit" value="Edit" style="--order : 1" >
-                                        <input class="option" type="submit" value="Hide"
-                                        style="--order : 2" >
-                                        <input class="option" type="submit" value="Delete"
-                                        style="--order : 3" >
-                                        <input class="option" type="submit" value="Follow" style="--order : 4">
+                                <div>
+                                    <div class="date">
+                                        <p>14/2/2021</p>
+                                    </div>
+                                    <div class="upload-edit">
+                                    
+                                        <input id="Edit-upload-1" type="checkbox">
+                                        <label for="Edit-upload-1" class="edit-button">
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                        </label>    
+                                        <div class="option-menu" style="--amount : 4">
+                                            <input class="option" type="submit" value="Edit" style="--order : 1">
+                                            <input class="option" type="submit" value="Hide" style="--order : 2">
+                                            <input class="option" type="submit" value="Delete" style="--order : 3">
+                                            <input class="option" type="submit" value="Follow" style="--order : 4">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -322,30 +331,31 @@
                         </div>
                         <div class="comment">
                             <div class="upload-meta-data">
-                                <div class="user-image-name">
-                                    <img src="icons/defult-user.svg" alt="">
-                                    <p>user name</p>
-                                </div>
-                                <div class="upload-type-date">
-                                    <div class="date">
-                                        <p>7/4/2021</p>
-                                        <p>10:54 pm</p>
+                                <div>
+                                    <div class="user-image-name">
+                                        <img src="img/hellothere9.2.jpg" alt="">
+                                        <p>username</p>
                                     </div>
+                                    <p>project</p>
                                 </div>
-                                <div class="upload-edit">
-                                    <input id="Edit-upload-2-comment-3" type="checkbox">
-                                    <label for="Edit-upload-2-comment-3" class="edit-button">
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                    </label>    
-                                    <div class="option-menu" style="--amount : 4">
-                                        <input class="option" type="submit" value="Edit" style="--order : 1" >
-                                        <input class="option" type="submit" value="Hide"
-                                        style="--order : 2" >
-                                        <input class="option" type="submit" value="Delete"
-                                        style="--order : 3" >
-                                        <input class="option" type="submit" value="Follow" style="--order : 4">
+                                <div>
+                                    <div class="date">
+                                        <p>14/2/2021</p>
+                                    </div>
+                                    <div class="upload-edit">
+                                    
+                                        <input id="Edit-upload-1" type="checkbox">
+                                        <label for="Edit-upload-1" class="edit-button">
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                        </label>    
+                                        <div class="option-menu" style="--amount : 4">
+                                            <input class="option" type="submit" value="Edit" style="--order : 1">
+                                            <input class="option" type="submit" value="Hide" style="--order : 2">
+                                            <input class="option" type="submit" value="Delete" style="--order : 3">
+                                            <input class="option" type="submit" value="Follow" style="--order : 4">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -358,28 +368,31 @@
                 <hr>
             <div class="row">
                 <div class="upload-meta-data">
-                    <div class="user-image-name">
-                        <img src="img/hellothere9.2.jpg" alt="">
-                        <p>user name</p>
-                    </div>
-                    <div class="upload-type-date">
-                        <p>blog</p>
-                        <div class="date">
-                            <p>24/5/2020<p>
+                    <div>
+                        <div class="user-image-name">
+                            <img src="img/hellothere9.2.jpg" alt="">
+                            <p>username</p>
                         </div>
+                        <p>project</p>
                     </div>
-                    <div class="upload-edit">
-                        <input id="Edit-upload-3" type="checkbox">
-                        <label for="Edit-upload-3" class="edit-button">
-                            <div class="dot"></div>
-                            <div class="dot"></div>
-                            <div class="dot"></div>
-                        </label>    
-                        <div class="option-menu" style="--amount : 4">
-                            <input class="option" type="submit" value="Edit" style="--order : 1">
-                            <input class="option" type="submit" value="Hide" style="--order : 2">
-                            <input class="option" type="submit" value="Delete" style="--order : 3">
-                            <input class="option" type="submit" value="Follow" style="--order : 4">
+                    <div>
+                        <div class="date">
+                            <p>14/2/2021</p>
+                        </div>
+                        <div class="upload-edit">
+                        
+                            <input id="Edit-upload-1" type="checkbox">
+                            <label for="Edit-upload-1" class="edit-button">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </label>    
+                            <div class="option-menu" style="--amount : 4">
+                                <input class="option" type="submit" value="Edit" style="--order : 1">
+                                <input class="option" type="submit" value="Hide" style="--order : 2">
+                                <input class="option" type="submit" value="Delete" style="--order : 3">
+                                <input class="option" type="submit" value="Follow" style="--order : 4">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -401,30 +414,31 @@
                     <div for="comment-section-1" class="comment-section">
                         <div class="comment">
                             <div class="upload-meta-data">
-                                <div class="user-image-name">
-                                    <img c src="icons/defult-user.svg" alt="">
-                                    <p>user name</p>
-                                </div>
-                                <div class="upload-type-date">
-                                    <div class="date">
-                                        <p>7/4/2021</p>
-                                        <p>10:54 pm</p>
+                                <div>
+                                    <div class="user-image-name">
+                                        <img src="img/hellothere9.2.jpg" alt="">
+                                        <p>username</p>
                                     </div>
+                                    <p>project</p>
                                 </div>
-                                <div class="upload-edit">
-                                    <input id="Edit-upload-3-comment-1" type="checkbox">
-                                    <label for="Edit-upload-3-comment-1" class="edit-button">
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                    </label>    
-                                    <div class="option-menu" style="--amount : 4">
-                                        <input class="option" type="submit" value="Edit" style="--order : 1" >
-                                        <input class="option" type="submit" value="Hide"
-                                        style="--order : 2" >
-                                        <input class="option" type="submit" value="Delete"
-                                        style="--order : 3" >
-                                        <input class="option" type="submit" value="Follow" style="--order : 4">
+                                <div>
+                                    <div class="date">
+                                        <p>14/2/2021</p>
+                                    </div>
+                                    <div class="upload-edit">
+                                    
+                                        <input id="Edit-upload-1" type="checkbox">
+                                        <label for="Edit-upload-1" class="edit-button">
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                        </label>    
+                                        <div class="option-menu" style="--amount : 4">
+                                            <input class="option" type="submit" value="Edit" style="--order : 1">
+                                            <input class="option" type="submit" value="Hide" style="--order : 2">
+                                            <input class="option" type="submit" value="Delete" style="--order : 3">
+                                            <input class="option" type="submit" value="Follow" style="--order : 4">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -434,30 +448,31 @@
                         </div>
                         <div class="comment">
                             <div class="upload-meta-data">
-                                <div class="user-image-name">
-                                    <img src="icons/defult-user.svg" alt="">
-                                    <p>user name</p>
-                                </div>
-                                <div class="upload-type-date">
-                                    <div class="date">
-                                        <p>7/4/2021</p>
-                                        <p>10:54 pm</p>
+                                <div>
+                                    <div class="user-image-name">
+                                        <img src="img/hellothere9.2.jpg" alt="">
+                                        <p>username</p>
                                     </div>
+                                    <p>project</p>
                                 </div>
-                                <div class="upload-edit">
-                                    <input id="Edit-upload-3-comment-2" type="checkbox">
-                                    <label for="Edit-upload-3-comment-2" class="edit-button">
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                    </label>    
-                                    <div class="option-menu" style="--amount : 4">
-                                        <input class="option" type="submit" value="Edit" style="--order : 1" >
-                                        <input class="option" type="submit" value="Hide"
-                                        style="--order : 2" >
-                                        <input class="option" type="submit" value="Delete"
-                                        style="--order : 3" >
-                                        <input class="option" type="submit" value="Follow" style="--order : 4">
+                                <div>
+                                    <div class="date">
+                                        <p>14/2/2021</p>
+                                    </div>
+                                    <div class="upload-edit">
+                                    
+                                        <input id="Edit-upload-1" type="checkbox">
+                                        <label for="Edit-upload-1" class="edit-button">
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                        </label>    
+                                        <div class="option-menu" style="--amount : 4">
+                                            <input class="option" type="submit" value="Edit" style="--order : 1">
+                                            <input class="option" type="submit" value="Hide" style="--order : 2">
+                                            <input class="option" type="submit" value="Delete" style="--order : 3">
+                                            <input class="option" type="submit" value="Follow" style="--order : 4">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -467,30 +482,31 @@
                         </div>
                         <div class="comment">
                             <div class="upload-meta-data">
-                                <div class="user-image-name">
-                                    <img src="icons/defult-user.svg" alt="">
-                                    <p>user name</p>
-                                </div>
-                                <div class="upload-type-date">
-                                    <div class="date">
-                                        <p>7/4/2021</p>
-                                        <p>10:54 pm</p>
+                                <div>
+                                    <div class="user-image-name">
+                                        <img src="img/hellothere9.2.jpg" alt="">
+                                        <p>username</p>
                                     </div>
+                                    <p>project</p>
                                 </div>
-                                <div class="upload-edit">
-                                    <input id="Edit-upload-3-comment-3" type="checkbox">
-                                    <label for="Edit-upload-3-comment-3" class="edit-button">
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                        <div class="dot"></div>
-                                    </label>    
-                                    <div class="option-menu" style="--amount : 4">
-                                        <input class="option" type="submit" value="Edit" style="--order : 1" >
-                                        <input class="option" type="submit" value="Hide"
-                                        style="--order : 2" >
-                                        <input class="option" type="submit" value="Delete"
-                                        style="--order : 3" >
-                                        <input class="option" type="submit" value="Follow" style="--order : 4">
+                                <div>
+                                    <div class="date">
+                                        <p>14/2/2021</p>
+                                    </div>
+                                    <div class="upload-edit">
+                                    
+                                        <input id="Edit-upload-1" type="checkbox">
+                                        <label for="Edit-upload-1" class="edit-button">
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                        </label>    
+                                        <div class="option-menu" style="--amount : 4">
+                                            <input class="option" type="submit" value="Edit" style="--order : 1">
+                                            <input class="option" type="submit" value="Hide" style="--order : 2">
+                                            <input class="option" type="submit" value="Delete" style="--order : 3">
+                                            <input class="option" type="submit" value="Follow" style="--order : 4">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
