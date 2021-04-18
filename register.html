@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html data-theme = 'dark'>
+    <head>
+        
+        <link rel="stylesheet" href="styles/main.css">
+        <title>Home</title>
+    </head>
+
+    <body>
+        
+        <div class="nav-bar">
+            <div class="logo">
+                <a href="log_in.html">Log in</a>
+            </div>
+
+            <div class="nav-bar-options">
+
+            </div>
+
+            <div class="nav-bar-icons">
+
+                <input type="checkbox" name="theme" id="theme" onchange="ChangeTheme(this)">
+                <label for="theme" class="mode-switch">
+                    
+                    <img src="icons/drawing.svg" alt="">
+                    <img src="icons/moon.svg" alt="">
+                    
+                </label>
+                
+            </div>
+                
+        </div>
+       
+        <div class="page"> 
+            <div class="row">
+                <form>
+                    <div class="input register-ui">
+                        <p>Register</p> 
+                        <div>    
+                            <p>username</p><textarea class="comment-textarea"></textarea>
+                            <p>password</p><textarea class="comment-textarea"></textarea>
+                            <p>confirm password</p><textarea class="comment-textarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button>post</button>
+                    </div>
+                </form>
+            </div>
+
+                
+        </div>
+
+    </body>
+    <script src="js/main.js" ></script>
+</html>
