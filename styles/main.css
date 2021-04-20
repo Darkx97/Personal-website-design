@@ -246,7 +246,6 @@ img
 {
     width: var(--user-img-size);
     height: var(--user-img-size);
-    height: var(--user-img-size);
     border-radius: 100%;
 }
 
@@ -609,13 +608,7 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
     font-family: 'optixal';
     font-size: var(--h4-size);
 }
-.user-image-name img
-{
-    width: 50px;
-    height: 50px;
-    border-radius: 20px;
-    /* border: var(--border-size) var(--normal-text-color) outset; */
-}
+
 
 
 
@@ -1136,7 +1129,7 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     .upload-meta-data > div:last-child
     {
         flex-direction: column-reverse;
-        
+        align-items: end;
     }
     .nav-bar-menu
     {
@@ -1260,7 +1253,7 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     .upload-meta-data > div:last-child
     {
         flex-direction: column-reverse;
-        
+        align-items: end;
     }
     .nav-bar-menu
     {
@@ -1303,10 +1296,8 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
         --dropped-img-size:25px;
         --profile-img-max-size:150px;
         --profile-background-max-size: 1000px; 
-        --user-img-size: 20px ;
-        
+        --user-img-size: 50px ;
 
-        
         --row-max-width:800px;
         --row-width: 85%;
         
