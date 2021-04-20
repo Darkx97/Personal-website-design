@@ -261,10 +261,11 @@ img
 {
     top: 0px;
     left: 0px;
-    z-index: 5;
     right: 0px;
+    z-index: 5;
     display: grid;
     position: fixed;
+    padding: 0px 10px;
     align-items: center;
     justify-content: center;
     height: var(--nav-bar-height);
