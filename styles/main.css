@@ -784,7 +784,7 @@ label:active > .arrow
 .comment
 {
     width: 95%;
-    padding: 5px;
+    padding: 10px;
     background : var(--data-input-bg-color);
     border : var(--border-size) var(--border-color) solid;
     border-radius : var(--border-radius);
