@@ -739,22 +739,6 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
 }
 
 
-.arrow-button
-{
-    width: var(--arrow-button);
-    height:var(--arrow-button);
-    display:flex;
-    place-items: center;
-    place-content: center;
-    border: var(--border-size) var(--border-color) solid;
-    border-radius: var(--border-radius);
-    background-color: var(--text-input-background);
-    transition:background .5s cubic-bezier(0.78, 0.48, 0.01, 1) , transform 0.1s 0s ease;
-    display: flex;
-}
-
-
-
 .arrow
 {
     fill:var(--normal-text-color);
@@ -764,15 +748,12 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     stroke:none;
     stroke-width:0.0489864;
     paint-order:stroke markers fill;
-    transition: transform 1.2s cubic-bezier(0.78, 0.48, 0.01, 1);
+    transition: transform 0.1s cubic-bezier(0.78, 0.48, 0.01, 1);
+    transform: rotate(180deg);
     place-self: center;
     cursor: pointer;
 }
 
-.arrow.active
-{
-    transform: rotate(-1260deg);
-}
 
 .comment-section 
 {
@@ -789,10 +770,17 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
 }
 
 
-.comment-section.active
+.comment-section.active , input[type="checkbox"]:checked + .comment-section
 {
     height: var(--comment-section-height);
 }
+
+label:active > .arrow
+{
+    transform:rotate(180deg) translate(0px , -10px);
+}
+
+
 .comment
 {
     width: 95%;
@@ -855,7 +843,6 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
 {
     position: absolute;
     top: calc(var(--arrow-size)* -1 );
-    transform: rotate(180deg);
     width: calc(var(--arrow-size) / 2);
     right: 5px;
 }
