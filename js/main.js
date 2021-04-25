@@ -112,13 +112,3 @@ function RemoveFile(file)
         dropzone.classList.remove("active")
     }
 }
-
-
-function ToggleUI(button)
-{
-    let section = button.parentElement.parentElement.querySelector(".comment-section") || button.parentElement.parentElement.parentElement.querySelector(".comment-section");
-    let arrow = button.querySelector(".arrow");
-
-    arrow.classList.toggle("active");
-    section.classList.toggle("active");
-}
