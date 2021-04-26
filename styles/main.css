@@ -808,10 +808,6 @@ label:active > .arrow
     width: 100%;
 }
 
-.project-ui >div > p 
-{
-    font-size: var(--p-size);
-}
 
 .drop-list
 {
