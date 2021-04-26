@@ -343,6 +343,7 @@ img
     cursor: pointer;
     z-index: 0;
     display: none;
+   
 }
 
 .line1,.line2,.line3
@@ -352,7 +353,7 @@ img
     margin-bottom: 5px;
     background-color: var(--normal-text-color);
     transition: transform 0.7s  cubic-bezier(0.78, 0.48, 0.01, 1) , opacity 1s cubic-bezier(0.78, 0.48, 0.01, 1);
-
+    border-radius: 50px;
 }
 
 .nav-bar-menu
