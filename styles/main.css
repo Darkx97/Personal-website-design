@@ -978,13 +978,13 @@ label:active > .arrow
     place-items: center;
     flex-direction: column;
     place-self: center;
-    width: 100%;
-    height: 100%;
+
 }
 
 .skill > div >p 
 {
     font-size: var(--note-size);
+    text-align: center;
 }
 
 
