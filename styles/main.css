@@ -1191,13 +1191,15 @@ label:active > .arrow
     {
         display: block;
     }
-
     .option-menu
     {
         width: var(--option-men-width);
-        gap: 30px;
-        max-height:  calc(var(--h4-size) * 6.5);
+        max-height:  calc(var(--h3-size) * 6.5);
     }   
+    .option , .option > p
+    {
+        font-size: var(--h4-size);
+    }
     .option , .option > p
     {
         font-size: var(--h4-size);
@@ -1323,8 +1325,7 @@ label:active > .arrow
     .option-menu
     {
         width: var(--option-men-width);
-        max-height:  calc(var(--h4
-        3-size) * 6.5);
+        max-height:  calc(var(--h3-size) * 6.5);
     }   
     .option , .option > p
     {
@@ -1333,7 +1334,7 @@ label:active > .arrow
     }
     input[type="checkbox"]:checked + label.edit-button + div.option-menu , input[type="checkbox"]:checked + .option-list + .option-menu
     {
-        height: calc(var(--amount) * calc(var(--h4-size) * 1.7));
+        height: calc(var(--amount) * calc(var(--h3-size) * 1.7));
     }
 
     .project-ui , .project-ui>div
