@@ -724,7 +724,7 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     
 }
 
-.option:hover, .option >p:hover , input[type="radio"]:checked + label.option , input[type="radio"]:checked + label.option >p
+.option:hover , input[type="radio"]:checked + label.option , input[type="radio"]:checked + label.option >p
 {
     background-color: var(--title-color);
     color: var(--button-font-color);
@@ -1053,7 +1053,7 @@ label:active > .arrow
         --project-img-max-size:100%;
 
         --option-men-width:400px;
-        --gap:30px;
+        --gap:15px;
     }
 
     .option-menu
@@ -1068,7 +1068,7 @@ label:active > .arrow
     }
     input[type="checkbox"]:checked + label.edit-button + div.option-menu , input[type="checkbox"]:checked + .option-list + .option-menu
     {
-        height: calc(var(--amount) * calc(var(--h4-size) * 1.7));
+        height: calc(var(--amount) * calc(var(--h4-size) * 1.5));
     }
     .project-ui , .project-ui>div
     {
@@ -1181,7 +1181,7 @@ label:active > .arrow
         --project-img-max-size:100%;
 
         --option-men-width:400px;
-        --gap:30px;
+        --gap:15px;
     }
     .nav-bar-options > a
     {
@@ -1199,16 +1199,12 @@ label:active > .arrow
     }   
     .option , .option > p
     {
-        font-size: var(--h4-size);
-    }
-    .option , .option > p
-    {
-        font-size: var(--h4-size);
+        font-size: var(--h3-size);
 
     }
     input[type="checkbox"]:checked + label.edit-button + div.option-menu , input[type="checkbox"]:checked + .option-list + .option-menu
     {
-        height: calc(var(--amount) * calc(var(--h4-size) * 1.7));
+        height: calc(var(--amount) * calc(var(--h3-size) * 1.3));
     }
 
     .project-ui , .project-ui>div
@@ -1307,7 +1303,7 @@ label:active > .arrow
         --project-img-max-size:100%;
 
         --option-men-width:300px;
-        --gap:30px;
+        --gap:15px;
     }
     .nav-bar-options > a
     {
@@ -1330,12 +1326,12 @@ label:active > .arrow
     }   
     .option , .option > p
     {
-        font-size: var(--h4-size);
+        font-size: var(--h3-size);
 
     }
     input[type="checkbox"]:checked + label.edit-button + div.option-menu , input[type="checkbox"]:checked + .option-list + .option-menu
     {
-        height: calc(var(--amount) * calc(var(--h3-size) * 1.7));
+        height: calc(var(--amount) * calc(var(--h3-size) * 1.4));
     }
 
     .project-ui , .project-ui>div
