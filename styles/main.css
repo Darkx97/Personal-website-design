@@ -22,7 +22,7 @@
 @font-face{
     font-family : 'optixal';
     src : url("../Fonts/Optixal.ttf");
-    ffont-weight: bold;
+    font-weight: 400;
 }
 @font-face{
     font-family : "poppins";
@@ -84,7 +84,7 @@ html[data-theme = 'dark']{
     --nav-bar-color : #0e0d0d;
 
     /* text coloring */
-    --title-color : #512eb3;
+    --title-color : #6a48ff;
     --normal-text-color :#ffffff;
     --note-color : #d1d1d1;
     --option-text-color : #949494;
@@ -104,12 +104,12 @@ html[data-theme = 'dark']{
 html[data-theme= 'light']
 {
     /* background color */
-    --body-background-color : #e0e0e0;
+    --body-background-color : #d6d6d6;
     /*  navigation bar color */
-    --nav-bar-color : #b3b3b3;
+    --nav-bar-color : #a7a7a7;
 
     /* text coloring */
-    --title-color : #6600ff;
+    --title-color : #7105ff;
     --normal-text-color :#000000;
     --option-text-color : #575757;
     --note-color : #555555;
@@ -124,8 +124,8 @@ html[data-theme= 'light']
     --border-warning-color : #ff0000;
 
     /* input UI coloring */
-    --data-input-bg-color : #c7c7c7;
-    --text-input-background : #f1f1f1;
+    --data-input-bg-color : #c2c2c2;
+    --text-input-background : #dfdfdf;
 }
 
 
@@ -319,7 +319,7 @@ img
 
 .logo a 
 {
-    font-size: var(--h4-size);
+    font-size: var(--h5-size);
     border-color: var(--option-text-color);
     
 }
@@ -555,7 +555,7 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
     /* height: 30px; */
     background-color: #00000000;
     color : var(--normal-text-color);
-    font-size: var(--h4-size);
+    font-size: var(--h5-size);
     border-radius: var(--border-radius);
     font-family : "optixal";
     border: var(--border-size) var(--title-color) solid;
@@ -724,13 +724,16 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     
 }
 
-.option:hover , input[type="radio"]:checked + label.option , input[type="radio"]:checked + label.option >p
+.option:hover , input[type="radio"]:checked + label.option , input[type="radio"]:checked 
 {
     background-color: var(--title-color);
     color: var(--button-font-color);
 }
 
-
+input[type="radio"]:checked + label.option >p 
+{
+    color: var(--button-font-color);
+}
 
 .comment-ui
 {
@@ -897,7 +900,10 @@ label:active > .arrow
     margin-left: 20px;
 }
 
-
+.project > p:first-of-type
+{
+    margin: 0px;
+}
 .project > img 
 {
     width: 80%;
@@ -1032,7 +1038,7 @@ label:active > .arrow
         --p-size  : 10px;
         --note-size : 14px;
 
-        --nav-bar-height : 100px;
+        --nav-bar-height : 75px;
 
         --border-radius:8px;
         --border-size:2px;
@@ -1285,7 +1291,7 @@ label:active > .arrow
         --note-size : 12px;
 
 
-        --nav-bar-height : 100px;
+        --nav-bar-height : 75px;
 
         --border-radius:8px;
         --border-size:2px;
@@ -1325,7 +1331,10 @@ label:active > .arrow
         justify-content: space-evenly;
         padding: 0px 5px;
     }
-
+    .logo>a , .log-out
+    {
+        font-size: var(--h3-size);
+    }
     .option-menu
     {
         width: var(--option-men-width);
