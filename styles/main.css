@@ -984,7 +984,7 @@ label:active > .arrow
 .skill > div >p 
 {
     font-size: var(--note-size);
-    text-align: center;
+    text-align: center;  
 }
 
 
