@@ -474,6 +474,7 @@ input[type="checkbox"]:checked + label.burger  > .line3 , .line3.active
     color: var(--note-color);
     font-family: 'basis33';
     text-align: center;
+    place-self: center;
 }
 
 .dropzone 
