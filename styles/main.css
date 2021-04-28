@@ -1069,7 +1069,7 @@ label:active > .arrow
 
         --arrow-size : 50px;
 
-        --dropped-img-size:25px;
+        --dropped-img-size:75px;
         --profile-img-max-size:150px;
         --profile-background-max-size: 1000px; 
         --user-img-size: 50px ;
