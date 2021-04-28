@@ -20,8 +20,8 @@
 
 
 @font-face{
-    font-family : 'optixal';
-    src : url("../Fonts/Optixal.ttf");
+    font-family : 'basis33';
+    src : url("../Fonts/basis33.ttf");
     font-weight: 400;
 }
 @font-face{
@@ -44,10 +44,22 @@
     --h5-size : 34px;
     --h6-size : 28px;
     --p-size  : 20px;
-    --note-size : 24px;
+    --note-size : 20px;
 
 
     --nav-bar-height : 75px;
+
+    /* --h1-size : 40px;
+    --h2-size : 36px;
+    --h3-size : 32px;
+    --h4-size : 28px;
+    --h5-size : 24px;
+    --h6-size : 18px;
+    --p-size  : 20px;
+    --note-size :10px;
+
+
+    --nav-bar-height : 75px; */
 
     --border-radius:8px;
     --border-size:2px;
@@ -143,7 +155,7 @@ h1,h2,h3,h4,h5,h6
     padding: 0;
     margin: 0;
     color: var(--title-color);
-    font-family: 'optixal';
+    font-family: 'basis33';
     font-size: var(--h1-size);
     font-weight: bold;
 }
@@ -224,7 +236,7 @@ input[type="button"],button
     justify-self: center;
     place-content: center;
     max-width: fit-content;
-    font-family : "optixal";
+    font-family : "basis33";
     font-size: var(--h6-size);
     color: var(--button-font-color);
     border-radius: var(--border-radius);
@@ -296,7 +308,7 @@ img
     display: flex;
     padding: 4px 6px;
     text-decoration: none;
-    font-family: 'optixal';
+    font-family: 'basis33';
     font-size: var(--h5-size);
     border: 2px #00000000 solid;
     color: var(--option-text-color);
@@ -460,7 +472,7 @@ input[type="checkbox"]:checked + label.burger  > .line3 , .line3.active
 {
     font-size: var(--note-size);
     color: var(--note-color);
-    font-family: 'optixal';
+    font-family: 'basis33';
     text-align: center;
 }
 
@@ -556,7 +568,7 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
     color : var(--normal-text-color);
     font-size: var(--h5-size);
     border-radius: var(--border-radius);
-    font-family : "optixal";
+    font-family : "basis33";
     border: var(--border-size) var(--title-color) solid;
     transition: background 0.5s cubic-bezier(0.78, 0.48, 0.01, 1);
 }
@@ -581,7 +593,7 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
 
 .upload-meta-data p 
 {
-    font-family: 'optixal';
+    font-family: 'basis33';
 }
 .upload-meta-data > div
 {
@@ -605,7 +617,7 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
 
 .user-image-name p 
 {
-    font-family: 'optixal';
+    font-family: 'basis33';
     font-size: var(--h4-size);
 }
 
@@ -701,7 +713,7 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     background-color: #00000000;
     color: var(--normal-text-color);
     border : none;
-    font-family: 'optixal';
+    font-family: 'basis33';
     font-size: var(--h6-size);
     border-radius: var(--border-radius);
     width: 90%;
@@ -715,7 +727,7 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     justify-self: center;
     text-align: center;
     justify-self: center;
-    font-family: optixal;
+    font-family: basis33;
     font-size: var(--h6-size);
     border : none;
     border-radius: var(--border-radius);
@@ -830,7 +842,7 @@ label:active > .arrow
 {
     text-align: center;
     font-size: var(--comment-textarea);
-    font-family: optixal;
+    font-family: basis33;
     width: auto;
 }
 .option-list 
