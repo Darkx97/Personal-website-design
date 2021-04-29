@@ -1097,7 +1097,7 @@ label:active > .arrow
     }
     input[type="checkbox"]:checked + label.edit-button + div.option-menu , input[type="checkbox"]:checked + .option-list + .option-menu
     {
-        height: calc(var(--amount) * calc(var(--h4-size) * 1.2));
+        height: calc(var(--amount) * calc(var(--h4-size) * 1.4));
     }
     .project-ui , .project-ui>div
     {
