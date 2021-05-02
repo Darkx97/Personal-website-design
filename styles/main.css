@@ -913,7 +913,18 @@ label:active > .arrow
 
 .project > p,.blog >p 
 {
+    display: grid;
     margin-left: 20px;
+}
+
+.blog > p > img
+{
+    display: flex;
+    height: auto;
+    max-height: 300px;
+    width: auto;
+    border-radius: 0px;
+    place-self: center;
 }
 
 .project > p:first-of-type
