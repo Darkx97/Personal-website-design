@@ -629,7 +629,7 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
 
 .date p 
 {
-    font-size: var(--h6-size);
+    font-size: var(--note-size);
     
 }
 .date
@@ -1328,7 +1328,7 @@ label:active > .arrow
         --h5-size : 32px;
         --h6-size : 26px;
         --p-size  : 12px;
-        --note-size : 24px;
+        --note-size :14px;
 
 
         --nav-bar-height : 95px;
@@ -1349,7 +1349,7 @@ label:active > .arrow
         --profile-img-max-size:150px;
         --profile-background-max-size: 1000px; 
         --user-img-size: 50px ;
-        --icon-img-size :20px;
+        --icon-img-size :15px;
 
         --row-max-width:800px;
         --row-width: 85%;
