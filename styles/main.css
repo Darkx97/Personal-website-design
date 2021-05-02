@@ -1007,12 +1007,11 @@ label:active > .arrow
 
 .skill > div >p 
 {
-    font-size: var(--note-size);
     text-align: center;  
 }
 
 
-.row > h1
+.row > h2
 {
     text-align: center;
 }
@@ -1197,7 +1196,7 @@ label:active > .arrow
 
         --arrow-size : 40px;
 
-        --dropped-img-size:30px;
+        --dropped-img-size:60px;
         --profile-img-max-size:150px;
         --profile-background-max-size: 1000px; 
         --user-img-size: 50px ;
@@ -1321,7 +1320,7 @@ label:active > .arrow
 
         --arrow-size : 50px;
 
-        --dropped-img-size:25px;
+        --dropped-img-size:40px;
         --profile-img-max-size:150px;
         --profile-background-max-size: 1000px; 
         --user-img-size: 50px ;
