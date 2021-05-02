@@ -763,7 +763,7 @@ input[type="radio"]:checked + label.option >p
 .comment-ui
 {
     display: grid;
-    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-columns: var(--user-img-size) 8fr var(--arrow-size);
     place-items: center;
 }
 
