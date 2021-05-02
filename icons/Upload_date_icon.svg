@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="18"
+   height="21"
+   viewBox="0 0 4.7625002 5.5562504"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
+   sodipodi:docname="Upload_date_icon.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="16"
+     inkscape:cx="5.3271021"
+     inkscape:cy="13.268487"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1729"
+     inkscape:window-height="1040"
+     inkscape:window-x="1431"
+     inkscape:window-y="41"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#851fdc;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       d="M 2.4948975,0.13767445 C 1.7120723,0.90629204 0.93867275,1.6821157 0.17917655,2.4664287 0.69029445,2.3525912 1.1980025,2.2065251 1.7045935,2.0929083 c 0.030642,1.1109143 0.00157,2.2290271 0.025439,3.3360173 0.2339796,-0.1884207 0.4537052,-0.3887348 0.6822695,-0.5816774 0.2390443,0.2014741 0.4780777,0.4029574 0.7171,0.6044497 0.01015,-1.1068876 -0.00737,-2.2142444 0.02633,-3.3208125 -0.017914,-0.1203641 0.1514714,0.013451 0.2165523,0.0099 0.43418,0.1311989 0.8750408,0.2812398 1.3077182,0.3960034 C 3.9623953,1.7305545 3.2354136,0.92958094 2.4972012,0.13619282 Z"
+       id="path174" />
+  </g>
+</svg>

@@ -78,6 +78,7 @@
     --profile-img-max-size:150px;
     --profile-background-max-size: 1000px; 
     --user-img-size: 50px ;
+    --icon-img-size : 20px ;
     
     --option-destines: 200px;
     
@@ -637,9 +638,20 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
     place-items: center;
     width: 100%;
     justify-content: space-evenly;
+    flex-direction: column;
     
 }
 
+.date > div
+{
+    display: flex;
+}
+
+.date  img
+{
+    height: var(--icon-img-size);
+    border-radius: 0px;
+}
 .upload-edit
 {
     display: grid;
@@ -1205,12 +1217,14 @@ label:active > .arrow
         --edit-button-size : 40px;
         --dot-size:10px;
 
-        --arrow-size : 40px;
+        --arrow-size : 30px;
 
         --dropped-img-size:60px;
         --profile-img-max-size:150px;
         --profile-background-max-size: 1000px; 
         --user-img-size: 50px ;
+        --icon-img-size :20px;
+
         
         --mode-switch-size : 50px;
         --option-destines: 400px;
@@ -1329,12 +1343,13 @@ label:active > .arrow
         --edit-button-size : 40px;
         --dot-size:10px;
 
-        --arrow-size : 50px;
+        --arrow-size : 25px;
 
         --dropped-img-size:40px;
         --profile-img-max-size:150px;
         --profile-background-max-size: 1000px; 
         --user-img-size: 50px ;
+        --icon-img-size :20px;
 
         --row-max-width:800px;
         --row-width: 85%;
