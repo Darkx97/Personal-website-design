@@ -92,34 +92,34 @@
 
 html[data-theme = 'dark']{
     /* background color */
-    --body-background-color : #252525;
+    --body-background-color : #151515;
     /*  navigation bar color */
-    --nav-bar-color : #0e0d0d;
+    --nav-bar-color : #000000;
 
     /* text coloring */
     --title-color : #6a48ff;
     --normal-text-color :#ffffff;
     --note-color : #d1d1d1;
-    --option-text-color : #949494;
+    --option-text-color : #5a5a5a;
     --anchor-text-color:#045abd;
     --visited-anchor-text-color: #009eb3;
     --button-font-color: #ffffff;
     /* border-coloring */
     --border-color: #000000;
-    --border-hover : #e6e6e6;
+    --border-hover : #6a48ff;
     --border-warning-color : #ff0000;
 
     /* input UI coloring */
-    --data-input-bg-color : #4d4d4d;
-    --text-input-background : #333333;
+    --data-input-bg-color : #3a3a3a;
+    --text-input-background : #1f1f1f;
 }
 
 html[data-theme= 'light']
 {
     /* background color */
-    --body-background-color : #d6d6d6;
+    --body-background-color : #ebebeb;
     /*  navigation bar color */
-    --nav-bar-color : #a7a7a7;
+    --nav-bar-color : #8c8c8c;
 
     /* text coloring */
     --title-color : #7105ff;
@@ -133,7 +133,7 @@ html[data-theme= 'light']
 
     /* border-coloring */
     --border-color: #3d3d3d;
-    --border-hover : #131313;
+    --border-hover : #7105ff;
     --border-warning-color : #ff0000;
 
     /* input UI coloring */
