@@ -927,6 +927,7 @@ label:active > .arrow
 {
     display: grid;
     margin-left: 20px;
+    font-size: var(--p-size);
 }
 
 .blog > p > img
@@ -1000,18 +1001,19 @@ label:active > .arrow
 {
     gap: 10px;
     display: grid;
-    grid-template-columns: 1.5fr 7fr 1.5fr;
+    grid-template-columns: 2fr 6fr 2fr;
     place-content: center;
     place-items :center;
     padding: 10px 0px;
 }
 
-.skill > p
+.skill  p
 {
     place-self: center;
-    max-width: 80%;
-}
-
+    max-width: 90%;
+    text-align: center;
+    font-size: var(--p-size);
+} 
 .skill img
 {
     width:var(--dropped-img-size);
@@ -1025,12 +1027,12 @@ label:active > .arrow
     place-items: center;
     flex-direction: column;
     place-self: center;
-
 }
 
-.skill > div >p 
+.skill > div  p 
 {
-    text-align: center;  
+    font-family: 'basis33';
+    font: var(--p-size); 
 }
 
 
