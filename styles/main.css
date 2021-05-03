@@ -1,6 +1,7 @@
 *{
     scrollbar-width: thin;
     scrollbar-color: var(--title-color) var(--nav-bar-color);
+    font-family: "Roboto";
 }
 
 *::-webkit-scrollbar
