@@ -38,41 +38,29 @@
 
 :root
 {
-    --h1-size : 66px;
+    --h1-size : 64px;
     --h2-size : 58px;
-    --h3-size : 50px;
-    --h4-size : 42px;
-    --h5-size : 34px;
+    --h3-size : 52px;
+    --h4-size : 44px;
+    --h5-size : 36px;
     --h6-size : 28px;
-    --p-size  : 20px;
+    --p-size  : 18px;
     --note-size : 20px;
 
 
     --nav-bar-height : 75px;
 
-    /* --h1-size : 40px;
-    --h2-size : 36px;
-    --h3-size : 32px;
-    --h4-size : 28px;
-    --h5-size : 24px;
-    --h6-size : 18px;
-    --p-size  : 20px;
-    --note-size :10px;
-
-
-    --nav-bar-height : 75px; */
-
     --border-radius:8px;
     --border-size:2px;
 
     --textarea-height : 115px;
-    --comment-textarea : 24px;
+    --comment-textarea : 28px;
     --comment-section-height : 600px;
 
     --edit-button-size : 22px;
     --dot-size: 4px;
 
-    --arrow-size : 40px;
+    --arrow-size : 30px;
     --mode-switch-size : 40px;
 
     --dropped-img-size:90px;
@@ -83,8 +71,7 @@
     
     --option-destines: 200px;
     
-    --row-max-width:1500px;
-    --row-width: 90%;
+    --row-width: 80%;
     
     --project-img-max-size:800px;
 
@@ -266,11 +253,6 @@ img
 }
 
 
-/* form
-{
-    max-width: fit-content;
-    width: fit-content;
-} */
 
 .nav-bar
 {
@@ -336,7 +318,7 @@ img
 
 .logo a 
 {
-    font-size: var(--h4-size);
+    font-size: var(--h5-size);
     border-color: var(--option-text-color);
     
 }
@@ -631,13 +613,14 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
 .date p 
 {
     font-size: var(--note-size);
-    
+    place-self: center;
 }
 .date
 {
     display: flex;
     place-items: center;
     width: 100%;
+    gap: 5px;
     justify-content: space-evenly;
     flex-direction: column;
     
@@ -704,14 +687,14 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
     gap: var(--gap);
     z-index: 2;
     transition:  height  0.50s 0.01s , background 0.10s 0.35s, border 0.20s  0.40s , padding 0.2s 0.1s  ;
-    max-height:  calc(var(--h6-size) * 5);
+    max-height:  calc( (var(--h6-size) + var(--gap) ) * 4 );
 }
 
 input[type="checkbox"]:checked + label.edit-button + div.option-menu , input[type="checkbox"]:checked + .option-list + .option-menu
 {
     background: var(--text-input-background);
     border: var(--border-size) var(--border-color) solid ;
-    height: calc(var(--amount) * calc(var(--h6-size) * 1.5));
+    height: calc(var(--amount) * calc(var(--h6-size) * 1.55));
     padding: 5px 0;
     transition:  height  0.40s 0.2s , background 0.20s 0.15s, border 0.20s  0.05s ,padding 0.2s 0.2s cubic-bezier(.44,.68,.64,.72);
 }
@@ -872,7 +855,7 @@ label:active > .arrow
 {
     position: absolute;
     top: calc(var(--arrow-size)* -1 );
-    width: calc(var(--arrow-size) / 2);
+    width: calc(var(--arrow-size) / 1.5);
     right: 5px;
 }
 .option-list + .option-menu
@@ -1084,6 +1067,48 @@ label:active > .arrow
     gap: var(--gap);
 }
 
+@media(max-width : 1400px )
+{
+    :root
+    {
+        --h1-size : 64px;
+        --h2-size : 56px;
+        --h3-size : 48px;
+        --h4-size : 40px;
+        --h5-size : 32px;
+        --h6-size : 26px;
+        --p-size  : 16px;
+        --note-size : 14px;
+
+
+        --nav-bar-height : 70px;
+
+        --border-radius:8px;
+        --border-size:2px;
+
+        --textarea-height : 115px;
+        --comment-textarea : 30px;
+        --comment-section-height : 600px;
+
+        --edit-button-size : 40px;
+        --dot-size:10px;
+
+        --arrow-size : 30px;
+
+        --dropped-img-size:75px;
+        --profile-img-max-size:150px;
+        --profile-background-max-size: 1000px; 
+        --user-img-size: 50px ;
+
+        --row-width: 80%;
+        
+        --project-img-max-size:100%;
+
+        --option-men-width:300px;
+        --gap:15px;
+    }
+}
+
 @media(min-resolution : 200dpi )
 {
     :root
@@ -1110,14 +1135,13 @@ label:active > .arrow
         --edit-button-size : 40px;
         --dot-size:10px;
 
-        --arrow-size : 50px;
+        --arrow-size : 35px;
 
         --dropped-img-size:75px;
         --profile-img-max-size:150px;
         --profile-background-max-size: 1000px; 
         --user-img-size: 50px ;
 
-        --row-max-width:800px;
         --row-width: 85%;
         
         --project-img-max-size:100%;
@@ -1215,14 +1239,14 @@ label:active > .arrow
 {
     :root
     {
-        --h1-size : 58px;
-        --h2-size : 50px;
+        --h1-size : 54px;
+        --h2-size : 48px;
         --h3-size : 42px;
         --h4-size : 36px;
-        --h5-size : 28px;
+        --h5-size : 30px;
         --h6-size : 24px;
-        --p-size  : 18px;
-        --note-size : 24px;
+        --p-size  : 16px;
+        --note-size : 20px;
 
         --nav-bar-height : 70px;
 
@@ -1236,7 +1260,7 @@ label:active > .arrow
         --edit-button-size : 40px;
         --dot-size:10px;
 
-        --arrow-size : 30px;
+        --arrow-size : 25px;
 
         --dropped-img-size:60px;
         --profile-img-max-size:150px;
@@ -1245,10 +1269,9 @@ label:active > .arrow
         --icon-img-size :20px;
 
         
-        --mode-switch-size : 50px;
+        --mode-switch-size : 30px;
         --option-destines: 400px;
         
-        --row-max-width:800px;
         --row-width: 85%;
         
         --project-img-max-size:100%;
@@ -1302,24 +1325,20 @@ label:active > .arrow
         align-items: end;
 
     }
-    .nav-bar-options > a 
-    {
-        display: none;
-    }
     .burger
     {
         display: block;
-        height: 50px;
-        width: 50px;
+        height: 35px;
+        width: 40px;
     }
     .line1,.line2,.line3
     {
-        height: 10px;
-        width: 50px;
+        height: 7px;
+        width: 40px;
     }
     input[type="checkbox"]:checked + label.burger  > .line1
     {
-        transform: rotate(-45deg) translate(-10px , 10px);
+        transform: rotate(-45deg) translate(-11px , 5px);
     }
     input[type="checkbox"]:checked + label.burger  >  .line2
     {
@@ -1327,7 +1346,7 @@ label:active > .arrow
     }
     input[type="checkbox"]:checked + label.burger  > .line3
     {
-        transform: rotate(45deg) translate(-10px , -10px);
+        transform: rotate(45deg) translate(-11px , -5px);
     }
 
     .nav-bar-menu
@@ -1340,17 +1359,17 @@ label:active > .arrow
 {
     :root
     {
-        --h1-size : 64px;
-        --h2-size : 56px;
-        --h3-size : 48px;
-        --h4-size : 40px;
-        --h5-size : 32px;
-        --h6-size : 26px;
-        --p-size  : 12px;
-        --note-size :14px;
+        --h1-size : 52px;
+        --h2-size : 46px;
+        --h3-size : 40px;
+        --h4-size : 34px;
+        --h5-size : 26px;
+        --h6-size : 20px;
+        --p-size  : 14px;
+        --note-size : 20px;
 
 
-        --nav-bar-height : 95px;
+        --nav-bar-height : 60px;
 
         --border-radius:8px;
         --border-size:2px;
@@ -1359,8 +1378,8 @@ label:active > .arrow
         --comment-textarea : 30px;
         --comment-section-height : 600px;
 
-        --edit-button-size : 40px;
-        --dot-size:10px;
+        --edit-button-size : 32px;
+        --dot-size:8px;
 
         --arrow-size : 25px;
 
@@ -1370,18 +1389,16 @@ label:active > .arrow
         --user-img-size: 50px ;
         --icon-img-size :15px;
 
-        --row-max-width:800px;
+        --mode-switch-size : 25px;
+
         --row-width: 85%;
         
         --project-img-max-size:100%;
 
-        --option-men-width:200px;
+        --option-men-width:250px;
         --gap:15px;
     }
-    .nav-bar-options > a
-    {
-        display: none;
-    }
+
     .burger
     {
         display: block;
@@ -1405,6 +1422,30 @@ label:active > .arrow
         height: calc(var(--amount) * calc(var(--h4-size) + var(--gap) ));
     }
 
+    .burger
+    {
+        display: block;
+        height: 30px;
+        width: 30px;
+    }
+    .line1,.line2,.line3
+    {
+        height: 5px;
+        width: 30px;
+    }
+    input[type="checkbox"]:checked + label.burger  > .line1
+    {
+        transform: rotate(-45deg) translate(-9px , 5px);
+    }
+    input[type="checkbox"]:checked + label.burger  >  .line2
+    {
+        transform:  translate(100px , 0px);
+    }
+    input[type="checkbox"]:checked + label.burger  > .line3
+    {
+        transform: rotate(45deg) translate(-9px , -5px);
+    }
+
     .project-ui , .project-ui>div
     {
         grid-template-columns: 1fr;
@@ -1415,7 +1456,7 @@ label:active > .arrow
     }
     .nav-bar-menu a , .nav-bar-menu p
     {
-        font-size: calc(var(--h1-size) );
+        font-size: calc(var(--h2-size) );
     }
     .nav-bar-menu
     {
