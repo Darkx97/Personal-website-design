@@ -65,7 +65,7 @@
 
     --dropped-img-size:90px;
     --profile-img-max-size:150px;
-    --profile-background-max-size: 1000px; 
+    --profile-background-max-size: 700px; 
     --user-img-size: 50px ;
     --icon-img-size : 20px ;
     
@@ -976,10 +976,10 @@ label:active > .arrow
 }
 .profile-imgs > img:first-child
 {
-    width: auto;
-    height: 100%;
-    max-width: 90%;
-    max-height: var(--profile-background-max-size);
+    width: 70%;
+    height: auto;
+    /* max-width: 95%; */
+    max-height: max-content;
     place-self: center;
     border-radius: var(--border-radius);
 }
