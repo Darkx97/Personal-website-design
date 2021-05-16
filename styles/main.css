@@ -1187,6 +1187,12 @@ label:active > .arrow
     {
         display: none;
     }
+    
+    .nav-bar a 
+    {
+        font-size: var(--h2-size);
+    }
+
 
     .burger
     {
