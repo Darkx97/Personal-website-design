@@ -1,7 +1,6 @@
 *{
     scrollbar-width: thin;
     scrollbar-color: var(--title-color) var(--nav-bar-color);
-    font-family: "roboto";
 }
 
 *::-webkit-scrollbar
@@ -17,8 +16,6 @@
 {
     background-color: var(--nav-bar-color);
 }
-
-
 
 @font-face{
     font-family : 'basis33';
@@ -47,33 +44,57 @@
     --p-size  : 18px;
     --note-size : 20px;
 
+    --padding : 6px;
+    --margin : 6px;
 
+    /* nav bar styling */
     --nav-bar-height : 75px;
+    --nav-bar-grid : 2fr 6fr 2fr;
 
+
+    
     --border-radius:8px;
     --border-size:2px;
 
+    /* text ares */
     --textarea-height : 115px;
     --comment-textarea : 28px;
     --comment-section-height : 600px;
 
+    /* user meta data styling */
     --edit-button-size : 22px;
     --dot-size: 4px;
+    
+    /* drop menus (edit / option menu ) */
+    --options-top-pos: 600px;
 
-    --arrow-size : 30px;
+    /* icons */
+    --icon-size : 30px;
+    --icon-img-size : 20px ;
+
+    /* switches  */
     --mode-switch-size : 40px;
+    
+    /* input ui grid layouts */
+    --comment-ui-grid : var(--user-img-size) 1fr var(--icon-size);
+    --project-ui-grid :7fr 3fr;
+    --register-ui-grid : 3fr 7fr;
+    --skill-ui-grid : 2fr 6fr 2fr ;
+    
+    /* posts grid layouts */
+    --blog-title-grid :calc(100% - var(--icon-size)) var(--icon-size);
+    --skill-row-grid : 2fr 6fr 2fr ;
+    --upload-meta-data-grid:2fr 2fr;
 
+    /* images */
+    --user-img-size: 50px ;
     --dropped-img-size:90px;
     --profile-img-max-size:150px;
     --profile-background-max-size: 700px; 
-    --user-img-size: 50px ;
-    --icon-img-size : 20px ;
-    
-    --option-destines: 200px;
-    
-    --row-width: 80%;
-    
     --project-img-max-size:800px;
+    
+    /* row */
+    --row-width: 80%;
 
     --option-men-width:200px;
     --gap:6px;
@@ -95,7 +116,7 @@ html[data-theme = 'dark']{
     --button-font-color: #ffffff;
     /* border-coloring */
     --border-color: #000000;
-    --border-hover : #6a48ff;
+    --border-hover : #4d2ddc;
     --border-warning-color : #ff0000;
 
     /* input UI coloring */
@@ -122,7 +143,7 @@ html[data-theme= 'light']
 
     /* border-coloring */
     --border-color: #3d3d3d;
-    --border-hover : #7105ff;
+    --border-hover : #5906c7;
     --border-warning-color : #ff0000;
 
     /* input UI coloring */
@@ -196,13 +217,14 @@ textarea,input[type="text"]
 {
     width: 90%;
     resize: none;
-    padding: 2px 4px;
+    padding: var(--padding) 4px;
     color: var(--normal-text-color);
     height: var(--textarea-height);
     border : var(--border-size) var(--border-color) solid;
     border-radius: var(--border-radius);
     font-size : var(--p-size);
     font-family : 'Roboto';
+    margin: 0;
     background-color : var(--text-input-background);
 }
 
@@ -218,20 +240,25 @@ input[type="text"]
 
 input[type="button"],button
 {
-    height: 28px;
+    height: auto;
     display: grid;
     min-width: 40px;
-    padding: 0px 5px;
+    padding:  0px var(--padding);
     justify-self: center;
     place-content: center;
     max-width: fit-content;
     font-family : "basis33";
-    font-size: var(--h6-size);
+    font-size: var(--h5-size);
     color: var(--button-font-color);
     border-radius: var(--border-radius);
     background-color: var(--title-color);
     border: var(--border-size) var(--border-color) solid;
-    
+    transition: background 0.5s 0.0s ease;
+}
+
+input[type="button"]:hover,button:hover
+{
+    background-color: var(--border-hover);
 }
 
 input[type="button"]:active,button:active 
@@ -262,12 +289,12 @@ img
     z-index: 5;
     display: grid;
     position: fixed;
-    padding: 0px 10px;
+    padding: 0px var(--padding);
     align-items: center;
     justify-content: center;
     height: var(--nav-bar-height);
     background: var(--nav-bar-color);
-    grid-template-columns: 2fr 6fr 2fr;
+    grid-template-columns: var(--nav-bar-grid);
     border-radius: 0px 0px var(--border-radius) var(--border-radius);
 }
 .nav-bar-icons
@@ -277,7 +304,7 @@ img
     width: 100%;
     align-items: center;
     align-content: center;
-    padding-right: 5px;
+    padding-right: var(--padding);
 }
 
 
@@ -290,11 +317,11 @@ img
 .nav-bar a , .nav-bar-menu a ,.nav-bar p , .nav-bar-menu p
 {
     display: flex;
-    padding: 2px 4px;
+    padding: 2px var(--padding);
     text-decoration: none;
     font-family: 'basis33';
     font-size: var(--h6-size);
-    border: 2px #00000000 solid;
+    border: var(--border-size) #00000000 solid;
     color: var(--option-text-color);
     border-radius: var(--border-radius);
     transition:all 0.5s cubic-bezier(0.68, 0.48, 0.11,1);
@@ -313,7 +340,6 @@ img
 {
     color: var(--normal-text-color);
     border-color: var(--normal-text-color);
-
 }
 
 .logo a 
@@ -335,23 +361,24 @@ img
     justify-content: space-evenly;
 }
 
-
 .burger 
 {
     position: relative;
     cursor: pointer;
     z-index: 0;
     display: none;
+    height: 35px;
+    width: 40px;
    
 }
 
 .line1,.line2,.line3
 {
-    height: 3px;
-    width: 25px;
+    height: 7px;
+    width: 40px;
     margin-bottom: 5px;
     background-color: var(--normal-text-color);
-    transition: transform 0.7s  cubic-bezier(0.78, 0.48, 0.01, 1) , opacity 1s cubic-bezier(0.78, 0.48, 0.01, 1);
+    transition: transform 0.7s  cubic-bezier(0.38, 0.48, 0.32, 1) , opacity 1s cubic-bezier(0.38, 0.48, 0.32, 1);
     border-radius: 50px;
 }
 
@@ -369,14 +396,14 @@ img
     overflow-y: scroll;
     z-index: 2;
     gap: var(--gap);
-    transition: height 0.7s  cubic-bezier(0.78, 0.48, 0.01, 1);
+    transition: height 0.7s  cubic-bezier(0.38, 0.48, 0.32, 1);
     display: none;
 }
 
 .nav-bar-menu.active , input[type="checkbox"]:checked + label.burger + div.nav-bar-menu
 {
     height: 400px;
-    padding: 15px 0px;
+    padding: var(--padding) 0px;
 }
 
 .nav-bar-menu > *
@@ -389,23 +416,21 @@ img
 .nav-bar-menu.active , input[type="checkbox"]:checked + label.burger + div.nav-bar-menu  > *
 {
     transform: translate(0 , 750px);
-    transition: transform 0.4s calc(var(--order) * 0.2s) cubic-bezier(0.78, 0.48, 0.01, 1),border 0.5s ease ;
+    transition: transform 0.4s calc(var(--order) * 0.2s) cubic-bezier(0.38, 0.48, 0.32, 1),border 0.5s ease ;
 }
 
-input[type="checkbox"]:checked + label.burger  > .line1 ,.line1.active
+input[type="checkbox"]:checked + label.burger  > .line1
 {
-    transform: rotate(-45deg) translate(-5px , 6px);
+    transform: rotate(-45deg) translate(-11px , 5px);
 }
-input[type="checkbox"]:checked + label.burger > .line2, .line2.active
+input[type="checkbox"]:checked + label.burger  >  .line2
 {
-    transform: translate(-50px , 0px);
-    opacity: 0;
+    transform:  translate(100px , 0px);
 }
-input[type="checkbox"]:checked + label.burger  > .line3 , .line3.active
+input[type="checkbox"]:checked + label.burger  > .line3
 {
-    transform: rotate(45deg) translate(-5px , -6px);
+    transform: rotate(45deg) translate(-11px , -5px);
 }
-
 
 .page
 {
@@ -433,7 +458,19 @@ input[type="checkbox"]:checked + label.burger  > .line3 , .line3.active
     background-color: var(--data-input-bg-color);
     border: var(--border-size) var(--border-color) solid;
     border-radius: var(--border-radius);
-    padding: 15px 5px;
+    padding: calc(var(--padding) * 2) var(--padding);
+}
+
+.input >p , .input > div > p
+{
+    font-size: var(--h5-size);
+    text-align: center;
+    place-self: center;
+}
+
+.input div 
+{
+    margin: var(--gap) auto;
 }
 .post-ui
 {
@@ -447,7 +484,7 @@ input[type="checkbox"]:checked + label.burger  > .line3 , .line3.active
     display:flex;
     flex-direction: row;
     gap:var(--gap);
-    top: -15px;
+    top: calc(calc(var(--h5-size) + var(--padding)) / -2);
     position: relative;
     place-content: center;
 }
@@ -471,8 +508,8 @@ input[type="checkbox"]:checked + label.burger  > .line3 , .line3.active
     border: var(--border-size) var(--option-text-color) dashed;
     border-radius: var(--border-radius);
     display: none;
-    padding:5px 0px;
-    margin: 5px 0px;
+    padding:var(--padding) 0px;
+    margin: 0 auto;
 }
 
 .dropzone img
@@ -480,9 +517,9 @@ input[type="checkbox"]:checked + label.burger  > .line3 , .line3.active
     height: var(--dropped-img-size);
     width: var(--dropped-img-size);
     border-radius: var(--border-radius);
-    margin : 2px;
     border: var(--border-size) #00000000 solid;
     border-radius: var(--border-radius);
+    margin : 2px;
 }
 
 .dropzone img:hover
@@ -556,7 +593,7 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
     border-radius: var(--border-radius);
     font-family : "basis33";
     border: var(--border-size) var(--title-color) solid;
-    transition: background 0.5s cubic-bezier(0.78, 0.48, 0.01, 1);
+    transition: background 0.5s cubic-bezier(0.38, 0.48, 0.32, 1);
 }
 .log-out:hover
 {
@@ -567,14 +604,12 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
 .upload-meta-data
 {
     display: flex;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: var(--upload-meta-data-grid);
     width: 100%;
     align-content: center;
     align-items: center;
     gap: var(--gap);
-    margin-bottom: var(--gap);
     justify-content: space-between;
-    
 }
 
 .upload-meta-data p 
@@ -631,7 +666,7 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
     display: flex;
 }
 
-.date  img
+.date img
 {
     height: var(--icon-img-size);
     border-radius: 0px;
@@ -649,7 +684,7 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
     width: var(--edit-button-size);
     height: var(--edit-button-size);
     display: flex;
-    padding: 5px;
+    padding: var(--padding);
     place-items: center;
     place-self : end;
     border-radius: 100%;
@@ -687,21 +722,30 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
     gap: var(--gap);
     z-index: 2;
     transition:  height  0.50s 0.01s , background 0.10s 0.35s, border 0.20s  0.40s , padding 0.2s 0.1s  ;
-    /* max-height:  calc( (var(--h6-size) + var(--gap) ) * 4 ); */
+}
+
+.option-menu  *
+{
+    margin: 0;
 }
 
 input[type="checkbox"]:checked + label.edit-button + div.option-menu , input[type="checkbox"]:checked + .option-list + .option-menu
 {
     background: var(--text-input-background);
     border: var(--border-size) var(--border-color) solid ;
-    height: calc(var(--amount) * calc(var(--h6-size) + var(--gap)));
-    padding: 5px 0;
+    height: calc( calc(calc(var(--amount) - 1 ) * var(--gap) ) + var(--padding) * 2  + var(--h6-size) * var(--amount));
+    padding: var(--padding) 0;
     transition:  height  0.40s 0.2s , background 0.20s 0.15s, border 0.20s  0.05s ,padding 0.2s 0.2s cubic-bezier(.44,.68,.64,.72);
+}
+
+input[type="checkbox"]:checked + .option-list + .option-menu 
+{
+    height: calc( calc(calc(var(--amount) - 2 ) * var(--gap) ) + var(--padding) * 2  + var(--comment-textarea) * var(--amount));
 }
 
 input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , input[type="checkbox"]:checked + .option-list + .option-menu > .option 
 {
-    transform : translate(0px , var(--option-destines));
+    transform : translate(0px , var(--options-top-pos));
     transition: transform 0.5s calc(var(--order) * 0.2s)ease , background-color 0.5s ease; ;
 
 }
@@ -716,8 +760,8 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     border-radius: var(--border-radius);
     width: 90%;
     position: relative;
-    top: calc(var(--option-destines) * -1);
-    transition: background 0.5s cubic-bezier(0.78, 0.48, 0.01, 1),transform 0.5s cubic-bezier(0.78, 0.48, 0.01, 1);
+    top: calc(var(--options-top-pos) * -1);
+    transition: background 0.5s cubic-bezier(0.38, 0.48, 0.32, 1),transform 0.5s cubic-bezier(0.38, 0.48, 0.32, 1);
 }
 .option >p
 {
@@ -729,7 +773,7 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     font-size: var(--h6-size);
     border : none;
     border-radius: var(--border-radius);
-    transition: background 0.5s cubic-bezier(0.78, 0.48, 0.01, 1),transform 0.5s cubic-bezier(0.78, 0.48, 0.01, 1);
+    transition: background 0.5s cubic-bezier(0.38, 0.48, 0.32, 1),transform 0.5s cubic-bezier(0.38, 0.48, 0.32, 1);
     
 }
 
@@ -747,7 +791,7 @@ input[type="radio"]:checked + label.option >p
 .comment-ui
 {
     display: grid;
-    grid-template-columns: var(--user-img-size) 1fr var(--arrow-size);
+    grid-template-columns: var(--comment-ui-grid);
     place-items: center;
 }
 
@@ -755,13 +799,13 @@ input[type="radio"]:checked + label.option >p
 .arrow
 {
     fill:var(--normal-text-color);
-    height: var(--arrow-size);
-    width: var(--arrow-size);
+    height: var(--icon-size);
+    width: var(--icon-size);
     fill-opacity:1;
     stroke:none;
     stroke-width:0.0489864;
     paint-order:stroke markers fill;
-    transition: transform 0.1s cubic-bezier(0.78, 0.48, 0.01, 1);
+    transition: transform 0.1s cubic-bezier(0.38, 0.48, 0.32, 1);
     transform: rotate(180deg);
     place-self: center;
     cursor: pointer;
@@ -775,11 +819,11 @@ input[type="radio"]:checked + label.option >p
     overflow-y: auto;
     place-self: center;
     overflow-x: hidden;
-    transition: height 1.2s cubic-bezier(0.78, 0.48, 0.01, 1);;
+    transition: height 1.2s cubic-bezier(0.38, 0.48, 0.32, 1);;
     display: flex;
     flex-direction: column;
     gap: var(--gap);
-    margin: 10px 0;
+    margin: var(--padding) 0;
 }
 
 
@@ -796,9 +840,8 @@ label:active > .arrow
 
 .comment
 {
-    /* width: 90%; */
     max-width: 92%;
-    padding: 10px;
+    padding: var(--padding);
     background : var(--data-input-bg-color);
     border : var(--border-size) var(--border-color) solid;
     border-radius : var(--border-radius);
@@ -810,16 +853,31 @@ label:active > .arrow
 {
     display: grid;
     justify-content: center;
-    grid-template-columns:7fr 3fr;
+    grid-template-columns:var(--project-ui-grid);
     place-items: center;
 }
 
 .project-ui >div
 {
-    display: grid;
-    place-items: center;
+    /* display: grid; */
     gap: var(--gap);
     width: 100%;
+    height: 100%;
+    margin: 0 auto ;
+}
+
+
+.project-ui >div:first-child
+{
+    display: grid;
+    justify-items: center;
+    align-items: start;
+    gap: 0px;
+}
+
+.project-ui >div:last-child 
+{
+    margin: 0 auto ;
 }
 
 
@@ -827,15 +885,16 @@ label:active > .arrow
 {
     width: 90%;
     justify-self: center;
+    align-self: start;
     display: flex;
-    padding: 0px;
     background-color: var(--text-input-background);
     border: var(--border-size) var(--border-color) solid;
     border-radius : var(--border-radius);
     place-content : center;
     height: var(--comment-textarea);
-    padding: 2px 0px;
+    padding: var(--padding) 0px;
     position: relative;
+    margin: 0 auto;
 }
 .drop-list p 
 {
@@ -854,8 +913,8 @@ label:active > .arrow
 .option-list > .arrow
 {
     position: absolute;
-    top: calc(var(--arrow-size)* -1 );
-    width: calc(var(--arrow-size) / 1.5);
+    top: calc(var(--icon-size)* -1 );
+    width: calc(var(--icon-size) / 1.5);
     right: 5px;
 }
 .option-list + .option-menu
@@ -871,7 +930,7 @@ label:active > .arrow
     display: flex;
     width: 100px;
     height: 100px;
-    padding: 5px;
+    padding: var(--padding);
     place-content : center;
     place-items: center;
 }
@@ -880,7 +939,7 @@ label:active > .arrow
     display: flex;
     width: 100px;
     height: 100px;
-    padding: 5px;
+    padding: var(--padding);
     place-items: center;
 }
 
@@ -894,8 +953,8 @@ label:active > .arrow
 .project
 {
     display: grid;
-    grid-template-columns: 7fr 3fr;
-    margin: 5px 0px;
+    grid-template-columns: var(--project-ui-grid);
+    margin: var(--padding) 0px;
     gap: var(--gap);
 }
 
@@ -956,7 +1015,7 @@ p img
 .blog > div
 {
     display: grid;
-    grid-template-columns: calc(100% - var(--arrow-size)) var(--arrow-size);
+    grid-template-columns: calc(100% - var(--icon-size)) var(--icon-size);
     width: 100%;
 }
 
@@ -997,10 +1056,10 @@ p img
 {
     gap: 10px;
     display: grid;
-    grid-template-columns: 2fr 6fr 2fr;
+    grid-template-columns: var(--skill-row-grid);
     place-content: center;
     place-items :center;
-    padding: 10px 0px;
+    padding: var(--padding) 0px;
 }
 
 .skill  p
@@ -1008,7 +1067,6 @@ p img
     place-self: center;
     max-width: 90%;
     text-align: center;
-    font-size: var(--p-size);
 } 
 .skill img
 {
@@ -1027,7 +1085,6 @@ p img
 
 .skill > div  p 
 {
-    font-family: 'basis33';
     font: var(--p-size); 
 }
 
@@ -1035,14 +1092,6 @@ p img
 .row > h2 , .row>h1
 {
     text-align: center;
-}
-
-.icon 
-{
-    border-radius: 0%;
-    /* width: 30px; */
-    height: 40px;
-    place-self: center;
 }
 
 .register-ui 
@@ -1059,56 +1108,15 @@ p img
 {
     display: grid;
     place-items: center;
-    grid-template-columns: 3fr 7fr;
+    grid-template-columns: var(--register-ui-grid);
     gap: var(--gap);
 }
-
-/* @media(max-width : 1400px )
-{
-    :root
-    {
-        --h1-size : 64px;
-        --h2-size : 56px;
-        --h3-size : 48px;
-        --h4-size : 40px;
-        --h5-size : 32px;
-        --h6-size : 26px;
-        --p-size  : 20px;
-        --note-size : 22px;
-
-
-        --nav-bar-height : 70px;
-
-        --border-radius:8px;
-        --border-size:2px;
-
-        --textarea-height : 115px;
-        --comment-textarea : 30px;
-        --comment-section-height : 600px;
-
-        --edit-button-size : 40px;
-        --dot-size:10px;
-
-        --arrow-size : 30px;
-
-        --dropped-img-size:75px;
-        --profile-img-max-size:150px;
-        --profile-background-max-size: 1000px; 
-        --user-img-size: 50px ;
-
-        --row-width: 80%;
-        
-        --project-img-max-size:100%;
-
-        --option-men-width:300px;
-        --gap:15px;
-    }
-} */
 
 @media(min-resolution : 200dpi )
 {
     :root
     {
+
         --h1-size : 70px;
         --h2-size : 64px;
         --h3-size : 58px;
@@ -1117,69 +1125,63 @@ p img
         --h6-size : 40px;
         --p-size  : 20px;
         --note-size : 22px;
-
-
+    
+        --padding : 10px;
+        --margin : 6px;
+    
+        /* nav bar styling */
         --nav-bar-height : 120px;
-
+        --nav-bar-grid : 2fr 6fr 2fr;
+    
+    
+        /* borders */
         --border-radius:8px;
         --border-size:2px;
-
+    
+        /* text ares */
         --textarea-height : 115px;
-        --comment-textarea : 30px;
+        --comment-textarea : 34px;
         --comment-section-height : 600px;
+    
+        /* user meta data styling */
+        --edit-button-size : 22px;
+        --dot-size: 4px;
+        
+        /* drop menus (edit / option menu ) */
+        --options-top-pos: 600px;
+    
+        /* icons */
+        --icon-size : 50px;
+        --icon-img-size : 20px ;
+    
+        /* switches  */
+        --mode-switch-size : 70px;
 
-        --edit-button-size : 40px;
-        --dot-size:10px;
-
-        --arrow-size : 30px;
-
+        /* input ui grid layouts */
+        --comment-ui-grid : var(--user-img-size) 1fr var(--icon-size);
+        --project-ui-grid :1fr;
+        --register-ui-grid : 1fr;
+        --skill-ui-grid : 1fr ;
+        
+        /* posts grid layouts */
+        --blog-title-grid :calc(100% - var(--icon-size)) var(--icon-size);
+        --skill-row-grid : 2fr 6fr 2fr ;
+        --upload-meta-data-grid:2fr 2fr;
+    
+        /* images */
+        --user-img-size: 50px ;
         --dropped-img-size:75px;
         --profile-img-max-size:150px;
         --profile-background-max-size: 1000px; 
-        --user-img-size: 50px ;
-
-        --row-width: 80%;
         
-        --project-img-max-size:100%;
-
+        /* row */
+        --row-width: 85%;
+    
         --option-men-width:300px;
-        --gap:15px;
+        --gap:20px;
     }
 
 
-    .option-menu
-    {
-        width: var(--option-men-width);
-        max-height:  calc(var(--h4-size) * 6.5);
-    }   
-    .option , .option > p
-    {
-        font-size: var(--h4-size);
-
-    }
-    input[type="checkbox"]:checked + label.edit-button + div.option-menu , input[type="checkbox"]:checked + .option-list + .option-menu
-    {
-        height: calc(var(--amount) * calc(var(--h4-size) * 1.4));
-    }
-    .project-ui , .project-ui>div
-    {
-        grid-template-columns: 1fr;
-        gap: var(--gap);
-        place-items: center;
-    }
-
-    .project
-    {
-        grid-template-columns: 1fr;
-    }
-    .project > h3:first-of-type
-    {
-        width : 100%
-    }
-    .upload-meta-data > div:first-child
-    {
-        flex-direction: column;        
-    }
     .nav-bar-options > a 
     {
         display: none;
@@ -1190,30 +1192,9 @@ p img
         font-size: var(--h2-size);
     }
 
-
     .burger
     {
         display: block;
-        height: 50px;
-        width: 50px;
-    }
-
-    .line1,.line2,.line3
-    {
-        height: 10px;
-        width: 50px;
-    }
-    input[type="checkbox"]:checked + label.burger  > .line1
-    {
-        transform: rotate(-45deg) translate(-10px , 10px);
-    }
-    input[type="checkbox"]:checked + label.burger  >  .line2
-    {
-        transform:  translate(100px , 0px);
-    }
-    input[type="checkbox"]:checked + label.burger  > .line3
-    {
-        transform: rotate(45deg) translate(-10px , -10px);
     }
     
     .upload-meta-data > div:first-child
@@ -1242,6 +1223,7 @@ p img
 {
     :root
     {
+
         --h1-size : 54px;
         --h2-size : 48px;
         --h3-size : 42px;
@@ -1250,37 +1232,61 @@ p img
         --h6-size : 24px;
         --p-size  : 16px;
         --note-size : 20px;
-
+    
+        --padding : 10px;
+        --margin : 6px;
+    
+        /* nav bar styling */
         --nav-bar-height : 80px;
-
+        --nav-bar-grid : 2fr 6fr 2fr;
+    
+    
+        /* borders */
         --border-radius:8px;
         --border-size:2px;
-
+    
+        /* text ares */
         --textarea-height : 115px;
         --comment-textarea : 34px;
         --comment-section-height : 600px;
+    
+        /* user meta data styling */
+        --edit-button-size : 22px;
+        --dot-size: 4px;
+        
+        /* drop menus (edit / option menu ) */
+        --options-top-pos: 600px;
+    
+        /* icons */
+        --icon-size : 30px;
+        --icon-img-size : 20px ;
+    
+        /* switches  */
+        --mode-switch-size : 50px;
 
-        --edit-button-size : 40px;
-        --dot-size:10px;
-
-        --arrow-size : 25px;
-
-        --dropped-img-size:60px;
-        --profile-img-max-size:150px;
-        --profile-background-max-size: 1000px; 
+        /* input ui grid layouts */
+        --comment-ui-grid : var(--user-img-size) 1fr var(--icon-size);
+        --project-ui-grid :1fr;
+        --register-ui-grid : 1fr;
+        --skill-ui-grid : 1fr ;
+        
+        /* posts grid layouts */
+        --blog-title-grid :calc(100% - var(--icon-size)) var(--icon-size);
+        --skill-row-grid : 2fr 6fr 2fr ;
+        --upload-meta-data-grid:2fr 2fr;
+    
+        /* images */
         --user-img-size: 50px ;
-        --icon-img-size :20px;
-
+        --dropped-img-size:90px;
+        --profile-img-max-size:150px;
+        --profile-background-max-size: 700px; 
+        --project-img-max-size:800px;
         
-        --mode-switch-size : 30px;
-        --option-destines: 400px;
-        
+        /* row */
         --row-width: 85%;
-        
-        --project-img-max-size:100%;
-
-        --option-men-width:400px;
-        --gap:15px;
+    
+        --option-men-width:200px;
+        --gap:10px;
     }
     .nav-bar-options > a
     {
@@ -1290,27 +1296,7 @@ p img
     {
         display: block;
     }
-    .option-menu
-    {
-        width: var(--option-men-width);
-        max-height:  calc(var(--h3-size) * 6.5);
-    }   
-    .option , .option > p
-    {
-        font-size: var(--h3-size);
 
-    }
-    input[type="checkbox"]:checked + label.edit-button + div.option-menu , input[type="checkbox"]:checked + .option-list + .option-menu
-    {
-        height: calc(var(--amount) * calc(var(--h3-size) + var(--gap) ));
-    }
-
-    .project-ui , .project-ui>div
-    {
-        grid-template-columns: 1fr;
-        gap: var(--gap);
-        place-items: center;
-    }
     .project
     {
         grid-template-columns: 1fr;
@@ -1328,29 +1314,6 @@ p img
         align-items: end;
 
     }
-    .burger
-    {
-        display: block;
-        height: 35px;
-        width: 40px;
-    }
-    .line1,.line2,.line3
-    {
-        height: 7px;
-        width: 40px;
-    }
-    input[type="checkbox"]:checked + label.burger  > .line1
-    {
-        transform: rotate(-45deg) translate(-11px , 5px);
-    }
-    input[type="checkbox"]:checked + label.burger  >  .line2
-    {
-        transform:  translate(100px , 0px);
-    }
-    input[type="checkbox"]:checked + label.burger  > .line3
-    {
-        transform: rotate(45deg) translate(-11px , -5px);
-    }
 
     .nav-bar-menu
     {
@@ -1362,6 +1325,7 @@ p img
 {
     :root
     {
+
         --h1-size : 52px;
         --h2-size : 46px;
         --h3-size : 40px;
@@ -1370,59 +1334,63 @@ p img
         --h6-size : 20px;
         --p-size  : 14px;
         --note-size : 20px;
-
-
-        --nav-bar-height : 60px;
-
+    
+        --padding : 10px;
+        --margin : 6px;
+    
+        /* nav bar styling */
+        --nav-bar-height : 70px;
+        --nav-bar-grid : 2fr 6fr 2fr;
+    
+    
+        /* borders */
         --border-radius:8px;
         --border-size:2px;
-
+    
+        /* text ares */
         --textarea-height : 115px;
         --comment-textarea : 30px;
         --comment-section-height : 600px;
-
-        --edit-button-size : 32px;
-        --dot-size:8px;
-
-        --arrow-size : 25px;
-
-        --dropped-img-size:40px;
-        --profile-img-max-size:150px;
-        --profile-background-max-size: 1000px; 
-        --user-img-size: 50px ;
-        --icon-img-size :15px;
-
-        --mode-switch-size : 25px;
-
-        --row-width: 85%;
+    
+        /* user meta data styling */
+        --edit-button-size : 22px;
+        --dot-size: 4px;
         
-        --project-img-max-size:100%;
+        /* drop menus (edit / option menu ) */
+        --options-top-pos: 600px;
+    
+        /* icons */
+        --icon-size : 30px;
+        --icon-img-size : 20px ;
+    
+        /* switches  */
+        --mode-switch-size : 50px;
 
-        --option-men-width:250px;
-        --gap:15px;
-    }
+        /* input ui grid layouts */
+        --comment-ui-grid : var(--user-img-size) 1fr var(--icon-size);
+        --project-ui-grid :1fr;
+        --register-ui-grid : 1fr;
+        --skill-ui-grid : 1fr ;
+        
+        /* posts grid layouts */
+        --blog-title-grid :calc(100% - var(--icon-size)) var(--icon-size);
+        --skill-row-grid : 2fr 6fr 2fr ;
+        --upload-meta-data-grid:2fr 2fr;
+    
+        /* images */
+        --user-img-size: 50px ;
+        --dropped-img-size:90px;
+        --profile-img-max-size:150px;
+        --profile-background-max-size: 700px; 
+        --project-img-max-size:800px;
+        
+        /* row */
+        --row-width: 85%;
+    
+        --option-men-width:200px;
+        --gap:10px;
 
-    .burger
-    {
-        display: block;
-    }
-    .nav-bar-icons
-    {
-        justify-content: space-evenly;
-        padding: 0px 5px;
-    }
-    .option-menu
-    {
-        width: var(--option-men-width);
-        max-height:  calc(var(--h4-size) * 6.5);
-    }   
-    .option , .option > p
-    {
-        font-size: var(--h4-size);
-    }
-    input[type="checkbox"]:checked + label.edit-button + div.option-menu , input[type="checkbox"]:checked + .option-list + .option-menu
-    {
-        height: calc(var(--amount) * calc(var(--h4-size) + var(--gap) ));
+
     }
 
     .burger
@@ -1449,22 +1417,4 @@ p img
         transform: rotate(45deg) translate(-9px , -5px);
     }
 
-    .project-ui , .project-ui>div
-    {
-        grid-template-columns: 1fr;
-    }
-    .project
-    {
-        grid-template-columns: 1fr;
-    }
-    .nav-bar-menu a , .nav-bar-menu p
-    {
-        font-size: calc(var(--h2-size) );
-    }
-    .nav-bar-menu
-    {
-        display: flex;
-    }
 }
-
-
