@@ -382,13 +382,13 @@ img
 .nav-bar-menu > *
 {
     position: relative;
-    top:-500px;
+    top:-700px;
 }
 
 
 .nav-bar-menu.active , input[type="checkbox"]:checked + label.burger + div.nav-bar-menu  > *
 {
-    transform: translate(0 , 500px);
+    transform: translate(0 , 750px);
     transition: transform 0.4s calc(var(--order) * 0.2s) cubic-bezier(0.78, 0.48, 0.01, 1),border 0.5s ease ;
 }
 
@@ -496,7 +496,7 @@ input[type="checkbox"]:checked + label.burger  > .line3 , .line3.active
     display: flex;
     gap: var(--gap);
 }
-.dropzone.drag , .dropzone:hover
+.dropzone.active:hover, .dropzone:hover
 {
     border-color: var(--normal-text-color);
 }
@@ -687,14 +687,14 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
     gap: var(--gap);
     z-index: 2;
     transition:  height  0.50s 0.01s , background 0.10s 0.35s, border 0.20s  0.40s , padding 0.2s 0.1s  ;
-    max-height:  calc( (var(--h6-size) + var(--gap) ) * 4 );
+    /* max-height:  calc( (var(--h6-size) + var(--gap) ) * 4 ); */
 }
 
 input[type="checkbox"]:checked + label.edit-button + div.option-menu , input[type="checkbox"]:checked + .option-list + .option-menu
 {
     background: var(--text-input-background);
     border: var(--border-size) var(--border-color) solid ;
-    height: calc(var(--amount) * calc(var(--h6-size) * 1.55));
+    height: calc(var(--amount) * calc(var(--h6-size) + var(--gap)));
     padding: 5px 0;
     transition:  height  0.40s 0.2s , background 0.20s 0.15s, border 0.20s  0.05s ,padding 0.2s 0.2s cubic-bezier(.44,.68,.64,.72);
 }
@@ -941,13 +941,13 @@ label:active > .arrow
     margin-left: 20px;
 }
 
-.blog p img
+p img
 {
     display:flex;
     height: auto;
-    max-height: 600px;
+    max-height: 800px;
     width: auto;
-    max-width: 600px;
+    max-width: 80%;
     border-radius: 0px;
     margin: 10px  auto;
 }
