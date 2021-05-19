@@ -1290,7 +1290,7 @@ p img
         --row-width: 85%;
     
         --option-men-width:200px;
-        --gap:0px;
+        --gap:15px;
     }
     .option-menu
     {
