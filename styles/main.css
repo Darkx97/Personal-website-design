@@ -19,17 +19,17 @@
 
 @font-face{
     font-family : "basis33";
-    src : url("/Fonts/basis33.ttf");
+    src : url("../Fonts/basis33.ttf");
     font-weight: 400;
 }
 @font-face{
     font-family : "poppins";
-    src : url("/Fonts/Poppins-Regular.ttf");
+    src : url("../Fonts/Poppins-Regular.ttf");
     font-weight: 400;
 }
 @font-face{
     font-family : "roboto";
-    src : url("/Fonts/Roboto-Regular.ttf");
+    src : url("../Fonts/Roboto-Regular.ttf");
     font-weight: 400;
 }
 
