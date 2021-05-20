@@ -20,7 +20,7 @@
 @font-face{
     font-family : "basis33";
     src : url("../Fonts/basis33.ttf");
-    font-weight: 400;
+    font-weight:bolder;
 }
 @font-face{
     font-family : "poppins";
@@ -113,7 +113,7 @@ html[data-theme = 'dark']{
     --option-text-color : #5a5a5a;
     --anchor-text-color:#045abd;
     --visited-anchor-text-color: #009eb3;
-    --button-font-color: #ffffff;
+    --normal-text-color: #ffffff;
     /* border-coloring */
     --border-color: #000000;
     --border-hover : #4d2ddc;
@@ -132,18 +132,18 @@ html[data-theme= 'light']
     --nav-bar-color : #8c8c8c;
 
     /* text coloring */
-    --title-color : #7105ff;
+    --title-color : #00aeff;
     --normal-text-color :#000000;
     --option-text-color : #575757;
     --note-color : #555555;
-    --button-font-color :#ffffff;
+    /* --normal-text-color :#ffffff; */
     /* anschor text color */
-    --anchor-text-color:#044ebd;
-    --visited-anchor-text-color: #008496;
+    --anchor-text-color:#020083;
+    --visited-anchor-text-color: #2257dd;
 
     /* border-coloring */
     --border-color: #3d3d3d;
-    --border-hover : #5906c7;
+    --border-hover : #73ceff;
     --border-warning-color : #ff0000;
 
     /* input UI coloring */
@@ -167,7 +167,7 @@ h1,h2,h3,h4,h5,h6
     color: var(--title-color);
     font-family: 'basis33';
     font-size: var(--h1-size) ;
-    font-weight: bold;
+    font-weight: bolder;
     width: fit-content;
 }
 
@@ -206,6 +206,7 @@ p,a
 
 a{
     color:var(--anchor-text-color);
+    font-weight:bold;
 }
 
 a:visited
@@ -249,7 +250,7 @@ input[type="button"],button
     font-family : "basis33";
     font-size: var(--h6-size);
     padding:  0px var(--padding);
-    color: var(--button-font-color);
+    color: var(--normal-text-color);
     border-radius: var(--border-radius);
     background-color: var(--title-color);
     border: var(--border-size) var(--border-color) solid;
@@ -630,6 +631,12 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
     gap: var(--gap);
 }
 
+.user-image-name > img , .comment-ui img
+{
+    border: var(--border-size) var(--title-color) outset;
+}
+
+
 .user-image-name p 
 {
     font-family: 'basis33';
@@ -660,10 +667,12 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
     display: flex;
 }
 
-.date img
+.date img , .date svg
 {
     height: var(--icon-img-size);
+    width: var(--icon-img-size);
     border-radius: 0px;
+    margin: auto 10px;
 }
 .upload-edit
 {
@@ -773,12 +782,12 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
 .option:hover , input[type="radio"]:checked + label.option , input[type="radio"]:checked 
 {
     background-color: var(--title-color);
-    color: var(--button-font-color);
+    color: var(--normal-text-color);
 }
 
 input[type="radio"]:checked + label.option >p 
 {
-    color: var(--button-font-color);
+    color: var(--normal-text-color);
 }
 
 .comment-ui
@@ -1038,6 +1047,7 @@ p img
     width: var(--profile-img-max-size);
     position: absolute;
     bottom: calc(var(--profile-img-max-size) / -2);
+    border : calc(var(--border-size) * 1.5 ) var(--border-hover) outset ;
 }
 
 .bio
@@ -1111,6 +1121,13 @@ p img
 {
     font-size: var(--p-size);
 }
+
+
+.upload-icons *
+{
+    fill: var(--title-color);
+}
+
 
 @media(min-resolution : 200dpi )
 {
@@ -1223,7 +1240,7 @@ p img
 
 }
 
-@media(max-width : 800px )
+@media(max-width : 1000px )
 {
     :root
     {

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html data-theme = 'dark'>
+    <head>
+
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="js/onload.js" ></script>
+        <title>Home</title>
+    </head>
+
+    <body onload="CheckTheme();CheckPage()">
+        
+        <div class="nav-bar" >
+            <div class="logo">
+                <a href="about.html">Sufian</a>
+            </div>
+
+            <div class="nav-bar-options">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="blogs.html">Blogs</a>
+            </div>
+
+            <div class="nav-bar-icons">
+                <form action="">
+                    <input class="log-out"type="submit" value="Log-out">
+                </form>
+                <input type="checkbox" name="theme" id="theme" onchange="ChangeTheme(this)">
+                <label for="theme" class="mode-switch">
+                    
+                    <img src="icons/drawing.svg" alt="">
+                    <img src="icons/moon.svg" alt="">
+                    
+                </label>
+                <input type="checkbox" name="" id="nav-menu">
+                <label for="nav-menu" class="burger" >
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </label>
+                <div class="nav-bar-menu">
+                    <a href="index.html" style="--order : 1">Home</a>
+                    <a href="projects.html" style="--order : 2">Projects</a>
+                    <a href="blogs.html" style="--order : 3">Blogs</a>
+                </div>
+            </div>
+                
+        </div>
+       
+        <div class="page"> 
+            <div class="row">
+                <input id="test" type="checkbox">
+                <label for="test">
+                    <svg
+                    width="13.3"
+                    height="13.7"
+                    viewBox="0 0 3.5189586 3.6247916"
+                    class="upload-icons"
+                    >
+
+                        <path
+                        style="fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.265;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+                        d="M 1.730264,0.02912217 0.14467689,2.045678 1.2363867,1.5664186 1.2223907,3.473672 1.730264,2.3777663 2.2854573,3.4880454 2.2470916,1.5721603 3.3745391,2.1455278 Z"
+                        id="path174"
+                        sodipodi:nodetypes="ccccccccc" />
+                    </svg>
+                </label>
+            </div>
+            <hr>
+            <div class="row">
+                <form>
+                    <div class="input post-ui">
+                        <p>Post content</p>
+                        <textarea ondragover="ActiveDropZone(this)" ondragleave="DeActiveDropZone(this)" ondrop="DropFile(this,event)"></textarea>
+                        <input type="file">
+                        <div class="dropzone" ondragover="ActiveDropZone(this)" ondragleave="DeActiveDropZone(this)" ondrop="DropFile(this,event)"></div>
+                        <p class="note">drag and drop to add pictures</p>
+                    </div>
+                    <div class="buttons">
+                        <button>post</button>
+                    </div>
+                </form>
+            </div>
+
+                
+        </div>
+
+    </body>
+    <script src="js/main.js" ></script>
+</html>
