@@ -18,7 +18,7 @@
 }
 
 @font-face{
-    font-family : "basis33";
+    font-family : "pixle";
     src : url("../Fonts/Warioland4chmc-VApe.ttf");
     font-weight:bolder;
 }
@@ -165,7 +165,7 @@ h1,h2,h3,h4,h5,h6
     padding: 0;
     margin: 0;
     color: var(--title-color);
-    font-family: 'basis33';
+    font-family: 'pixle';
     font-size: var(--h1-size) ;
     font-weight: bolder;
     width: fit-content;
@@ -247,7 +247,7 @@ input[type="button"],button
     justify-self: center;
     place-content: center;
     max-width: fit-content;
-    font-family : "basis33";
+    font-family : "pixle";
     font-size: var(--h6-size);
     padding:  0px var(--padding);
     color: var(--normal-text-color);
@@ -320,7 +320,7 @@ img
     display: flex;
     padding: 2px var(--padding);
     text-decoration: none;
-    font-family: 'basis33';
+    font-family: 'pixle';
     font-size: var(--h6-size);
     border: var(--border-size) #00000000 solid;
     color: var(--option-text-color);
@@ -491,7 +491,7 @@ input[type="checkbox"]:checked + label.burger  > .line3
 {
     font-size: var(--note-size);
     color: var(--note-color);
-    font-family: 'basis33';
+    font-family: 'pixle';
     text-align: center;
     place-self: center;
     width: 100%;
@@ -586,7 +586,7 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
     color : var(--normal-text-color);
     font-size: var(--h6-size);
     border-radius: var(--border-radius);
-    font-family : "basis33";
+    font-family : "pixle";
     border: var(--border-size) var(--title-color) solid;
     transition: background 0.5s cubic-bezier(0.38, 0.48, 0.32, 1);
 }
@@ -609,7 +609,7 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
 
 .upload-meta-data p 
 {
-    font-family: 'basis33';
+    font-family: 'pixle';
 }
 .upload-meta-data > div
 {
@@ -639,7 +639,7 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
 
 .user-image-name p 
 {
-    font-family: 'basis33';
+    font-family: 'pixle';
     font-size: var(--h4-size);
 }
 
@@ -758,7 +758,7 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     background-color: #00000000;
     color: var(--normal-text-color);
     border : none;
-    font-family: 'basis33';
+    font-family: 'pixle';
     font-size: var(--comment-textarea);
     border-radius: var(--border-radius);
     width: 90%;
@@ -772,7 +772,7 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     justify-self: center;
     text-align: center;
     justify-self: center;
-    font-family: basis33;
+    font-family: pixle;
     font-size: var(--h6-size);
     border : none;
     border-radius: var(--border-radius);
@@ -902,7 +902,7 @@ label:active > .arrow
 {
     text-align: center;
     font-size: var(--comment-textarea);
-    font-family: basis33;
+    font-family: pixle;
     width: auto;
 }
 .option-list 
