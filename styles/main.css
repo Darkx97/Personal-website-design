@@ -278,6 +278,7 @@ img
     width: var(--user-img-size);
     height: var(--user-img-size);
     border-radius: 100%;
+    margin: auto;
 }
 
 
@@ -736,14 +737,14 @@ input[type="checkbox"]:checked + label.edit-button + div.option-menu , input[typ
 {
     background: var(--text-input-background);
     border: var(--border-size) var(--border-color) solid ;
-    height: calc( calc(calc(var(--amount) - 1 ) * var(--gap) ) + calc(var(--padding) * 2)  + calc(var(--comment-textarea) * var(--amount)));
+    height: calc( calc(calc(var(--amount) ) * var(--gap) ) + calc(var(--padding) * 2)  + calc(var(--comment-textarea) * var(--amount)));
     padding: var(--padding) 0;
     transition:  height  0.40s 0.2s , background 0.20s 0.15s, border 0.20s  0.05s ,padding 0.2s 0.2s cubic-bezier(.44,.68,.64,.72);
 }
 
 input[type="checkbox"]:checked + .option-list + .option-menu 
 {
-    height: calc( calc(calc(var(--amount) - 2 ) * var(--gap) ) + calc(var(--padding) * 2 ) + calc(var(--comment-textarea) * var(--amount)));
+    height: calc( calc(calc(var(--amount) - 1) * var(--gap) ) + calc(var(--padding) * 2 ) + calc(var(--comment-textarea) * var(--amount)));
 }
 
 input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , input[type="checkbox"]:checked + .option-list + .option-menu > .option 
@@ -904,6 +905,7 @@ label:active > .arrow
     font-size: var(--comment-textarea);
     font-family: pixle;
     width: auto;
+    margin: auto;
 }
 .option-list 
 {
