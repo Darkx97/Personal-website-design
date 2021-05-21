@@ -76,7 +76,7 @@
     --mode-switch-size : 40px;
     
     /* input ui grid layouts */
-    --comment-ui-grid : var(--user-img-size) 1fr var(--icon-size);
+    --comment-ui-grid : calc(var(--user-img-size) * 1.5) 1fr calc(var(--icon-size) * 1.5);
     --project-ui-grid :7fr 3fr;
     --register-ui-grid : 3fr 7fr;
     --skill-ui-grid : 2fr 6fr 2fr ;
@@ -280,8 +280,6 @@ img
     border-radius: 100%;
     margin: auto;
 }
-
-
 
 .nav-bar
 {
@@ -1177,7 +1175,7 @@ p img
         --mode-switch-size : 70px;
 
         /* input ui grid layouts */
-        --comment-ui-grid : var(--user-img-size) 1fr var(--icon-size);
+        --comment-ui-grid : calc(var(--user-img-size) * 1.5) 1fr calc(var(--icon-size) * 1.5);
         --project-ui-grid :1fr;
         --register-ui-grid : 1fr;
         --skill-ui-grid : 1fr ;
@@ -1288,7 +1286,7 @@ p img
         --mode-switch-size : 50px;
 
         /* input ui grid layouts */
-        --comment-ui-grid : var(--user-img-size) 1fr var(--icon-size);
+        --comment-ui-grid : calc(var(--user-img-size) * 1.5) 1fr calc(var(--icon-size) * 1.5);
         --project-ui-grid :1fr;
         --register-ui-grid : 1fr;
         --skill-ui-grid : 1fr ;
@@ -1400,7 +1398,7 @@ p img
         --mode-switch-size : 50px;
 
         /* input ui grid layouts */
-        --comment-ui-grid : var(--user-img-size) 1fr var(--icon-size);
+        --comment-ui-grid : calc(var(--user-img-size) * 1.5) 1fr calc(var(--icon-size) * 1.5);
         --project-ui-grid :1fr;
         --register-ui-grid : 1fr;
         --skill-ui-grid : 1fr ;
