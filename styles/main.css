@@ -1,6 +1,7 @@
 *{
     scrollbar-width: thin;
     scrollbar-color: var(--title-color) var(--nav-bar-color);
+    transition:border 0.5s ease , background 0.5s ease;
 }
 
 *::-webkit-scrollbar
@@ -35,14 +36,14 @@
 
 :root
 {
-    --h1-size : 64px;
-    --h2-size : 58px;
-    --h3-size : 52px;
-    --h4-size : 44px;
-    --h5-size : 36px;
-    --h6-size : 28px;
-    --p-size  : 18px;
-    --note-size : 20px;
+    --h1-size : 65px;
+    --h2-size : 59px;
+    --h3-size : 53px;
+    --h4-size : 45px;
+    --h5-size : 37px;
+    --h6-size : 29px;
+    --p-size  : 19px;
+    --note-size : 21px;
 
     --padding : 6px;
     --margin : 6px;
@@ -324,7 +325,7 @@ img
     border: var(--border-size) #00000000 solid;
     color: var(--option-text-color);
     border-radius: var(--border-radius);
-    transition:all 0.5s cubic-bezier(0.38, 0.48, 0.32, 1);
+    transition:all 0.5s cubic-bezier(.63,.37,.37,.63);
 
 }
 
@@ -378,7 +379,7 @@ img
     width: 40px;
     margin-bottom: 5px;
     background-color: var(--normal-text-color);
-    transition: transform 0.7s  cubic-bezier(0.38, 0.48, 0.32, 1) , opacity 1s cubic-bezier(0.38, 0.48, 0.32, 1);
+    transition: transform 0.7s  cubic-bezier(.63,.37,.37,.63) , opacity 1s cubic-bezier(.63,.37,.37,.63);
     border-radius: 50px;
 }
 
@@ -396,7 +397,7 @@ img
     overflow-y: scroll;
     z-index: 2;
     gap: var(--gap);
-    transition: height 0.7s  cubic-bezier(0.38, 0.48, 0.32, 1);
+    transition: height 0.7s  cubic-bezier(.63,.37,.37,.63);
     display: none;
 }
 
@@ -416,7 +417,7 @@ img
 .nav-bar-menu.active , input[type="checkbox"]:checked + label.burger + div.nav-bar-menu  > *
 {
     transform: translate(0 , 750px);
-    transition: transform 0.4s calc(var(--order) * 0.2s) cubic-bezier(0.38, 0.48, 0.32, 1),border 0.5s ease ;
+    transition: transform 0.4s calc(var(--order) * 0.2s) cubic-bezier(.63,.37,.37,.63),border 0.5s ease ;
 }
 
 input[type="checkbox"]:checked + label.burger  > .line1
@@ -587,7 +588,7 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
     border-radius: var(--border-radius);
     font-family : "pixle";
     border: var(--border-size) var(--title-color) solid;
-    transition: background 0.5s cubic-bezier(0.38, 0.48, 0.32, 1);
+    transition: background 0.5s cubic-bezier(.63,.37,.37,.63);
 }
 .log-out:hover
 {
@@ -763,7 +764,7 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     width: 90%;
     position: relative;
     top: calc(var(--options-top-pos) * -1);
-    transition: background 0.5s cubic-bezier(0.38, 0.48, 0.32, 1),transform 0.5s cubic-bezier(0.38, 0.48, 0.32, 1);
+    transition: background 0.5s cubic-bezier(.63,.37,.37,.63),transform 0.5s cubic-bezier(.63,.37,.37,.63);
 }
 .option >p
 {
@@ -775,7 +776,7 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     font-size: var(--h6-size);
     border : none;
     border-radius: var(--border-radius);
-    transition: background 0.5s cubic-bezier(0.38, 0.48, 0.32, 1),transform 0.5s cubic-bezier(0.38, 0.48, 0.32, 1);
+    transition: background 0.5s cubic-bezier(.63,.37,.37,.63),transform 0.5s cubic-bezier(.63,.37,.37,.63);
 }
 
 .option:hover , input[type="radio"]:checked + label.option , input[type="radio"]:checked 
@@ -806,7 +807,7 @@ input[type="radio"]:checked + label.option >p
     stroke:none;
     stroke-width:0.0489864;
     paint-order:stroke markers fill;
-    transition: transform 0.1s cubic-bezier(0.38, 0.48, 0.32, 1);
+    transition: transform 0.1s cubic-bezier(.63,.37,.37,.63);
     transform: rotate(180deg);
     place-self: center;
     cursor: pointer;
@@ -820,7 +821,7 @@ input[type="radio"]:checked + label.option >p
     overflow-y: auto;
     place-self: center;
     overflow-x: hidden;
-    transition: height 1.2s cubic-bezier(0.38, 0.48, 0.32, 1);;
+    transition: height 1.2s cubic-bezier(.63,.37,.37,.63);;
     display: flex;
     flex-direction: column;
     gap: var(--gap);
@@ -915,7 +916,7 @@ label:active > .arrow
 .option-list > .arrow
 {
     position: absolute;
-    top: calc( calc(var(--comment-textarea) + var(--padding) / 2)* -1 );
+    top: calc( calc(var(--comment-textarea) + var(--padding) * 2)* -1 );
     width: calc(var(--icon-size));
     right: 5px;
     z-index: 4;
@@ -1134,14 +1135,14 @@ p img
     :root
     {
 
-        --h1-size : 70px;
-        --h2-size : 64px;
-        --h3-size : 58px;
-        --h4-size : 52px;
-        --h5-size : 46px;
-        --h6-size : 40px;
-        --p-size  : 20px;
-        --note-size : 22px;
+        --h1-size : 71px;
+        --h2-size : 65px;
+        --h3-size : 59px;
+        --h4-size : 53px;
+        --h5-size : 47px;
+        --h6-size : 41px;
+        --p-size  : 21px;
+        --note-size : 23px;
     
         --padding : 10px;
         --margin : 6px;
@@ -1197,6 +1198,11 @@ p img
         --option-men-width:300px;
         --gap:20px;
     }
+
+    .option-list > .arrow
+    {
+        top: calc( calc(var(--comment-textarea) + var(--padding) * 1.5)* -1 );
+    }
     .input >p , .input > div > p
     {
         font-size: var(--h6-size);
@@ -1245,14 +1251,14 @@ p img
     :root
     {
 
-        --h1-size : 54px;
-        --h2-size : 48px;
-        --h3-size : 42px;
-        --h4-size : 36px;
-        --h5-size : 30px;
-        --h6-size : 24px;
-        --p-size  : 16px;
-        --note-size : 20px;
+        --h1-size : 55px;
+        --h2-size : 49px;
+        --h3-size : 43px;
+        --h4-size : 37px;
+        --h5-size : 31px;
+        --h6-size : 25px;
+        --p-size  : 17px;
+        --note-size : 21px;
     
         --padding : 10px;
         --margin : 6px;
@@ -1313,6 +1319,10 @@ p img
     {
         right: calc(var(--edit-button-size)  * 2);
     }
+    .option-list > .arrow
+    {
+        top: calc( calc(var(--comment-textarea) + var(--padding))* -1 );
+    }
     .input >p , .input > div > p
     {
         font-size: var(--h6-size);
@@ -1357,14 +1367,14 @@ p img
     :root
     {
 
-        --h1-size : 52px;
-        --h2-size : 46px;
-        --h3-size : 40px;
-        --h4-size : 34px;
-        --h5-size : 26px;
-        --h6-size : 20px;
+        --h1-size : 53px;
+        --h2-size : 47px;
+        --h3-size : 41px;
+        --h4-size : 35px;
+        --h5-size : 27px;
+        --h6-size : 21px;
         --p-size  : 14px;
-        --note-size : 20px;
+        --note-size : 21px;
     
         --padding : 10px;
         --margin : 6px;
