@@ -984,6 +984,11 @@ label:active > .arrow
     height: 100%;
 }
 
+.project > div:last-child  > p 
+{
+    font-size: calc(var(--p-size) * 2);
+}
+
 
 .project img
 {
@@ -1216,12 +1221,7 @@ p img
         text-align: center;
         place-self: center;
     }
-    .project-ui >p , .project-ui > div > p
-    {
-        font-size: calc(var(--p-size) * 2.5) !important;
-        text-align: center;
-        place-self: center;
-    }
+
     .nav-bar-options > a
     {
         display: none;
@@ -1421,10 +1421,17 @@ p img
         --gap:20px;
     }
 
-    /* .skill  p
+    .skill  p
     {
-        font-size: calc(var(--p-size) / 2);
-    } */
+        font-size: calc(var(--p-size) * 0.7);
+    }
+
+    .project-ui >p , .project-ui > div > p
+    {
+        font-size: calc(var(--p-size) * 2.5) !important;
+        text-align: center;
+        place-self: center;
+    }
     .option-list > .arrow
     {
         top: calc( calc(var(--comment-textarea) + var(--padding) * 2)* -1);
