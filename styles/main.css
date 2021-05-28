@@ -1252,12 +1252,6 @@ p > img
         place-items: start;
     }
 
-    .upload-meta-data > div:last-child
-    {
-        flex-direction: column-reverse;
-        align-items: end;
-
-    }
 
     .nav-bar-menu
     {
@@ -1456,12 +1450,6 @@ p > img
     {
         flex-direction: column;
         place-items: start;
-    }
-
-    .upload-meta-data > div:last-child
-    {
-        flex-direction: column-reverse;
-        align-items: flex-end;
     }
     .nav-bar-options > a 
     {
