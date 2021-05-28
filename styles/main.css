@@ -204,7 +204,7 @@ p,a
     color: var(--normal-text-color);
     font-size: var(--p-size);
     width: auto;
-    max-width: 100%;
+    max-width: 100%; 
 }
 
 a{
@@ -1212,7 +1212,13 @@ p img
     }
     .input >p , .input > div > p
     {
-        font-size: var(--h6-size);
+        font-size: calc(var(--p-size)) !important;
+        text-align: center;
+        place-self: center;
+    }
+    .project-ui >p , .project-ui > div > p
+    {
+        font-size: calc(var(--p-size) * 2.5) !important;
         text-align: center;
         place-self: center;
     }
@@ -1357,8 +1363,8 @@ p img
         --h4-size : 53px;
         --h5-size : 47px;
         --h6-size : 41px;
-        --p-size  : 9px;
-        --note-size : 17px;
+        --p-size  : 11px;
+        --note-size : 21px;
     
         --padding : 10px;
         --margin : 6px;
