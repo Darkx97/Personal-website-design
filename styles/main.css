@@ -169,7 +169,7 @@ h1,h2,h3,h4,h5,h6
     font-family: 'pixle';
     font-size: var(--h1-size) ;
     font-weight: bolder;
-    width: fit-content;
+    width: auto;
 }
 
 h2{
