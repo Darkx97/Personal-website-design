@@ -170,6 +170,7 @@ h1,h2,h3,h4,h5,h6
     font-size: var(--h1-size) ;
     font-weight: bolder;
     width: auto;
+    max-width: 100%;
 }
 
 h2{
@@ -202,7 +203,8 @@ p,a
     font-family: "Roboto";
     color: var(--normal-text-color);
     font-size: var(--p-size);
-    width: fit-content;
+    width: auto;
+    max-width: 100%;
 }
 
 a{
@@ -1130,121 +1132,6 @@ p img
 }
 
 
-@media(min-resolution : 200dpi )
-{
-    :root
-    {
-
-        --h1-size : 71px;
-        --h2-size : 65px;
-        --h3-size : 59px;
-        --h4-size : 53px;
-        --h5-size : 47px;
-        --h6-size : 41px;
-        --p-size  : 21px;
-        --note-size : 23px;
-    
-        --padding : 10px;
-        --margin : 6px;
-    
-        /* nav bar styling */
-        --nav-bar-height : 120px;
-        --nav-bar-grid : 2fr 6fr 2fr;
-    
-    
-        /* borders */
-        --border-radius:8px;
-        --border-size:4px;
-    
-        /* text ares */
-        --textarea-height : 115px;
-        --comment-textarea : 34px;
-        --comment-section-height : 600px;
-    
-        /* user meta data styling */
-        --edit-button-size : 22px;
-        --dot-size: 4px;
-        
-        /* drop menus (edit / option menu ) */
-        --options-top-pos: 600px;
-    
-        /* icons */
-        --icon-size : 50px;
-        --icon-img-size : 20px ;
-    
-        /* switches  */
-        --mode-switch-size : 70px;
-
-        /* input ui grid layouts */
-        --comment-ui-grid : calc(var(--user-img-size) * 1.5) 1fr calc(var(--icon-size) * 1.5);
-        --project-ui-grid :1fr;
-        --register-ui-grid : 1fr;
-        --skill-ui-grid : 1fr ;
-        
-        /* posts grid layouts */
-        --blog-title-grid :calc(100% - var(--icon-size)) var(--icon-size);
-        --skill-row-grid : 2fr 6fr 2fr ;
-        --upload-meta-data-grid:2fr 2fr;
-    
-        /* images */
-        --user-img-size: 50px ;
-        --dropped-img-size:75px;
-        --profile-img-max-size:150px;
-        --profile-background-max-size: 1000px; 
-        
-        /* row */
-        --row-width: 85%;
-    
-        --option-men-width:300px;
-        --gap:20px;
-    }
-
-    .option-list > .arrow
-    {
-        top: calc( calc(var(--comment-textarea) + var(--padding) * 1.5)* -1 );
-    }
-    .input >p , .input > div > p
-    {
-        font-size: var(--h6-size);
-        text-align: center;
-        place-self: center;
-    }
-    .nav-bar-options > a 
-    {
-        display: none;
-    }
-    
-    .nav-bar a 
-    {
-        font-size: var(--h2-size);
-    }
-
-    .burger
-    {
-        display: block;
-    }
-    
-    .upload-meta-data > div:first-child
-    {
-        flex-direction: column;
-        place-items: start;
-    }
-
-    .upload-meta-data > div:last-child
-    {
-        flex-direction: column-reverse;
-        align-items: flex-end;
-    }
-    .nav-bar-options > a 
-    {
-        display: none;
-    }
-    .nav-bar-menu
-    {
-        display: flex;
-    }
-
-}
 
 @media(max-width : 1000px )
 {
@@ -1454,6 +1341,128 @@ p img
     input[type="checkbox"]:checked + label.burger  > .line3
     {
         transform: rotate(45deg) translate(-9px , -5px);
+    }
+
+}
+
+
+@media(min-resolution : 200dpi )
+{
+    :root
+    {
+
+        --h1-size : 71px;
+        --h2-size : 65px;
+        --h3-size : 59px;
+        --h4-size : 53px;
+        --h5-size : 47px;
+        --h6-size : 41px;
+        --p-size  : 9px;
+        --note-size : 17px;
+    
+        --padding : 10px;
+        --margin : 6px;
+    
+        /* nav bar styling */
+        --nav-bar-height : 120px;
+        --nav-bar-grid : 2fr 6fr 2fr;
+    
+    
+        /* borders */
+        --border-radius:8px;
+        --border-size:4px;
+    
+        /* text ares */
+        --textarea-height : 115px;
+        --comment-textarea : 34px;
+        --comment-section-height : 600px;
+    
+        /* user meta data styling */
+        --edit-button-size : 22px;
+        --dot-size: 4px;
+        
+        /* drop menus (edit / option menu ) */
+        --options-top-pos: 600px;
+    
+        /* icons */
+        --icon-size : 50px;
+        --icon-img-size : 20px ;
+    
+        /* switches  */
+        --mode-switch-size : 70px;
+
+        /* input ui grid layouts */
+        --comment-ui-grid : calc(var(--user-img-size) * 1.5) 1fr calc(var(--icon-size) * 1.5);
+        --project-ui-grid :1fr;
+        --register-ui-grid : 1fr;
+        --skill-ui-grid : 1fr ;
+        
+        /* posts grid layouts */
+        --blog-title-grid :calc(100% - var(--icon-size)) var(--icon-size);
+        --skill-row-grid : 2fr 6fr 2fr ;
+        --upload-meta-data-grid:2fr 2fr;
+    
+        /* images */
+        --user-img-size: 50px ;
+        --dropped-img-size:75px;
+        --profile-img-max-size:150px;
+        --profile-background-max-size: 1000px; 
+        
+        /* row */
+        --row-width: 85%;
+    
+        --option-men-width:300px;
+        --gap:20px;
+    }
+
+    /* .skill  p
+    {
+        font-size: calc(var(--p-size) / 2);
+    } */
+    .option-list > .arrow
+    {
+        top: calc( calc(var(--comment-textarea) + var(--padding) * 2)* -1);
+    }
+    .input >p , .input > div > p
+    {
+        font-size: var(--h6-size);
+        text-align: center;
+        place-self: center;
+        margin: var(--padding) auto;
+    }
+    .nav-bar-options > a 
+    {
+        display: none;
+    }
+    
+    .nav-bar a 
+    {
+        font-size: var(--h2-size);
+    }
+
+    .burger
+    {
+        display: block;
+    }
+    
+    .upload-meta-data > div:first-child
+    {
+        flex-direction: column;
+        place-items: start;
+    }
+
+    .upload-meta-data > div:last-child
+    {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+    .nav-bar-options > a 
+    {
+        display: none;
+    }
+    .nav-bar-menu
+    {
+        display: flex;
     }
 
 }
