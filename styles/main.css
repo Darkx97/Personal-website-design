@@ -196,11 +196,11 @@ hr{
     border: none;
 }
 
-p,a 
+p,a,li
 {
     margin:5px 0;
     white-space: pre-line;
-    font-family: "Roboto";
+    font-family: "Roboto" !important;
     color: var(--normal-text-color);
     font-size: var(--p-size);
     width: auto;
@@ -215,6 +215,15 @@ a{
 a:visited
 {
     color:var(--visited-anchor-text-color);
+}
+
+ul,ol 
+{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    text-align: start;
 }
 
 textarea,input[type="text"]
@@ -322,7 +331,7 @@ img
     display: flex;
     padding: 2px var(--padding);
     text-decoration: none;
-    font-family: 'pixle';
+    font-family: 'pixle' !important;
     font-size: var(--h6-size);
     border: var(--border-size) #00000000 solid;
     color: var(--option-text-color);
@@ -493,7 +502,7 @@ input[type="checkbox"]:checked + label.burger  > .line3
 {
     font-size: var(--note-size);
     color: var(--note-color);
-    font-family: 'pixle';
+    font-family: 'pixle' !important;
     text-align: center;
     place-self: center;
     width: 100%;
@@ -588,7 +597,7 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
     color : var(--normal-text-color);
     font-size: var(--h6-size);
     border-radius: var(--border-radius);
-    font-family : "pixle";
+    font-family : "pixle" !important;
     border: var(--border-size) var(--title-color) solid;
     transition: background 0.5s cubic-bezier(.63,.37,.37,.63);
 }
@@ -611,7 +620,7 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
 
 .upload-meta-data p 
 {
-    font-family: 'pixle';
+    font-family: 'pixle' !important;
 }
 .upload-meta-data > div
 {
@@ -641,7 +650,7 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
 
 .user-image-name p 
 {
-    font-family: 'pixle';
+    font-family: 'pixle' !important;
     font-size: var(--h4-size);
 }
 
@@ -760,7 +769,7 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     background-color: #00000000;
     color: var(--normal-text-color);
     border : none;
-    font-family: 'pixle';
+    font-family: 'pixle' !important;
     font-size: var(--comment-textarea);
     border-radius: var(--border-radius);
     width: 90%;
@@ -774,7 +783,7 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     justify-self: center;
     text-align: center;
     justify-self: center;
-    font-family: pixle;
+    font-family: pixle !important;
     font-size: var(--h6-size);
     border : none;
     border-radius: var(--border-radius);
@@ -904,7 +913,7 @@ label:active > .arrow
 {
     text-align: center;
     font-size: var(--comment-textarea);
-    font-family: pixle;
+    font-family: "pixle" !important;
     width: auto;
     margin: auto;
 }
@@ -984,10 +993,6 @@ label:active > .arrow
     height: 100%;
 }
 
-.project > div:last-child  > p 
-{
-    font-size: calc(var(--p-size) * 2);
-}
 
 
 .project img
@@ -1011,7 +1016,7 @@ label:active > .arrow
     margin-left: 20px;
 }
 
-p img
+p > img
 {
     display:flex;
     height: auto;
@@ -1074,12 +1079,8 @@ p img
     padding: var(--padding) 0px;
 }
 
-.skill  p
-{
-    place-self: center;
-    max-width: 90%;
-    text-align: center;
-} 
+
+
 .skill img
 {
     width:var(--dropped-img-size);
@@ -1095,9 +1096,17 @@ p img
     place-self: center;
 }
 
-.skill > div  p 
+.skill > div:first-child  p 
 {
-    font: var(--p-size); 
+    font-family: 'pixle' !important;
+}
+.skill > div:nth-child(2)
+{
+    font-family: Roboto !important;
+}
+.skill > div:nth-child(3) > p 
+{
+    font-family: 'pixle' !important;
 }
 
 
@@ -1138,7 +1147,7 @@ p img
 
 
 
-@media(max-width : 1000px )
+@media screen and (max-width : 1000px )
 {
     :root
     {
@@ -1213,7 +1222,7 @@ p img
     }
     .option-list > .arrow
     {
-        top: calc( calc(var(--comment-textarea) + var(--padding))* -1 );
+        top: calc( calc(var(--comment-textarea) + var(--padding))* -2 );
     }
     .input >p , .input > div > p
     {
@@ -1255,7 +1264,7 @@ p img
     }
 }
 
-@media(max-width : 600px )
+@media screen and (max-width : 600px ) and (max-resolution : 120dpi )
 {
     :root
     {
@@ -1352,7 +1361,7 @@ p img
 }
 
 
-@media(min-resolution : 200dpi )
+@media screen and (min-resolution : 200dpi ) 
 {
     :root
     {
@@ -1363,7 +1372,7 @@ p img
         --h4-size : 53px;
         --h5-size : 47px;
         --h6-size : 41px;
-        --p-size  : 11px;
+        --p-size  : 21px;
         --note-size : 21px;
     
         --padding : 10px;
@@ -1421,17 +1430,8 @@ p img
         --gap:20px;
     }
 
-    .skill  p
-    {
-        font-size: calc(var(--p-size) * 0.7);
-    }
 
-    .project-ui >p , .project-ui > div > p
-    {
-        font-size: calc(var(--p-size) * 2.5) !important;
-        text-align: center;
-        place-self: center;
-    }
+
     .option-list > .arrow
     {
         top: calc( calc(var(--comment-textarea) + var(--padding) * 2)* -1);
