@@ -52,9 +52,18 @@
                     <div class="input post-ui">
                         
                         <p>Blog title</p>
-                        <textarea class="comment-textarea" ></textarea>
+                        <span 
+                            class="comment-textarea" 
+                            role="textbox" 
+                            contenteditable>
+                        </span>
                         <p>Blog description</p>
-                        <textarea ondragover="ActiveDropZone(this)" ondragleave="DeActiveDropZone(this)" ondrop="DropFile(this,event)"></textarea>
+                        <span 
+                            class="textinput" 
+                            role="textbox" 
+                            contenteditable>
+                        </span>
+                        <!-- <textarea ondragover="ActiveDropZone(this)" ondragleave="DeActiveDropZone(this)" ondrop="DropFile(this,event)"></textarea> -->
                         <input type="file">
                         <div class="dropzone" ondragover="ActiveDropZone(this)" ondragleave="DeActiveDropZone(this)" ondrop="DropFile(this,event)"></div>
                         

@@ -229,29 +229,44 @@ ul,ol
     text-align: start;
 }
 
-textarea,input[type="text"]
+.textinput
 {
+    max-width: 95%;
     width: 95%;
     resize: none;
     padding: var(--padding) 4px;
     color: var(--normal-text-color);
-    height: var(--textarea-height);
+    min-height: var(--textarea-height);
     border : var(--border-size) var(--border-color) solid;
     border-radius: var(--border-radius);
     font-size : var(--p-size);
     font-family : 'Roboto';
     margin: 0;
     background-color : var(--text-input-background);
+    max-height: 350px;
+    overflow-y: auto;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
-textarea.comment-textarea
+.comment-textarea, input[type="text"]
 {
-    height : var(--comment-textarea);
-}
-
-input[type="text"]
-{
-    height: var(--comment-textarea);
+    max-width: 95%;
+    width: 95%;
+    resize: none;
+    padding: var(--padding) 4px;
+    color: var(--normal-text-color);
+    min-height: var(--comment-textarea);
+    max-height: 150px;
+    border : var(--border-size) var(--border-color) solid;
+    border-radius: var(--border-radius);
+    font-size : var(--p-size);
+    font-family : 'Roboto';
+    margin: 0;
+    background-color : var(--text-input-background);
+    overflow-y: auto;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 input[type="button"],button

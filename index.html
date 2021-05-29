@@ -65,7 +65,12 @@
                 <form>
                     <div class="input post-ui">
                         <p>Post content</p>
-                        <textarea ondragover="ActiveDropZone(this)" ondragleave="DeActiveDropZone(this)" ondrop="DropFile(this,event)"></textarea>
+                        <!-- <textarea ondragover="ActiveDropZone(this)" ondragleave="DeActiveDropZone(this)" ondrop="DropFile(this,event)"></textarea> -->
+                        <span 
+                            class="textinput" 
+                            role="textbox" 
+                            contenteditable>
+                            </span>
                         <input type="file">
                         <div class="dropzone" ondragover="ActiveDropZone(this)" ondragleave="DeActiveDropZone(this)" ondrop="DropFile(this,event)"></div>
                         <p class="note">drag and drop to add pictures</p>
