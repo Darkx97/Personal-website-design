@@ -59,6 +59,9 @@
     --border-radius:8px;
     --border-size:4px;
 
+    /* drop zone */
+    --drop-zone-single-size : 100px;
+
     /* text ares */
     --textarea-height : 115px;
     --textarea-max-height : 365px;
@@ -962,8 +965,8 @@ label:active > .arrow
 .dropzone.single
 {
     display: flex;
-    width: 100px;
-    height: 100px;
+    width: var(--drop-zone-single-size);
+    height: var(--drop-zone-single-size);
     padding: var(--padding);
     place-content : center;
     place-items: center;
@@ -971,8 +974,8 @@ label:active > .arrow
 .dropzone.single > label
 {
     display: flex;
-    width: 100px;
-    height: 100px;
+    width: var(--drop-zone-single-size);
+    height: var(--drop-zone-single-size);
     padding: var(--padding);
     place-items: center;
 }
@@ -1175,7 +1178,7 @@ p > img
         --h5-size : 31px;
         --h6-size : 25px;
         --p-size  : 17px;
-        --note-size : 21px;
+        --note-size : 19px;
     
         --padding : 6px;
         --margin : 4px;
@@ -1188,6 +1191,9 @@ p > img
         /* borders */
         --border-radius:8px;
         --border-size:4px;
+
+        /* drop zone */
+        --drop-zone-single-size : 80px;
     
         /* text ares */
         --textarea-height : 115px;
@@ -1287,8 +1293,8 @@ p > img
         --h4-size : 35px;
         --h5-size : 27px;
         --h6-size : 21px;
-        --p-size  : 14px;
-        --note-size : 21px;
+        --p-size  : 13px;
+        --note-size : 15px;
     
         --padding : 4px;
         --margin : 2px;
@@ -1302,6 +1308,9 @@ p > img
         --border-radius:8px;
         --border-size:4px;
     
+        /* drop zone */
+        --drop-zone-single-size : 70px;
+
         /* text ares */
         --textarea-height : 115px;
         --textarea-max-height : 200px;
@@ -1404,8 +1413,11 @@ p > img
     
     
         /* borders */
-        --border-radius:8px;
+        --border-radius:4px;
         --border-size:2px;
+
+        /* drop zone */
+        --drop-zone-single-size : 40px;
     
         /* text ares */
         --textarea-height : 70px;
