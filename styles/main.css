@@ -656,7 +656,7 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
 
 .upload-meta-data > div  > p
 {
-    font-size: var(--h5-size);
+    font-size: var(--note-size);
 }
 .user-image-name
 {
@@ -675,7 +675,7 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
 .user-image-name p 
 {
     font-family: 'pixle' !important;
-    font-size: var(--h4-size);
+    font-size: var(--h5-size);
 }
 
 
@@ -886,6 +886,11 @@ label:active > .arrow
     place-self:center;
 }
 
+.comment > p:last-of-type
+{
+    margin-left: calc(var(--user-img-size) / 2);
+    margin-right: calc(var(--user-img-size) /4);
+}
 
 .project-ui
 {
