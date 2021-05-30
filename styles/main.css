@@ -48,21 +48,21 @@
     --p-size  : 19px;
     --note-size : 21px;
 
-    --padding : 6px;
+    --padding : 8px;
     --margin : 6px;
 
     /* nav bar styling */
     --nav-bar-height : 75px;
     --nav-bar-grid : 2fr 6fr 2fr;
 
-
-    
+    /* borders */
     --border-radius:8px;
     --border-size:4px;
 
     /* text ares */
     --textarea-height : 115px;
-    --comment-textarea : 28px;
+    --textarea-max-height : 365px;
+    --comment-textarea-max-height :155px;
     --comment-section-height : 600px;
 
     /* user meta data styling */
@@ -228,13 +228,16 @@ ul,ol
     margin: auto;
     text-align: start;
 }
-
+textarea,input[type="text"]
+{
+    display: none;
+}
 .textinput
 {
     max-width: 95%;
-    width: 95%;
+    width: calc(95% - var(--padding) * 1.5);
     resize: none;
-    padding: var(--padding) 4px;
+    padding: var(--padding) calc(var(--padding) *1.5);
     color: var(--normal-text-color);
     min-height: var(--textarea-height);
     border : var(--border-size) var(--border-color) solid;
@@ -243,21 +246,21 @@ ul,ol
     font-family : 'Roboto';
     margin: 0;
     background-color : var(--text-input-background);
-    max-height: 350px;
+    max-height: var(--textarea-max-height);
     overflow-y: auto;
     word-wrap: break-word;
     word-break: break-all;
 }
 
-.comment-textarea, input[type="text"]
+span,.comment-textarea, input[type="text"]
 {
     max-width: 95%;
-    width: 95%;
+    width: calc(95% - var(--padding) * 1.5);
     resize: none;
-    padding: var(--padding) 4px;
+    padding: var(--padding) calc(var(--padding) * 1.5);
     color: var(--normal-text-color);
-    min-height: var(--comment-textarea);
-    max-height: 150px;
+    min-height: var(--p-size);
+    max-height: var(--comment-textarea-max-height);
     border : var(--border-size) var(--border-color) solid;
     border-radius: var(--border-radius);
     font-size : var(--p-size);
@@ -613,7 +616,7 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
     /* height: 30px; */
     background-color: #00000000;
     color : var(--normal-text-color);
-    font-size: var(--h6-size);
+    font-size: var(--h5-size);
     border-radius: var(--border-radius);
     font-family : "pixle" !important;
     border: var(--border-size) var(--title-color) solid;
@@ -765,14 +768,14 @@ input[type="checkbox"]:checked + label.edit-button + div.option-menu , input[typ
 {
     background: var(--text-input-background);
     border: var(--border-size) var(--border-color) solid ;
-    height: calc( calc(calc(var(--amount) ) * var(--gap) ) + calc(var(--padding) * 2)  + calc(var(--comment-textarea) * var(--amount)));
+    height: calc( calc(calc(var(--amount) ) * var(--gap) ) + calc(var(--padding) * 2)  + calc(var(--h6-size) * var(--amount)));
     padding: var(--padding) 0;
     transition:  height  0.40s 0.2s , background 0.20s 0.15s, border 0.20s  0.05s ,padding 0.2s 0.2s cubic-bezier(.44,.68,.64,.72);
 }
 
 input[type="checkbox"]:checked + .option-list + .option-menu 
 {
-    height: calc( calc(calc(var(--amount) - 1) * var(--gap) ) + calc(var(--padding) * 2 ) + calc(var(--comment-textarea) * var(--amount)));
+    height: calc( calc(calc(var(--amount) - 1) * var(--gap) ) + calc(var(--padding) * 2 ) + calc(var(--h6-size) * var(--amount)));
 }
 
 input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , input[type="checkbox"]:checked + .option-list + .option-menu > .option 
@@ -788,7 +791,7 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     color: var(--normal-text-color);
     border : none;
     font-family: 'pixle' !important;
-    font-size: var(--comment-textarea);
+    font-size: var(--h6-size);
     border-radius: var(--border-radius);
     width: 90%;
     position: relative;
@@ -891,8 +894,6 @@ label:active > .arrow
 
 .project-ui >div
 {
-    /* display: grid; */
-    gap: var(--gap);
     width: 100%;
     height: 100%;
     margin: 0 auto ;
@@ -915,7 +916,7 @@ label:active > .arrow
 
 .drop-list
 {
-    width: 95%;
+    width: calc(95% - var(--padding) * 1.5);
     justify-self: center;
     align-self: start;
     display: flex;
@@ -923,15 +924,14 @@ label:active > .arrow
     border: var(--border-size) var(--border-color) solid;
     border-radius : var(--border-radius);
     place-content : center;
-    height: var(--comment-textarea);
-    padding: var(--padding) 0px;
+    height: calc(var(--h6-size) + var(--padding));
     position: relative;
     margin: 0 auto;
 }
 .drop-list p 
 {
     text-align: center;
-    font-size: var(--comment-textarea);
+    font-size: var(--h6-size);
     font-family: "pixle" !important;
     width: auto;
     margin: auto;
@@ -946,7 +946,7 @@ label:active > .arrow
 .option-list > .arrow
 {
     position: absolute;
-    top: calc( calc(var(--comment-textarea) + var(--padding) * 2)* -1 );
+    top: calc( calc(var(--h6-size) + var(--padding) + var(--margin))* -1);
     width: calc(var(--icon-size));
     right: 5px;
     z-index: 4;
@@ -1177,8 +1177,8 @@ p > img
         --p-size  : 17px;
         --note-size : 21px;
     
-        --padding : 10px;
-        --margin : 6px;
+        --padding : 6px;
+        --margin : 4px;
     
         /* nav bar styling */
         --nav-bar-height : 80px;
@@ -1191,7 +1191,8 @@ p > img
     
         /* text ares */
         --textarea-height : 115px;
-        --comment-textarea : 34px;
+        --textarea-max-height : 365px;
+        --comment-textarea-max-height :155px;
         --comment-section-height : 600px;
     
         /* user meta data styling */
@@ -1238,8 +1239,9 @@ p > img
     }
     .option-list > .arrow
     {
-        top: calc( calc(var(--comment-textarea) + var(--padding))* -2 );
+        top: calc( calc(var(--h6-size) + var(--padding) + var(--margin))* -1);
     }
+
     .input >p , .input > div > p
     {
         font-size: calc(var(--p-size)) !important;
@@ -1288,8 +1290,8 @@ p > img
         --p-size  : 14px;
         --note-size : 21px;
     
-        --padding : 10px;
-        --margin : 6px;
+        --padding : 4px;
+        --margin : 2px;
     
         /* nav bar styling */
         --nav-bar-height : 70px;
@@ -1302,7 +1304,8 @@ p > img
     
         /* text ares */
         --textarea-height : 115px;
-        --comment-textarea : 30px;
+        --textarea-max-height : 200px;
+        --comment-textarea-max-height :90px;
         --comment-section-height : 600px;
     
         /* user meta data styling */
@@ -1343,6 +1346,12 @@ p > img
         --option-men-width:200px;
         --gap:10px;
     }
+
+    .option-list > .arrow
+    {
+        top: calc( calc(var(--h6-size) + var(--padding) * 2 + var(--margin) * 2)* -1);
+    }
+
 
     .burger
     {
@@ -1385,7 +1394,7 @@ p > img
         --p-size  : 11px;
         --note-size : 9px;
     
-        --padding : 5px;
+        --padding : 2px;
         --margin : 3px;
         --gap:10px;
 
@@ -1400,7 +1409,8 @@ p > img
     
         /* text ares */
         --textarea-height : 70px;
-        --comment-textarea : 16px;
+        --textarea-max-height : 200px;
+        --comment-textarea-max-height :85px;
         --comment-section-height : 600px;
     
         /* user meta data styling */
@@ -1443,7 +1453,7 @@ p > img
 
     .option-list > .arrow
     {
-        top: calc( calc(var(--comment-textarea) + var(--padding) * 2)* -1);
+        top: calc( calc(var(--h6-size) + var(--padding) + var(--margin))* -1);
     }
 
     .nav-bar-options > a 
@@ -1451,9 +1461,9 @@ p > img
         display: none;
     }
     
-    .nav-bar a 
+    .nav-bar a , .log-out
     {
-        font-size: var(--h2-size);
+        font-size: var(--h3-size);
     }
 
     .burger
