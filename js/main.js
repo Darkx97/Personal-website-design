@@ -11,6 +11,7 @@ window.addEventListener("dragover",function(e)
 });
 
 let files=[];
+let img=0;
 
 
 
@@ -56,9 +57,6 @@ function DeActiveDropZone(element)
 
 function DropFile(element , event)
 {
-    // event.preventDefault();
-    console.log("test");
-    // console.log("test");
     let dropzone = element.parentElement.parentElement.querySelector(".dropzone");
     dropzone.classList.remove("drag");
 
@@ -69,24 +67,43 @@ function DropFile(element , event)
     {
         if(data.item(i).type.indexOf("image") === -1)
         {
-            console.log(i," not an image\n",data.item(i).type);
+            // console.log(i," not an image\n",data.item(i).type);
+            continue
         }
         else
         {
-            console.log(i," is an image\n",data.item(i).type);
+            // console.log(i," is an image\n",data.item(i).type);
             files.push(data.item(i));
-            ShowDropedFile(dropzone,data.item(i),i)
+            ShowDropedFile(dropzone,files[i])
         }
     }
+    let input =dropzone.parentElement.querySelector(`[type="file"]`)
+    input.files = SaveFilesDATA(files);
+    console.log("files : ",files,"\ninput.files : ",input.files);
 
 }
 
-function ShowDropedFile(dropzone,file,index)
+function SaveFilesDATA(files)
 {
-    const reader = new FileReader();
+    let FileData = new ClipboardEvent("").clipboardData || new DataTransfer();
+    for (let i = 0; i < files.length; i++)
+    {
+        FileData.items.add(files[i]);
+    }
+
+    console.log(FileData.files);
+    return FileData.files
+    
+}
+
+
+function ShowDropedFile(dropzone,file)
+{
     dropzone.classList.add("active")
+    const reader = new FileReader();
+    let textarea = dropzone.parentElement.querySelector(".textinput")
     reader.readAsDataURL(file);
-    if(dropzone.classList.contains("single") && index === files.length-1)
+    if(dropzone.classList.contains("single"))
     {
         reader.onload = ()=>
         {
@@ -97,18 +114,47 @@ function ShowDropedFile(dropzone,file,index)
     {
         reader.onload = ()=>
         {
+            img++;
             dropzone.innerHTML+=`<img class='dropitem' onclick="RemoveFile(this)" src='${reader.result}'>`;
+            textarea.innerHTML += ` [img${img}] `;
         }
     }
 
 }
 
+
 function RemoveFile(file)
 {
+    img--;
     let dropzone = file.parentElement;
-    file.remove()
+    let index = Array.prototype.indexOf.call(dropzone.children, file) + 1;
+    let textarea = dropzone.parentElement.querySelector(".textinput");
+    // console.log(textarea);
+    if(textarea !== undefined)
+    {
+        // console.log("removing : ",index);
+        textarea.innerHTML = textarea.innerHTML.replace(`[img${index}]`, ` `);
+
+        for(let i = index ; i <= files.length+1 ; i++)
+        {
+            textarea.innerHTML = textarea.innerHTML.replace(`[img${i}]`, `[img${i-1}]`);
+        }
+        
+    }
+
+
+    
+    // console.log("index : ",index,"\n \n files length : ",files.length);
+    files.splice(index-1,1);
+    // console.log("\n \n files length : ",files.length,"files : \n",files);
+    let input =dropzone.parentElement.querySelector(`[type="file"]`)
+    input.files = SaveFilesDATA(files);
+    console.log("files : ",files,"\ninput.files : ",input.files);
+    file.remove();
     if (dropzone.children.length == 0)
     {
         dropzone.classList.remove("active")
     }
 }
+
+

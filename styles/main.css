@@ -535,7 +535,7 @@ input[type="checkbox"]:checked + label.burger  > .line3
 .dropzone 
 {
     display: none;
-    margin: 0 auto;
+    margin: var(--margin) auto;
     width: calc(95%);
     align-content: center;
     border-radius: var(--border-radius);
@@ -1233,8 +1233,8 @@ p > img
     
         /* images */
         --user-img-size: 50px ;
-        --dropped-img-size:90px;
-        --profile-img-max-size:150px;
+        --dropped-img-size:60px;
+        --profile-img-max-size:120px;
         --profile-background-max-size: 700px; 
         --project-img-max-size:800px;
         
@@ -1349,8 +1349,8 @@ p > img
     
         /* images */
         --user-img-size: 50px ;
-        --dropped-img-size:90px;
-        --profile-img-max-size:150px;
+        --dropped-img-size:45px;
+        --profile-img-max-size:95px;
         --profile-background-max-size: 700px; 
         --project-img-max-size:800px;
         

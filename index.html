@@ -70,7 +70,11 @@
                             name = "Post-content"
                             class="textinput" 
                             role="textbox" 
-                            contenteditable>
+                            contenteditable
+                            ondragover="ActiveDropZone(this)"
+                            ondragleave="DeActiveDropZone(this)"
+                            ondrop="DropFile(this,event)"
+                            >
                             </span>
                         <input type="file">
                         <div class="dropzone" ondragover="ActiveDropZone(this)" ondragleave="DeActiveDropZone(this)" ondrop="DropFile(this,event)"></div>
