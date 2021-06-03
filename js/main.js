@@ -45,6 +45,19 @@ function ChangeTheme(Switch)
     }
 }
 
+function InputFiles(input)
+{
+    let dropzone =input.parentElement.querySelector(`.dropzone`)
+    for (let i = 0; i < input.files.length; i++) {
+        files.push(input.files[i]);
+        ShowDropedFile(dropzone,input.files[i]);
+    }
+    input.files = SaveFilesDATA(files);
+
+    console.log( input.files);
+
+}
+
 function ActiveDropZone(element)
 {
     element.parentElement.parentElement.querySelector(".dropzone").classList.add("drag");
@@ -90,10 +103,7 @@ function SaveFilesDATA(files)
     {
         FileData.items.add(files[i]);
     }
-
-    console.log(FileData.files);
-    return FileData.files
-    
+    return FileData.files 
 }
 
 
@@ -129,8 +139,7 @@ function RemoveFile(file)
     let dropzone = file.parentElement;
     let index = Array.prototype.indexOf.call(dropzone.children, file) + 1;
     let textarea = dropzone.parentElement.querySelector(".textinput");
-    // console.log(textarea);
-    if(textarea !== undefined)
+    if(!dropzone.classList.contains("single"))
     {
         // console.log("removing : ",index);
         textarea.innerHTML = textarea.innerHTML.replace(`[img${index}]`, ` `);
@@ -141,10 +150,9 @@ function RemoveFile(file)
         }
         
     }
-
-
+    else
     
-    // console.log("index : ",index,"\n \n files length : ",files.length);
+
     files.splice(index-1,1);
     // console.log("\n \n files length : ",files.length,"files : \n",files);
     let input =dropzone.parentElement.querySelector(`[type="file"]`)
@@ -154,6 +162,11 @@ function RemoveFile(file)
     if (dropzone.children.length == 0)
     {
         dropzone.classList.remove("active")
+        if (dropzone.classList.contains("single")) {
+            dropzone.innerHTML=`<label  for="drop-zone-1">
+            <p class="note">drag and drop to add pictures</p>
+        </label>`
+        }
     }
 }
 

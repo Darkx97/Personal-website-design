@@ -63,13 +63,14 @@
                             role="textbox" 
                             contenteditable>
                         </span>
+                        <input id="file-1" type="file" onchange="InputFiles(this)">
                         <textarea ondragover="ActiveDropZone(this)" ondragleave="DeActiveDropZone(this)" ondrop="DropFile(this,event)"></textarea>
-                        <input type="file">
                         <div class="dropzone" ondragover="ActiveDropZone(this)" ondragleave="DeActiveDropZone(this)" ondrop="DropFile(this,event)"></div>
                         
                     </div>
                     <div class="buttons">
-                        <button>post</button>
+                        <input type="submit" value="Post">
+                        <input type="button"class="cancel-button" value="Add image">
                     </div>
                 </form>
             </div>
