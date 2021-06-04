@@ -86,7 +86,7 @@
     --comment-ui-grid : calc(var(--user-img-size) * 1.5) 1fr calc(var(--icon-size) * 1.5);
     --project-ui-grid :7fr 3fr;
     --register-ui-grid : 3fr 7fr;
-    --skill-ui-grid : 2fr 6fr 2fr ;
+    --skill-ui-grid : 2fr 5fr 2fr ;
     
     /* posts grid layouts */
     --blog-title-grid :calc(100% - var(--icon-size)) var(--icon-size);
@@ -749,6 +749,7 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
     border: var(--border-size) #00000000 solid ;
     height: 0px;
     width: var(--option-men-width);
+    min-width: 250px;
     position : absolute;
     top: calc(var(--edit-button-size) * 0);
     right: calc(var(--edit-button-size)  * 2);
@@ -978,7 +979,7 @@ label:active > .arrow
 {
     width:100%; 
     top: calc(var(--border-size) * -1);
-    left: calc(var(--border-size) * -1);
+    right: calc(var(--border-size) * -1);
     /* min-width: 200px; */
 }
 
