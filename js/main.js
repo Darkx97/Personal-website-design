@@ -150,9 +150,7 @@ function RemoveFile(file)
         }
         
     }
-    else
     
-
     files.splice(index-1,1);
     // console.log("\n \n files length : ",files.length,"files : \n",files);
     let input =dropzone.parentElement.querySelector(`[type="file"]`)
@@ -170,4 +168,15 @@ function RemoveFile(file)
     }
 }
 
+function CloseOptionMenu(option)
+{
+    let menu = option.parentElement.parentElement.querySelector(".option-list")||option.parentElement.parentElement.querySelector(".edit-button");
+    menu.click()
+}
 
+function ChangeOption(option)
+{
+    let text= option.value;
+    let textbox = option.parentElement.parentElement.querySelector(".option-list").querySelector("p");
+    textbox.innerHTML = text;
+}

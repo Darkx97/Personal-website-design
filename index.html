@@ -9,6 +9,7 @@
 
     <body onload="CheckTheme();CheckPage()">
         
+        
         <div class="nav-bar" >
             <div class="logo">
                 <a href="about.html">Darkx97</a>
@@ -45,7 +46,6 @@
             </div>
                 
         </div>
-       
         <div class="page"> 
             <div class="row">
                 <form>
@@ -62,13 +62,13 @@
                             ondrop="DropFile(this,event)"
                             >
                             </span>
-                        <input type="file" onchange="InputFiles(this)">
+                        <input id="file-input" type="file" onchange="InputFiles(this)">
                         <div class="dropzone" ondragover="ActiveDropZone(this)" ondragleave="DeActiveDropZone(this)" ondrop="DropFile(this,event)"></div>
                         <p class="note">drag and drop to add pictures</p>
                     </div>
                     <div class="buttons">
-                        <button>post</button>
-                        <button class="cancel-button">add picture</button>
+                        <input type="submit" value="Post">
+                        <label for="file-input" type="button" class="cancel-button" value="add image"> Add image</label>
                     </div>
                 </form>
             </div>

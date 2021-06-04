@@ -111,7 +111,8 @@ html[data-theme = 'dark']{
     /* background color */
     --body-background-color : #151515;
     /*  navigation bar color */
-    --nav-bar-color : #000000;
+    --nav-bar-color : rgb(0, 0, 0);
+    --nav-menu-color : rgb(0, 0, 0);
 
     /* text coloring */
     --title-color : #6a48ff;
@@ -128,6 +129,7 @@ html[data-theme = 'dark']{
     /* input UI coloring */
     --data-input-bg-color : #3a3a3a;
     --text-input-background : #1f1f1f;
+    --option-menu-background : rgb(31, 31, 31);
     --cancel-button-hover-color :#616161; 
 }
 
@@ -137,6 +139,7 @@ html[data-theme= 'light']
     --body-background-color : #ebebeb;
     /*  navigation bar color */
     --nav-bar-color : #8c8c8c;
+    --nav-menu-color : hsl(0, 0%, 55%);
 
     /* text coloring */
     --title-color : #00aeff;
@@ -154,6 +157,7 @@ html[data-theme= 'light']
     /* input UI coloring */
     --data-input-bg-color : #c2c2c2;
     --text-input-background : #dfdfdf;
+    --option-menu-background : rgb(223, 223, 223);
     --cancel-button-hover-color :#e4e4e4; 
 }
 
@@ -264,7 +268,7 @@ span,.comment-textarea, input[type="text"]
     word-break: break-all;
 }
 
-input[type="submit"],input[type="button"],button
+input[type="submit"],input[type="button"],button,.cancel-button
 {
     height: auto;
     display: grid;
@@ -288,7 +292,7 @@ input[type="button"]:hover,button:hover,input[type="submit"]:hover
     background-color: var(--border-hover);
 }
 
-input[type="button"]:active,button:active ,input[type="submit"]:active
+input[type="button"]:active,button:active ,input[type="submit"]:active ,.cancel-button:active
 {
     transform: translate(0px, 5px);
 }
@@ -332,6 +336,7 @@ img
     background: var(--nav-bar-color);
     grid-template-columns: var(--nav-bar-grid);
     border-radius: 0px 0px var(--border-radius) var(--border-radius);
+
 }
 .nav-bar-icons
 {
@@ -341,6 +346,7 @@ img
     align-items: center;
     align-content: center;
     padding-right: var(--padding);
+    z-index: 2;
 }
 
 
@@ -421,22 +427,25 @@ img
 .nav-bar-menu
 {
     position: fixed;
-    top: calc(var(--nav-bar-height) - (var(--nav-bar-height) / 10));
+    top: calc(var(--nav-bar-height));
     display: flex;
     flex-direction: column;
     right: 0px;
     left: 0px;
     align-items: center;
-    background-color: var(--nav-bar-color);
+    background-color: var(--nav-menu-color);
     height: 0px;
     overflow-y: scroll;
-    z-index: 2;
+    z-index: 5;
     gap: var(--gap);
     transition: height 0.7s  cubic-bezier(.63,.37,.37,.63);
     display: none;
+    backdrop-filter:blur(5px);
+    -webkit-background-composite: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
-.nav-bar-menu.active , input[type="checkbox"]:checked + label.burger + div.nav-bar-menu
+input[type="checkbox"]:checked + label.burger + div.nav-bar-menu
 {
     height: 400px;
     padding: var(--padding) 0px;
@@ -761,7 +770,11 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
     align-items: center;
     border-radius: var(--border-radius);
     gap: var(--gap);
-    z-index: 2;
+    z-index: 1;
+
+    backdrop-filter: blur(0px);
+    
+
     transition:  height  0.50s 0.01s , background 0.10s 0.35s, border 0.20s  0.40s , padding 0.2s 0.1s  ;
 }
 
@@ -785,11 +798,13 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
 
 input[type="checkbox"]:checked + label.edit-button + div.option-menu , input[type="checkbox"]:checked + .option-list + .option-menu
 {
-    background: var(--text-input-background);
+        background-color: var(--option-menu-background);
     border: var(--border-size) var(--border-color) solid ;
-    height: calc( calc(calc(var(--amount) ) * var(--gap) ) + calc(var(--padding) * 2)  + calc(var(--h6-size) * var(--amount)));
-    padding: var(--padding) 0;
+    height: calc( calc(calc(var(--amount) - 1 ) * var(--gap) ) + calc(var(--padding) * 2)  + calc(var(--h6-size) * var(--amount)));
+
     transition:  height  0.40s 0.2s , background 0.20s 0.15s, border 0.20s  0.05s ,padding 0.2s 0.2s cubic-bezier(.44,.68,.64,.72);
+    backdrop-filter: blur(5px);
+
 }
 
 input[type="checkbox"]:checked + .option-list + .option-menu 
@@ -804,7 +819,7 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
 
 }
 
-.option 
+.option , input[type="submit"].option
 {
     background-color: #00000000;
     color: var(--normal-text-color);
@@ -817,6 +832,7 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     top: calc(var(--options-top-pos) * -1);
     transition: background 0.5s cubic-bezier(.63,.37,.37,.63),transform 0.5s cubic-bezier(.63,.37,.37,.63);
 }
+
 .option >p
 {
     text-align: center;
@@ -830,7 +846,7 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     transition: background 0.5s cubic-bezier(.63,.37,.37,.63),transform 0.5s cubic-bezier(.63,.37,.37,.63);
 }
 
-.option:hover , input[type="radio"]:checked + label.option , input[type="radio"]:checked 
+input[type="submit"].option:hover, .option:hover , input[type="radio"]:checked + label.option , input[type="radio"]:checked 
 {
     background-color: var(--title-color);
     color: var(--normal-text-color);
@@ -863,6 +879,7 @@ input[type="radio"]:checked + label.option >p
     transform: rotate(180deg);
     place-self: center;
     cursor: pointer;
+    z-index: 1;
 }
 
 
@@ -948,9 +965,10 @@ label:active > .arrow
     border: var(--border-size) var(--border-color) solid;
     border-radius : var(--border-radius);
     place-content : center;
-    height: calc(var(--h6-size) + var(--padding));
+    height: calc(var(--h6-size) + calc(var(--padding) * 1.3));
     position: relative;
     margin: 0 auto;
+    place-items: center;
 }
 .drop-list p 
 {
@@ -965,6 +983,8 @@ label:active > .arrow
     width: 100%;
     justify-content: center;
     cursor: pointer;
+    background-color: var(--option-menu-background);
+    
 }
 
 .option-list > .arrow
@@ -973,7 +993,7 @@ label:active > .arrow
     top: calc( calc(var(--h6-size) + var(--padding) + var(--margin))* -1);
     width: calc(var(--icon-size));
     right: 5px;
-    z-index: 4;
+    z-index: 1;
 }
 .option-list + .option-menu
 {
@@ -1188,6 +1208,80 @@ p > img
 
 
 
+@media screen and (max-width : 1400px )
+{
+    :root
+    {
+
+        --h1-size : 55px;
+        --h2-size : 49px;
+        --h3-size : 43px;
+        --h4-size : 37px;
+        --h5-size : 31px;
+        --h6-size : 25px;
+        --p-size  : 17px;
+        --note-size : 19px;
+    
+        --padding : 8px;
+        --margin : 6px;
+    
+        /* nav bar styling */
+        --nav-bar-height : 75px;
+        --nav-bar-grid : 2fr 6fr 2fr;
+    
+        /* borders */
+        --border-radius:8px;
+        --border-size:4px;
+    
+        /* drop zone */
+        --drop-zone-single-size : 100px;
+    
+        /* text ares */
+        --textarea-height : 160px;
+        --textarea-max-height : 365px;
+        --comment-textarea-max-height :155px;
+        --comment-section-height : 600px;
+    
+        /* user meta data styling */
+        --edit-button-size : 22px;
+        --dot-size: 4px;
+        
+        /* drop menus (edit / option menu ) */
+        --options-top-pos: 600px;
+    
+        /* icons */
+        --icon-size : 30px;
+        --icon-img-size : 20px ;
+    
+        /* switches  */
+        --mode-switch-size : 40px;
+        
+        /* input ui grid layouts */
+        --comment-ui-grid : calc(var(--user-img-size) * 1.5) 1fr calc(var(--icon-size) * 1.5);
+        --project-ui-grid :7fr 3fr;
+        --register-ui-grid : 3fr 7fr;
+        --skill-ui-grid : 2fr 5fr 2fr ;
+        
+        /* posts grid layouts */
+        --blog-title-grid :calc(100% - var(--icon-size)) var(--icon-size);
+        --skill-row-grid : 2fr 6fr 2fr ;
+        --upload-meta-data-grid:2fr 2fr;
+    
+        /* images */
+        --user-img-size: 50px ;
+        --dropped-img-size:90px;
+        --profile-img-max-size:150px;
+        --profile-background-max-size: 700px; 
+        --project-img-max-size:800px;
+        
+        /* row */
+        --row-width: 80%;
+    
+        --option-men-width:200px;
+        --gap:10px;
+    }
+}
+
 @media screen and (max-width : 1000px )
 {
     :root
@@ -1309,12 +1403,12 @@ p > img
     :root
     {
 
-        --h1-size : 53px;
-        --h2-size : 47px;
-        --h3-size : 41px;
-        --h4-size : 35px;
-        --h5-size : 27px;
-        --h6-size : 21px;
+        --h1-size : 49px;
+        --h2-size : 43px;
+        --h3-size : 37px;
+        --h4-size : 31px;
+        --h5-size : 35px;
+        --h6-size : 29px;
         --p-size  : 13px;
         --note-size : 15px;
     
