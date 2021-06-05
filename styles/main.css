@@ -237,6 +237,7 @@ ul,ol
 textarea,input[type="text"]
 {
     display: none;
+    height: var(--p-size);
 }
 .textinput
 {
@@ -248,7 +249,7 @@ textarea,input[type="text"]
     max-height: var(--textarea-max-height);
 }
 
-span,.comment-textarea, input[type="text"]
+textarea ,span,.comment-textarea, input[type="text"]
 {
     max-width: 95%;
     width: calc(95% - 20px);
@@ -1199,6 +1200,12 @@ p > img
     width: 100%;
     grid-template-columns: var(--register-ui-grid);
     gap: var(--gap);
+    height: fit-content;
+}
+
+.register-ui textarea , .register-ui input[type="text"]
+{
+    display : block
 }
 
 .upload-icons *
@@ -1577,7 +1584,6 @@ p > img
         --row-width: 85%;
     
     }
-
 
     .option-list > .arrow
     {
