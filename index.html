@@ -48,7 +48,7 @@
         </div>
         <div class="page"> 
             <div class="row">
-                <form>
+                <form onload="this.form.reset">
                     <div class="input post-ui">
                         <p>Post content</p>
                         <textarea ondragover="ActiveDropZone(this)" ondragleave="DeActiveDropZone(this)" ondrop="DropFile(this,event)"></textarea>
@@ -62,7 +62,7 @@
                             ondrop="DropFile(this,event)"
                             >
                             </span>
-                        <input id="file-input" type="file" onchange="InputFiles(this)">
+                        <input type="file" id="file-input" onchange="InputFiles(this)" multiple>
                         <div class="dropzone" ondragover="ActiveDropZone(this)" ondragleave="DeActiveDropZone(this)" ondrop="DropFile(this,event)"></div>
                         <p class="note">drag and drop to add pictures</p>
                     </div>
@@ -85,6 +85,16 @@
                     all animations in this website and menus are functioning through Css expect for (drag and drop) functions and theme switching.
                     enjoy.
                 </p>
+                <h6>Note :</h6>
+                <p>there is a <b>blur</b> effect on this website, its disabled by default on <b>Firefox</b>.
+                    to enable it :</p>
+                    <ul>
+                        <li>in the search bar type : about:config</li>
+                        <li>click on accept Risk and Continue</li>
+                        <li>search for : backdrop-filter</li>
+                        <li>change the value to true</li>
+                    </ul>
+
             </div>
 
 

@@ -52,3 +52,14 @@ function CheckPage()
         }
     }
 }
+
+
+function ClearFiles(input)
+{
+    console.log("testetset");
+    let FileData = new ClipboardEvent("").clipboardData || new DataTransfer();
+    files.splice(0,files.length)
+    files.length=0;
+    input.files = FileData;
+    console.log("clearing input value : \n",input.files,"\n clear Files[] value : \n",files);
+}

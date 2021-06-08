@@ -50,10 +50,83 @@
             <div class="profile-imgs">
                 <img src="img/zpaxev0mwjc41.jpg" >
                 <img src="img/hellothere11.1.png" >
+                <label for="bio-edit" class="profile-edit">
+                    <svg
+                        viewBox="0 0 5.2916668 5.2916669"
+                        class="upload-icons"
+                        >
+                        <path
+                        id="rect841"
+                        style="opacity:1;;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke"
+                        d="m 3.2699189,0.8982329 1.1183475,1.1183474 c 0.026133,0.026133 0.023153,0.07119 -0.00668,0.1010222 L 2.0194053,4.4797797 c -0.029834,0.029834 -1.94637113,0.7537506 -1.93746819,0.7178829 0,0 0.72450053,-1.9302906 0.75433493,-1.960125 L 3.1688944,0.9049151 c 0.029834,-0.029834 0.074892,-0.032815 0.1010247,-0.00668 z"
+                        sodipodi:nodetypes="csssssscc" />
+                        <rect
+                        style="opacity:1;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke"
+                        id="rect880"
+                        width="1.6882606"
+                        height="0.98188043"
+                        x="2.8991148"
+                        y="-2.9078808"
+                        rx="0.066627115"
+                        ry="0.066627115"
+                        transform="rotate(45)" />
+                    </svg>
+    
+                </label>
             </div>
 
+            <form action="" class="row">
+                <input type="checkbox" name="" id="bio-edit">
+                <div class="input bio-ui">
+                    <div>
+                        <div>
+                            <div>
+                                <p>User image</p>
+                                <input type="file" id="drop-zone-3" onchange="InputFiles(this)">
+                                <div class="dropzone single" ondragover="ActiveDropZone(this)" ondragleave="DeActiveDropZone(this)" ondrop="DropFile(this,event)">
+                                    <label  for="drop-zone-3">
+                                        <p class="note">drag and drop to add pictures</p>
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <p>Username</p>
+                                <input type="text" style="display: block;">
+                            </div>
+                        </div>
+    
+                        <div>
+                            <div>
+                                <p>Cover image</p>
+                                <input type="file" id="drop-zone-2" onchange="InputFiles(this)">
+                                <div class="dropzone single" ondragover="ActiveDropZone(this)" ondragleave="DeActiveDropZone(this)" ondrop="DropFile(this,event)">
+                                    <label  for="drop-zone-2">
+                                        <p class="note">drag and drop to add pictures</p>
+                                    </label>
+                                </div>
+                            </div>
+    
+                            <div>
+                                <p>Welcome message</p>
+                                <input type="text" style="display: block;">
+                            </div>
+                        </div>
+                    </div>
+                    <p>Bio</p>
+                    <span 
+                        class="textinput" 
+                        role="textbox" 
+                        contenteditable>
+                    </span>
+
+                </div>
+                <div class="buttons">
+                    <input type="button" value="Update">
+                </div>
+            </form>
+
             <div class="row bio">
-                <h2>Darkx97</h2>
+                <h1>Darkx97</h1>
                 <h3>welcome to my website</h3>
                 <p>my name is Sufian.
                     im a computer science student learning software development. 
@@ -62,7 +135,7 @@
                     when i started making this website i was already 2 years into the major, i used to know almost nothing about software development and i started making website as a practice to learn on my own, a year later (now). i learned a lot about software and web development and decided that im gong to use this website as my personal website and probably expand on it to be a simple , less addictive social media. than the rest of the known platforms.
                     i still have other projects you can click on projects in the navigation bar , or of your on mobile click the burger icon to open the navigation menu.
 
-                    some of the projects i have even started yet , im cuz im still learning how to actually do them.
+                    some of the projects i have not even started yet , im cuz im still learning how to actually do them.
                     the website is going to be up to date with what im actually working , and if i canceled it or not.
 
                     for now the main focus is this website as i want to work with website development, its going to be sort of a free open source project any one should be able to take this project and make it work as their own personal website with few commands.
@@ -76,66 +149,94 @@
             <hr>
             <div class="row">
                 
-                <h2>Skills</h2>
-                <div class="input skill-ui">
-                    <div>
-                        <p>Skill name</p>
-                        <span 
-                                class="comment-textarea" 
-                                role="textbox" 
-                                contenteditable>
-                        </span>
-                        <input type="file" id="drop-zone-1" onchange="InputFiles(this)">
-                        <div class="dropzone single" ondragover="ActiveDropZone(this)" ondragleave="DeActiveDropZone(this)" ondrop="DropFile(this,event)">
-                            <label  for="drop-zone-1">
-                                <p class="note">drag and drop to add pictures</p>
-                            </label>
+                <h2>
+                    Skills
+                    <label for="add-skill" class="profile-edit">
+                        <svg
+                            viewBox="0 0 5.2916668 5.2916669"
+                            class="upload-icons"
+                            >
+                            <path
+                            id="rect841"
+                            style="opacity:1;;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke"
+                            d="m 3.2699189,0.8982329 1.1183475,1.1183474 c 0.026133,0.026133 0.023153,0.07119 -0.00668,0.1010222 L 2.0194053,4.4797797 c -0.029834,0.029834 -1.94637113,0.7537506 -1.93746819,0.7178829 0,0 0.72450053,-1.9302906 0.75433493,-1.960125 L 3.1688944,0.9049151 c 0.029834,-0.029834 0.074892,-0.032815 0.1010247,-0.00668 z"
+                            sodipodi:nodetypes="csssssscc" />
+                            <rect
+                            style="opacity:1;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke"
+                            id="rect880"
+                            width="1.6882606"
+                            height="0.98188043"
+                            x="2.8991148"
+                            y="-2.9078808"
+                            rx="0.066627115"
+                            ry="0.066627115"
+                            transform="rotate(45)" />
+                        </svg>
+        
+                    </label>
+                </h2>
+
+                <form action="">
+                    <input type="checkbox" id="add-skill">
+                    <div class="input skill-ui">
+                        <div>
+                            <p>Skill name</p>
+                            <input type="text" style="display: block;">
+                            <input type="file" id="drop-zone-1" onchange="InputFiles(this)">
+                            <div class="dropzone single" ondragover="ActiveDropZone(this)" ondragleave="DeActiveDropZone(this)" ondrop="DropFile(this,event)">
+                                <label  for="drop-zone-1">
+                                    <p class="note">drag and drop to add pictures</p>
+                                </label>
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <p>Description</p>
-                        <span 
+                        <div>
+                            <p>Description</p>
+                            <span 
                                 class="textinput" 
                                 role="textbox" 
                                 contenteditable>
-                        </span>
-                    </div>
-                    <div>
-                        <p>Level</p>
-                        <div class="drop-list">
-                            <input id="option-list-1" type="checkbox">
-                            <label for="option-list-1" class="option-list">
-                                <p>test</p>
-                                <svg
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                class="arrow">
-                                    <path 
-                                    inkscape:transform-center-x="-0.010131665"
-                                    inkscape:transform-center-y="-2.9884325"
-                                    d="M 22.5,19.465298 12.093831,14.621402 1.5,19.5 6.7348032,10.499998 11.969605,1.5 l 5.265197,8.982651 z"
-                                    sodipodi:nodetypes="ccccccc" />
-                                </svg>
-                            </label>
-                            <div class="option-menu" style="--amount : 4">
-                                <input onchange="CloseOptionMenu(this);ChangeOption(this)" type="radio" name="option-1" id="menu-1-option-1" value="Beginner" >
-                                <label class="option"  style="--order : 1" for="menu-1-option-1"><p>Beginner</p></label>
-
-                                <input onchange="CloseOptionMenu(this);ChangeOption(this)" type="radio" name="option-1" id="menu-1-option-2" value="Intermediate" >
-                                <label class="option"  style="--order : 2" for="menu-1-option-2"><p>Intermediate</p></label>
-
-                                <input onchange="CloseOptionMenu(this);ChangeOption(this)" type="radio" name="option-1" id="menu-1-option-3" value="Good" >
-                                <label class="option"  style="--order : 3" for="menu-1-option-3"><p>Good</p></label>
-
-                                <input onchange="CloseOptionMenu(this);ChangeOption(this)" type="radio" name="option-1" id="menu-1-option-4" value="Very Good" >
-                                <label class="option"  style="--order : 4" for="menu-1-option-4"><p>Very Good</p></label>
-
-                                <input onchange="CloseOptionMenu(this);ChangeOption(this)" type="radio" name="option-1" id="menu-1-option-5" value="Expert" >
-                                <label class="option"  style="--order : 5" for="menu-1-option-5"><p>Expert</p></label>
+                            </span>
+                        </div>
+                        <div>
+                            <p>Level</p>
+                            <div class="drop-list">
+                                <input id="option-list-1" type="checkbox">
+                                <label for="option-list-1" class="option-list">
+                                    <p>test</p>
+                                    <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    class="arrow">
+                                        <path 
+                                        inkscape:transform-center-x="-0.010131665"
+                                        inkscape:transform-center-y="-2.9884325"
+                                        d="M 22.5,19.465298 12.093831,14.621402 1.5,19.5 6.7348032,10.499998 11.969605,1.5 l 5.265197,8.982651 z"
+                                        sodipodi:nodetypes="ccccccc" />
+                                    </svg>
+                                </label>
+                                <div class="option-menu" style="--amount : 4">
+                                    <input onchange="CloseOptionMenu(this);ChangeOption(this)" type="radio" name="option-1" id="menu-1-option-1" value="Beginner" >
+                                    <label class="option"  style="--order : 1" for="menu-1-option-1"><p>Beginner</p></label>
+    
+                                    <input onchange="CloseOptionMenu(this);ChangeOption(this)" type="radio" name="option-1" id="menu-1-option-2" value="Intermediate" >
+                                    <label class="option"  style="--order : 2" for="menu-1-option-2"><p>Intermediate</p></label>
+    
+                                    <input onchange="CloseOptionMenu(this);ChangeOption(this)" type="radio" name="option-1" id="menu-1-option-3" value="Good" >
+                                    <label class="option"  style="--order : 3" for="menu-1-option-3"><p>Good</p></label>
+    
+                                    <input onchange="CloseOptionMenu(this);ChangeOption(this)" type="radio" name="option-1" id="menu-1-option-4" value="Very Good" >
+                                    <label class="option"  style="--order : 4" for="menu-1-option-4"><p>Very Good</p></label>
+    
+                                    <input onchange="CloseOptionMenu(this);ChangeOption(this)" type="radio" name="option-1" id="menu-1-option-5" value="Expert" >
+                                    <label class="option"  style="--order : 5" for="menu-1-option-5"><p>Expert</p></label>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div class="buttons">
+                        <input type="button" value="post">
+                    </div>
+                </form>
 
                 <div class="skill">
                     <h6>Skill</h6>
@@ -158,6 +259,19 @@
                     <div>
                         <p>Good</p>
                     </div>
+                    <div class="upload-edit">
+                                
+                        <input id="Edit-upload-1" type="checkbox">
+                        <label for="Edit-upload-1" class="edit-button">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </label>    
+                        <div class="option-menu" style="--amount : 2">
+                            <input onclick="CloseOptionMenu(this)"class="option" type="submit" value="Edit" style="--order : 1">
+                            <input onclick="CloseOptionMenu(this)"class="option" type="submit" value="Delete" style="--order : 2">
+                        </div>
+                    </div>
                 </div>
             </div>    
                 <hr>
@@ -172,6 +286,19 @@
                     </div>
                     <div>
                         <p>Good</p>
+                    </div>
+                    <div class="upload-edit">
+                                
+                        <input id="Edit-upload-2" type="checkbox">
+                        <label for="Edit-upload-2" class="edit-button">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </label>    
+                        <div class="option-menu" style="--amount : 2">
+                            <input onclick="CloseOptionMenu(this)"class="option" type="submit" value="Edit" style="--order : 1">
+                            <input onclick="CloseOptionMenu(this)"class="option" type="submit" value="Delete" style="--order : 2">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -188,6 +315,19 @@
                     </div>
                     <div>
                         <p>Intermediate</p>
+                    </div>
+                    <div class="upload-edit">
+                                
+                        <input id="Edit-upload-3" type="checkbox">
+                        <label for="Edit-upload-3" class="edit-button">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </label>    
+                        <div class="option-menu" style="--amount : 2">
+                            <input onclick="CloseOptionMenu(this)"class="option" type="submit" value="Edit" style="--order : 1">
+                            <input onclick="CloseOptionMenu(this)"class="option" type="submit" value="Delete" style="--order : 2">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -206,6 +346,19 @@
                     <div>
                         <p>beginner</p>
                     </div>
+                    <div class="upload-edit">
+                                
+                        <input id="Edit-upload-4" type="checkbox">
+                        <label for="Edit-upload-4" class="edit-button">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </label>    
+                        <div class="option-menu" style="--amount : 2">
+                            <input onclick="CloseOptionMenu(this)"class="option" type="submit" value="Edit" style="--order : 1">
+                            <input onclick="CloseOptionMenu(this)"class="option" type="submit" value="Delete" style="--order : 2">
+                        </div>
+                    </div>
                 </div>
             </div>
                 <hr>
@@ -221,6 +374,19 @@
                     <div>
                         <p>Intermediate</p>
                     </div>
+                    <div class="upload-edit">
+                                
+                        <input id="Edit-upload-5" type="checkbox">
+                        <label for="Edit-upload-5" class="edit-button">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </label>    
+                        <div class="option-menu" style="--amount : 2">
+                            <input onclick="CloseOptionMenu(this)"class="option" type="submit" value="Edit" style="--order : 1">
+                            <input onclick="CloseOptionMenu(this)"class="option" type="submit" value="Delete" style="--order : 2">
+                        </div>
+                    </div>
                 </div>
             </div>
     
@@ -233,6 +399,19 @@
                     </div>
                     <div>
                         <p>syn-97@hotmail.com</p>
+                    </div>
+                    <div class="upload-edit">
+                                
+                        <input id="Edit-upload-6" type="checkbox">
+                        <label for="Edit-upload-6" class="edit-button">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </label>    
+                        <div class="option-menu" style="--amount : 2">
+                            <input onclick="CloseOptionMenu(this)"class="option" type="submit" value="Edit" style="--order : 1">
+                            <input onclick="CloseOptionMenu(this)"class="option" type="submit" value="Delete" style="--order : 2">
+                        </div>
                     </div>
                 </div>
             </div>
