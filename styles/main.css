@@ -641,6 +641,8 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
 .log-out , input[type="submit"].log-out
 {
     /* height: 30px; */
+    padding : 0 var(--padding);
+    text-decoration: none;
     background-color: #00000000;
     color : var(--normal-text-color);
     font-size: var(--h5-size);
@@ -655,6 +657,14 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
     color : var(--normal-text-color);
     background-color: var(--border-hover)
 }
+
+a.log-out
+{
+    place-self: center;
+    font-size: var(--h6-size);
+    color: var(--normal-text-color);
+}
+
 
 .upload-meta-data
 {
@@ -1084,7 +1094,10 @@ label:active > .arrow
 
     place-self: start;
 }
-
+.blog 
+{
+    display: grid;
+}
 .blog p
 {
     margin-left: 20px;
@@ -1290,8 +1303,8 @@ input[type="checkbox"]:checked + .skill-ui
 h2 > .profile-edit
 {
     position: absolute;
-    height: calc(var(--user-img-size) * 0.8);
-    width: calc(var(--user-img-size) * 0.8);
+    height: calc(var(--user-img-size) * 0.6);
+    width: calc(var(--user-img-size) * 0.6);
 }
 
 .skill
