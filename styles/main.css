@@ -442,7 +442,7 @@ img
 .nav-bar-menu
 {
     position: fixed;
-    top: calc(var(--nav-bar-height));
+    top: calc(var(--nav-bar-height) - 6px);
     display: flex;
     flex-direction: column;
     right: 0px;
