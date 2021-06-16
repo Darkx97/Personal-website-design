@@ -1284,9 +1284,6 @@ input[type="checkbox"]:checked + .skill-ui
     margin-bottom: 10px;
 }
 
-
-
-
 @keyframes input-ui
 {
     from
