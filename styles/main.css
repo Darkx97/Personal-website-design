@@ -5,20 +5,29 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+    scrollbar-gutter: 8px;
 }
 
 *::-webkit-scrollbar
 {
     width: 5px;
-    
+    border-radius: 10px;
 }
 *::-webkit-scrollbar-thumb
 {
     background-color: var(--title-color);
+    border-radius: 10px;
+
 }
 *::-webkit-scrollbar-track
 {
     background-color: var(--nav-bar-color);
+    border-radius: 10px;
+}
+*::-webkit-scrollbar-corner
+{
+    border-radius: 10px;
 }
 
 input::-webkit-outer-spin-button,
@@ -226,6 +235,7 @@ p,a,li
     width: auto;
     max-width: 100%; 
     background: #00000000;
+    word-break: break-word;
 }
 
 a{
@@ -484,7 +494,7 @@ input[type="checkbox"]:checked + label.burger  > .line1 , .line1.active
 }
 input[type="checkbox"]:checked + label.burger  >  .line2 ,.line2.active
 {
-    transform:  translate(100px , 0px);
+    transform:  translate(1000px , 0px);
 }
 input[type="checkbox"]:checked + label.burger  > .line3 ,.line3.active
 {
@@ -798,8 +808,8 @@ a.log-out
     border-radius: var(--border-radius);
     gap: var(--gap);
     z-index: 1;
-    backdrop-filter: none;
-    transition:  height  0.50s 0.01s , background 0.10s 0.35s, border 0.20s  0.40s , padding 0.2s 0.1s , backdrop-filter 2s 2s ease  ;
+    backdrop-filter: blur(0px);
+    transition:  height  0.50s 0.01s , background 0.10s 0.35s, border 0.20s  0.40s , padding 0.2s 0.1s , backdrop-filter 1s 0.2s ease  ;
 }
 
 .option-menu  *
@@ -817,10 +827,22 @@ input[type="checkbox"]:checked + label.edit-button + div.option-menu , input[typ
             height  0.40s 0.2s ,
             background 0.20s 0.15s,
             border 0.20s  0.05s ,
-            backdrop-filter 0s 0.5s,
+            backdrop-filter 0s 0s,
             padding 0.2s 0.2s cubic-bezier(.44,.68,.64,.72);
-    animation: blur-drop-menu 2s;
+    animation: blur-drop-menu ;
+    animation-delay : 0s;
+    animation-duration: 0.2s;
 
+}
+
+@keyframes blur-drop-menu
+{
+    from{
+        backdrop-filter: blur(0px);
+    }
+    to{
+        backdrop-filter: blur(2px);
+    }
 }
 
 
@@ -1103,18 +1125,34 @@ label:active > .arrow
     margin-left: 20px;
 }
 
-p > img
+p > img , .images > img
 {
-    display:flex;
     height: auto;
     max-height: 800px;
+    min-height: 30%;
     width: auto;
+    min-width: 350px;
     max-width: 80%;
     border-radius: var(--border-radius);
-    margin: 10px  auto;
+    margin:  5px auto;
+}
+
+.images
+{
+    position:relative;
+    overflow-x: auto;
+    display: flex;
+    margin: auto;
+    margin-bottom: 5px;
+    max-width: 100%;
+    gap: 10px;
+    scrollbar-width: auto;
 }
 
 
+.post{
+    overflow-y: hidden;
+}
 .blog > div
 {
     display: grid;
@@ -1141,7 +1179,6 @@ p > img
 {
     width: 70%;
     height: auto;
-    /* max-width: 95%; */
     max-height: max-content;
     place-self: center;
     border-radius: var(--border-radius);
@@ -1159,14 +1196,14 @@ p > img
 {
     display: flex;
     place-items: center;
-    height: calc(var(--user-img-size) * 0.8);
-    width: calc(var(--user-img-size) * 0.8);
-    border: var(--border-size) var(--title-color) solid;
     position: absolute;
     border-radius: 100%;
     cursor: pointer;
     right: 10px;
     bottom: calc(var(--user-img-size) * 0);
+    width: calc(var(--user-img-size) * 0.8);
+    height: calc(var(--user-img-size) * 0.8);
+    border: var(--border-size) var(--title-color) solid;
 }
 
 .profile-edit > svg
@@ -1267,6 +1304,17 @@ input[type="checkbox"]:checked + .skill-ui
     animation-delay:  0.5s;
     animation-duration: 999s;
 }
+@keyframes input-ui
+{
+    from
+    {
+        overflow: unset;
+    }
+    to
+    {
+        overflow: hidden;
+    }
+}
 
 .dropzone.cover
 {
@@ -1283,19 +1331,6 @@ input[type="checkbox"]:checked + .skill-ui
     text-align: center;
     margin-bottom: 10px;
 }
-
-@keyframes input-ui
-{
-    from
-    {
-        overflow: unset;
-    }
-    to
-    {
-        overflow: hidden;
-    }
-}
-
 
 h2 > .profile-edit
 {
@@ -1700,7 +1735,7 @@ h2 > .profile-edit
     }
     input[type="checkbox"]:checked + label.burger  > .line2,.line2.active
     {
-        transform:  translate(100px , 0px);
+        transform:  translate(1000px , 0px);
     }
     input[type="checkbox"]:checked + label.burger  >.line3,.line3.active
     {
