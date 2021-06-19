@@ -37,7 +37,7 @@ input::-webkit-inner-spin-button {
 }
 
 @font-face{
-    font-family : "pixle";
+    font-family : "pixel";
     src : url("../Fonts/Warioland4chmc-VApe.ttf");
     font-weight:bolder;
 }
@@ -150,6 +150,10 @@ html[data-theme = 'dark']{
     --text-input-background : #1f1f1f;
     --option-menu-background : rgba(0, 0, 0, 0.30);
     --cancel-button-hover-color :#616161; 
+
+
+    /* upload blur cover */
+    --upload-cover-color: rgba(0, 0, 0, 0.10);
 }
 
 html[data-theme= 'light']
@@ -178,6 +182,11 @@ html[data-theme= 'light']
     --text-input-background : #dfdfdf;
     --option-menu-background : rgba(223, 223, 223, 0.30);
     --cancel-button-hover-color :#e4e4e4; 
+
+
+    /* upload blur cover */
+    --upload-cover-color: rgba(140, 140, 140, 0.10);
+
 }
 
 
@@ -194,7 +203,7 @@ h1,h2,h3,h4,h5,h6
     padding: 0;
     margin: 0;
     color: var(--title-color);
-    font-family: 'pixle';
+    font-family: 'pixel';
     font-size: var(--h1-size) ;
     font-weight: bolder;
     width: auto;
@@ -301,7 +310,7 @@ input[type="submit"],input[type="button"],button,.cancel-button
     justify-self: center;
     place-content: center;
     max-width: fit-content;
-    font-family : "pixle";
+    font-family : pixel;
     font-size: var(--h6-size);
     padding:  0px var(--padding);
     color: var(--normal-text-color);
@@ -386,7 +395,7 @@ img
     display: flex;
     padding: 2px var(--padding);
     text-decoration: none;
-    font-family: 'pixle' !important;
+    font-family: 'pixel' !important;
     font-size: var(--h6-size);
     border: var(--border-size) #00000000 solid;
     color: var(--option-text-color);
@@ -463,7 +472,7 @@ img
     overflow-y: scroll;
     z-index: 5;
     gap: var(--gap);
-    transition: height 0.7s  cubic-bezier(.63,.37,.37,.63);
+    transition: 0.5s cubic-bezier(.63,.37,.37,.63);
     display: none;
     backdrop-filter:blur(2px);
 
@@ -494,7 +503,8 @@ input[type="checkbox"]:checked + label.burger  > .line1 , .line1.active
 }
 input[type="checkbox"]:checked + label.burger  >  .line2 ,.line2.active
 {
-    transform:  translate(1000px , 0px);
+    transform:  translate(0px , 0px);
+    opacity: 0;
 }
 input[type="checkbox"]:checked + label.burger  > .line3 ,.line3.active
 {
@@ -559,7 +569,7 @@ input[type="checkbox"]:checked + label.burger  > .line3 ,.line3.active
 {
     font-size: var(--note-size);
     color: var(--note-color);
-    font-family: 'pixle' !important;
+    font-family: 'pixel' !important;
     text-align: center;
     place-self: center;
     width: 100%;
@@ -574,6 +584,76 @@ input[type="checkbox"]:checked + label.burger  > .line3 ,.line3.active
     border-radius: var(--border-radius);
     border: var(--border-size) var(--option-text-color) dashed;
 }
+
+
+.image 
+{
+    padding: 0;
+    margin: 2px;
+    display: block;
+    position: relative;
+    width: var(--dropped-img-size);
+    height: var(--dropped-img-size);
+}
+
+.image-blur
+{
+    top: 0px;
+    left: 0;
+    display: grid;
+    position: absolute;
+    border-radius: var(--border-radius);
+    width: calc(var(--dropped-img-size) + var(--border-size) * 2);
+    height: calc(var(--dropped-img-size) + var(--border-size) * 2);
+}
+
+.image:hover  .cover:hover , .cover:hover ,.image:hover  .cover
+{
+    height: 0px;
+}
+
+.upload-percentage 
+{
+    position: relative;
+    width: min-content;
+    align-self: center;
+    justify-self: center;
+    border-radius: var(--border-radius);
+    background-color: var(--nav-menu-color);
+}
+.upload-delete
+{
+    left: 10px;
+    position: relative;
+    width: var(--edit-button-size);
+    height: var(--edit-button-size);
+}
+
+.upload-retry
+{
+    position: relative;
+    place-self: center;
+    width: calc(var(--edit-button-size));
+    height: var(--edit-button-size);
+    border-radius: var(--border-radius);
+    background-color: var(--nav-menu-color);
+}
+
+.cover 
+{
+    top: 2px;
+    left: 2px;
+    display: grid;
+    position: absolute;
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    background-color: var(--upload-cover-color);
+    width: calc(var(--dropped-img-size) + var(--border-size) * 2);
+    height: calc(var(--dropped-img-size) + var(--border-size) * 2);
+    transition: height 0.5s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
 
 .dropzone img
 {
@@ -657,7 +737,7 @@ input[type="checkbox"]:checked + label.mode-switch > img:last-child
     color : var(--normal-text-color);
     font-size: var(--h5-size);
     border-radius: var(--border-radius);
-    font-family : "pixle" !important;
+    font-family : pixel !important;
     border: var(--border-size) var(--title-color) solid;
     transition: background 0.5s cubic-bezier(.63,.37,.37,.63);
     cursor: pointer;
@@ -689,7 +769,7 @@ a.log-out
 
 .upload-meta-data p 
 {
-    font-family: 'pixle' !important;
+    font-family: 'pixel' !important;
 }
 .upload-meta-data > div
 {
@@ -719,7 +799,7 @@ a.log-out
 
 .user-image-name p 
 {
-    font-family: 'pixle' !important;
+    font-family: 'pixel' !important;
     font-size: var(--h5-size);
 }
 
@@ -867,7 +947,7 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     place-self: center;
     color: var(--normal-text-color);
     border : none;
-    font-family: 'pixle' !important;
+    font-family: 'pixel' !important;
     font-size: var(--h6-size);
     border-radius: var(--border-radius);
     width: auto;
@@ -883,7 +963,7 @@ input[type="checkbox"]:checked + label.edit-button + .option-menu > .option , in
     justify-self: center;
     text-align: center;
     justify-self: center;
-    font-family: pixle !important;
+    font-family: pixel !important;
     font-size: var(--h6-size);
     border : none;
     border-radius: var(--border-radius);
@@ -1018,7 +1098,7 @@ label:active > .arrow
 {
     text-align: center;
     font-size: var(--h6-size);
-    font-family: "pixle" !important;
+    font-family: pixel !important;
     width: auto;
     margin: auto;
 }
@@ -1372,7 +1452,7 @@ h2 > .profile-edit
 
 .skill > div:first-child  p 
 {
-    font-family: 'pixle' !important;
+    font-family: 'pixel' !important;
 }
 .skill > div:nth-child(2)
 {
@@ -1380,7 +1460,7 @@ h2 > .profile-edit
 }
 .skill > div:nth-child(3) > p 
 {
-    font-family: 'pixle' !important;
+    font-family: 'pixel' !important;
 }
 
 .skill > .upload-edit
@@ -1439,6 +1519,7 @@ h2 > .profile-edit
     border: var(--border-size) var(--border-color) solid;
     border-radius: var(--border-radius);
 }
+
 
 @media screen and (max-width : 1400px )
 {
@@ -1735,7 +1816,7 @@ h2 > .profile-edit
     }
     input[type="checkbox"]:checked + label.burger  > .line2,.line2.active
     {
-        transform:  translate(1000px , 0px);
+        transform:  translate(0px , 0px);
     }
     input[type="checkbox"]:checked + label.burger  >.line3,.line3.active
     {
