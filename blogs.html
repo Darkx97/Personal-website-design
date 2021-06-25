@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html data-theme = 'dark'>
+<html dark='true'>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="styles/main.css">
-        <script src="js/onload.js" ></script>
+        <script src="js/onload.js" onload="CheckTheme()"></script>
         <title>Blogs</title>
     </head>
 
-    <body onload="CheckTheme();CheckPage()">
-        
+    <body onload="CheckPage();CheckThemeIcon()">
         <div class="nav-bar" >
             <div class="logo">
                 <a href="about.html">Darkx97</a>
@@ -24,7 +23,7 @@
                 <form action="">
                     <input class="log-out"type="submit" value="Log-out">
                 </form>
-                <input type="checkbox" name="theme" id="theme" onchange="ChangeTheme(this)">
+                <input type="checkbox" name="theme" id="theme"onclick="ChangeTheme(this)">
                 <label for="theme" class="mode-switch">
                     
                     <img src="icons/drawing.svg" alt="">
@@ -46,7 +45,7 @@
                 
         </div>
        
-        <div class="page"> 
+        <div class="page" > 
             <div class="row">
                 <form>
                     <div class="input post-ui">

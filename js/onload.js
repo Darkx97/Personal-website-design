@@ -2,20 +2,31 @@ let theme = localStorage.getItem("Theme");
 
 function CheckTheme() 
 {
-    let check = document.querySelector("#theme");
     if(theme == 'dark')
     {
-        document.documentElement.setAttribute('data-theme','dark');
-        check.checked=false;
+        document.documentElement.setAttribute('dark','true');
+        
     }
     else
     {
-        document.documentElement.setAttribute('data-theme','light');
-        check.checked=true;
+        document.documentElement.setAttribute('dark','false');
+        
     }
-
 }
 
+
+function CheckThemeIcon()
+{
+    let Switch = document.querySelector(".nav-bar").querySelector("#theme");
+    if(localStorage.getItem("Theme") == 'dark')
+    {
+        Switch.checked = false;
+    }
+    else
+    {
+        Switch.checked = true;
+    }
+}
 
 function CheckPage()
 {
@@ -34,20 +45,11 @@ function CheckPage()
             {
                 navbar.children[i].classList.add("at");
             }
-            else
-            {
-                navbar.children[i].classList.remove("at");
-            }
-    
         }
         for (let i = 0; i < navmenu.children.length; i++) {
             if(title.innerHTML == navmenu.children[i].innerHTML)
             {
                 navmenu.children[i].classList.add("at");
-            }
-            else
-            {
-                navmenu.children[i].classList.remove("at");
             }
         }
     }

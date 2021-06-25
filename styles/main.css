@@ -69,6 +69,7 @@ input::-webkit-inner-spin-button {
     /* nav bar styling */
     --nav-bar-height : 75px;
     --nav-bar-grid : 2fr 6fr 2fr;
+    --nav-menu-height :400px;
 
     /* borders */
     --border-radius:8px;
@@ -126,7 +127,72 @@ input::-webkit-inner-spin-button {
     --gap:10px;
 }
 
-html[data-theme = 'dark']{
+@media(prefers-dark-interface){
+    :root
+    {
+    /* background color */
+    --body-background-color : #151515;
+    /*  navigation bar color */
+    --nav-bar-color : rgb(0, 0, 0);
+    --nav-menu-color : rgba(0, 0, 0, 0.70);
+
+    /* text coloring */
+    --title-color : #6a48ff;
+    --normal-text-color :#ffffff;
+    --option-text-color : #5a5a5a;
+    --note-color : #d1d1d1;
+    --anchor-text-color:#045abd;
+    --visited-anchor-text-color: #009eb3;
+    /* border-coloring */
+    --border-color: #000000;
+    --border-hover : #4d2ddc;
+    --border-warning-color : #ac0000;
+
+    /* input UI coloring */
+    --data-input-bg-color : #3a3a3a;
+    --text-input-background : #1f1f1f;
+    --option-menu-background : rgba(0, 0, 0, 0.30);
+    --cancel-button-hover-color :#616161; 
+
+
+    /* upload blur cover */
+    --upload-cover-color: rgba(0, 0, 0, 0.10);
+    }
+}
+
+@media(prefers-light-interface){
+    :root
+    {
+        /* background color */
+        --body-background-color : #ebebeb;
+        /*  navigation bar color */
+        --nav-bar-color : #8c8c8c;
+        --nav-menu-color : rgba(140, 140, 140, 0.70);
+
+        /* text coloring */
+        --title-color : #00aeff;
+        --normal-text-color :#000000;
+        --option-text-color : #575757;
+        --note-color : #555555;
+        --anchor-text-color:#020083;
+        --visited-anchor-text-color: #2257dd;
+
+        /* border-coloring */
+        --border-color: #3d3d3d;
+        --border-hover : #73ceff;
+        --border-warning-color : #ff4646;
+
+        /* input UI coloring */
+        --data-input-bg-color : #c2c2c2;
+        --text-input-background : #dfdfdf;
+        --option-menu-background : rgba(223, 223, 223, 0.30);
+        --cancel-button-hover-color :#e4e4e4; 
+
+        /* upload blur cover */
+        --upload-cover-color: rgba(140, 140, 140, 0.10);
+    }
+}
+html[dark = 'true']{
     /* background color */
     --body-background-color : #151515;
     /*  navigation bar color */
@@ -156,7 +222,7 @@ html[data-theme = 'dark']{
     --upload-cover-color: rgba(0, 0, 0, 0.10);
 }
 
-html[data-theme= 'light']
+html[dark= 'false']
 {
     /* background color */
     --body-background-color : #ebebeb;
@@ -188,6 +254,7 @@ html[data-theme= 'light']
     --upload-cover-color: rgba(140, 140, 140, 0.10);
 
 }
+
 
 
 html,body
@@ -422,6 +489,7 @@ img
 {
     font-size: var(--h5-size);
     border-color: var(--option-text-color);
+    word-break: keep-all;
     
 }
 .logo a:hover , .logo a.at
@@ -480,7 +548,7 @@ img
 
 input[type="checkbox"]:checked + label.burger + div.nav-bar-menu
 {
-    height: 400px;
+    height: var(--nav-menu-height);
     padding: var(--padding) 0px;
 }
 
@@ -589,11 +657,11 @@ input[type="checkbox"]:checked + label.burger  > .line3 ,.line3.active
 .image 
 {
     padding: 0;
-    margin: 2px;
     display: block;
     position: relative;
     width: var(--dropped-img-size);
     height: var(--dropped-img-size);
+    margin: 2px;
 }
 
 .image-blur
@@ -603,8 +671,9 @@ input[type="checkbox"]:checked + label.burger  > .line3 ,.line3.active
     display: grid;
     position: absolute;
     border-radius: var(--border-radius);
-    width: calc(var(--dropped-img-size) + var(--border-size) * 2);
-    height: calc(var(--dropped-img-size) + var(--border-size) * 2);
+    width: calc(var(--dropped-img-size));
+    height: calc(var(--dropped-img-size) );
+    overflow: hidden;
 }
 
 .image:hover  .cover:hover , .cover:hover ,.image:hover  .cover
@@ -629,20 +698,115 @@ input[type="checkbox"]:checked + label.burger  > .line3 ,.line3.active
     height: var(--edit-button-size);
 }
 
-.upload-retry
+.upload-retry-cancel
 {
     position: relative;
     place-self: center;
+    width: 100%;
+    height: var(--edit-button-size);
+    
+}
+.upload-retry-cancel >div:first-of-type ,.upload-retry-cancel>div:last-of-type
+{
+    
+    position: absolute;
+    background-color: var(--nav-menu-color);
     width: calc(var(--edit-button-size));
     height: var(--edit-button-size);
     border-radius: var(--border-radius);
+}
+.upload-retry-cancel >div:first-of-type
+{
+    left: 0px;
+    top: 0px;
+}
+
+.upload-retry-cancel>div:last-of-type
+{
+    right: 0px;
+    top: 0px;
+}
+
+
+
+.upload-pause-resume
+{
+    place-self: center;
     background-color: var(--nav-menu-color);
+    border-radius: var(--border-radius);
+    width: calc(var(--edit-button-size));
+    height: var(--edit-button-size);
+    z-index: 1;
+}
+
+.pause-button-0
+{
+    position: relative;
+}
+.pause-line1,.pause-line2,.pause-line3 , .x-line1,.x-line2
+{
+    position: relative;
+    height: 14px;
+    width: 3px;
+    background-color: var(--title-color);
+    border-radius: var(--border-radius);
+    transition: transform 0.5s, top 0.5s , left 0.6s ease;
+}
+
+.pause-line1
+{
+    top: 3px;
+    left: 6px;
+}
+.pause-line2
+{
+    top: -11px;
+    left: 13px;
+}
+.pause-line3
+{
+    top: -25px;
+    left: 13px;
+}
+
+input[type="checkbox"]:checked + label>.pause-line1
+{
+    top: 3px;
+    left: 5px;
+}
+input[type="checkbox"]:checked + label>.pause-line2
+{
+    top: -8px;
+    left: 10px;
+    transform: rotate(60deg);
+}
+input[type="checkbox"]:checked + label>.pause-line3
+{
+
+    top: -28px;
+    left: 10px;
+    transform: rotate(-60deg);
+}
+
+.x-line1
+{
+    top: 4px;
+    left: 9px;
+    transform: rotate(-45deg);
+    height: 16px;
+    width: 4px;
+}
+.x-line2
+{
+    top: -12px;
+    left: 9px;
+    transform: rotate(45deg);
+    height: 16px;
+    width: 4px;
 }
 
 .cover 
 {
-    top: 2px;
-    left: 2px;
     display: grid;
     position: absolute;
     backdrop-filter: blur(10px);
@@ -650,7 +814,7 @@ input[type="checkbox"]:checked + label.burger  > .line3 ,.line3.active
     background-color: var(--upload-cover-color);
     width: calc(var(--dropped-img-size) + var(--border-size) * 2);
     height: calc(var(--dropped-img-size) + var(--border-size) * 2);
-    transition: height 0.5s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: height 0.6s 0s cubic-bezier(.63,.37,.37,.63);
 }
 
 
@@ -660,20 +824,14 @@ input[type="checkbox"]:checked + label.burger  > .line3 ,.line3.active
     height: var(--dropped-img-size);
     width: var(--dropped-img-size);
     border-radius: var(--border-radius);
-    border: var(--border-size) #00000000 solid;
     border-radius: var(--border-radius);
-    margin : 2px;
-}
-
-.dropzone img:hover
-{
-    border-color: var(--border-warning-color);
 }
 
 .dropzone.active
 {
     border-color: var(--option-text-color);
-    display: inline;
+    display: flex;
+    flex-wrap: wrap;
     gap: var(--gap);
 }
 .dropzone.active:hover, .dropzone:hover
@@ -1507,6 +1665,7 @@ h2 > .profile-edit
     fill: var(--title-color);
 }
 
+
 .error-msg
 {
     display: grid;
@@ -1541,6 +1700,7 @@ h2 > .profile-edit
         /* nav bar styling */
         --nav-bar-height : 75px;
         --nav-bar-grid : 2fr 6fr 2fr;
+        --nav-menu-height :400px;
     
         /* borders */
         --border-radius:8px;
@@ -1613,8 +1773,9 @@ h2 > .profile-edit
         --margin : 4px;
     
         /* nav bar styling */
-        --nav-bar-height : 80px;
+        --nav-bar-height : 65px;
         --nav-bar-grid : 2fr 6fr 2fr;
+        --nav-menu-height :400px;
     
     
         /* borders */
@@ -1642,7 +1803,7 @@ h2 > .profile-edit
         --icon-img-size : 20px ;
     
         /* switches  */
-        --mode-switch-size : 50px;
+        --mode-switch-size : 45px;
 
         /* input ui grid layouts */
         --comment-ui-grid : calc(var(--user-img-size) * 1.5) 1fr calc(var(--icon-size) * 1.5);
@@ -1733,8 +1894,9 @@ h2 > .profile-edit
         --margin : 2px;
     
         /* nav bar styling */
-        --nav-bar-height : 70px;
+        --nav-bar-height : 60px;
         --nav-bar-grid : 2fr 2fr 2fr;
+        --nav-menu-height :400px;
     
     
         /* borders */
@@ -1762,7 +1924,7 @@ h2 > .profile-edit
         --icon-img-size : 20px ;
     
         /* switches  */
-        --mode-switch-size : 50px;
+        --mode-switch-size : 40px;
 
         /* input ui grid layouts */
         --comment-ui-grid : calc(var(--user-img-size) * 1.5) 1fr calc(var(--icon-size) * 1.5);
@@ -1847,6 +2009,8 @@ h2 > .profile-edit
         /* nav bar styling */
         --nav-bar-height : 60px;
         --nav-bar-grid : 2fr 2fr 2fr;
+        --nav-menu-height :250px;
+    
     
     
         /* borders */
@@ -1921,7 +2085,7 @@ h2 > .profile-edit
 
     .burger
     {
-        display: block;
+        display: grid;
     }
     
     .upload-meta-data > div:first-child
