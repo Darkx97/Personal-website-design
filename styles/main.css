@@ -960,7 +960,7 @@ a.log-out
 .user-image-name p 
 {
     font-family: 'pixel' !important;
-    font-size: var(--h5-size);
+    font-size: var(--h6-size);
 }
 
 
@@ -1369,12 +1369,13 @@ p > img , .images > img
 {
     height: auto;
     max-height: 800px;
-    min-height: 30%;
+    min-height: auto;
     width: auto;
     min-width: 350px;
     max-width: 80%;
     border-radius: var(--border-radius);
     margin:  5px auto;
+    display: block;
 }
 
 .images
