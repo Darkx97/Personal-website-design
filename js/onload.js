@@ -2,14 +2,14 @@ let theme = localStorage.getItem("Theme");
 
 function CheckTheme() 
 {
-    if(theme == 'dark')
+    if(theme == 'light')
     {
-        document.documentElement.setAttribute('dark','true');
+        document.documentElement.setAttribute('dark','false');
         
     }
     else
     {
-        document.documentElement.setAttribute('dark','false');
+        document.documentElement.setAttribute('dark','true');
         
     }
 }

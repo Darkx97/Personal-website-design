@@ -490,6 +490,8 @@ img
     font-size: var(--h5-size);
     border-color: var(--option-text-color);
     word-break: keep-all;
+    word-wrap: unset;
+    white-space: nowrap;
     
 }
 .logo a:hover , .logo a.at
@@ -1858,6 +1860,12 @@ h2 > .profile-edit
         display: grid;
     }
 
+    .logo a , .log-out, input[type="submit"].log-out
+    {
+        font-size: var(--h6-size);
+    }
+
+
     .project
     {
         grid-template-columns: 1fr;
@@ -1960,6 +1968,10 @@ h2 > .profile-edit
         top: calc( calc(var(--h6-size) + var(--padding) * 2 + var(--margin) * 2)* -1);
     }
 
+    .logo a , .log-out, input[type="submit"].log-out
+    {
+        font-size: var(--h6-size);
+    }
 
     .burger
     {
